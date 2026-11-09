@@ -301,7 +301,7 @@ function show(id){
 }
 const TO=(()=>{const F=['seo','social','design','web'];return [...F.map(id=>S.find(x=>x.id===id)).filter(Boolean),...S.filter(x=>!F.includes(x.id))]})();
 const one=c=>TO.map(s=>`<button type="button"${c?' tabindex="-1" aria-hidden="true" data-clone="1"':' role="tab"'} data-id="${s.id}">${L[s.id]||s.n}</button>`).join('');
-tabs.innerHTML=one(1)+one(0)+one(1);
+tabs.innerHTML=one(0);
 const mid=id=>tabs.querySelector(`button:not([data-clone])[data-id="${id}"]`);let prog=0;
 tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;show(b.dataset.id);const W=tabs.scrollWidth/3;if(b.dataset.clone){tabs.scrollLeft+=b.offsetLeft<W?W:-W}const m=mid(b.dataset.id);prog=Date.now();tabs.scrollTo({left:m.offsetLeft-(tabs.clientWidth-m.offsetWidth)/2,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
 tabs.addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft'].includes(e.key))return;const bs=[...tabs.querySelectorAll('button:not([data-clone])')],i=bs.indexOf(document.activeElement);if(i<0)return;const j=(i+(e.key==='ArrowRight'?1:-1)+bs.length)%bs.length;bs[j].focus();bs[j].click()});
@@ -312,10 +312,10 @@ plans.addEventListener('click',e=>{const a=e.target.closest('[data-add]');if(!a)
   setTimeout(()=>{const sel=document.querySelector(`select[data-pk="${id}"]`);if(sel){sel.value=ti;sel.dispatchEvent(new Event('change',{bubbles:true}))}},30);
 });
 show('web');
-const loop=()=>{if(Date.now()-prog<700)return;const W=tabs.scrollWidth/3;if(tabs.scrollLeft<W*0.5)tabs.scrollLeft+=W;else if(tabs.scrollLeft>W*1.5)tabs.scrollLeft-=W};
-const edge=()=>{tabs.classList.add('ov');tabs.classList.remove('st','en');loop()};
+const loop=()=>{};
+const edge=()=>{const m=tabs.scrollWidth-tabs.clientWidth;tabs.classList.toggle('ov',m>2);tabs.classList.toggle('st',tabs.scrollLeft<4);tabs.classList.toggle('en',tabs.scrollLeft>m-4)};
 const ctr=()=>{const b=tabs.querySelector('[aria-selected="true"]');if(b)tabs.scrollLeft=b.offsetLeft-(tabs.clientWidth-b.offsetWidth)/2};
-tabs.addEventListener('scroll',edge,{passive:true});addEventListener('resize',edge);edge();const home=()=>{tabs.scrollLeft=tabs.scrollWidth/3-8};home();addEventListener('load',()=>{home();edge()});setInterval(()=>{if(Date.now()-prog>700)loop()},400);
+tabs.addEventListener('scroll',edge,{passive:true});addEventListener('resize',edge);edge();const home=()=>{ctr();edge()};home();addEventListener('load',()=>{home();edge()});
 })();
 ;(()=>{const t=document.getElementById('ptabs');if(!t)return;
 t.addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)||e.ctrlKey)return;const max=t.scrollWidth-t.clientWidth;if(max<=0)return;const d=e.deltaMode===1?e.deltaY*32:e.deltaY;
