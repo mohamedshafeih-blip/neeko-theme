@@ -1578,6 +1578,15 @@
 .sxsm .sxsp{background:none!important;padding:0!important;border-radius:0!important;width:18px!important;height:18px!important;box-shadow:none!important;overflow:visible}
 
 .sxg .pgq .caret{animation:pblink 1s step-end infinite}.sxgq{white-space:nowrap}
+/* slower pacing */
+.sxsmr{animation-duration:14s}
+.sxsmr.p{animation-duration:14s,14s}
+.sxsmr.r0.p{animation-delay:0s,1.4s}.sxsmr.r1.p{animation-delay:.08s,2.2s}.sxsmr.r2.p{animation-delay:.16s,3s}
+.sxsmr.p .sxcb,.sxsmr.p .sxcb svg{animation-duration:14s}
+.sxsmr.r0 .sxcb,.sxsmr.r0 .sxcb svg{animation-delay:1.4s}.sxsmr.r1 .sxcb,.sxsmr.r1 .sxcb svg{animation-delay:2.2s}.sxsmr.r2 .sxcb,.sxsmr.r2 .sxcb svg{animation-delay:3s}
+.sxsma b{animation-duration:14s;animation-delay:3.6s}
+.sxsm .sxsp{animation-duration:14s}
+.sxaot .sk,.sxaot p{animation-duration:14s}
 
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
 @media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
