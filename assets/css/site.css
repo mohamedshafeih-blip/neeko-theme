@@ -1486,3 +1486,8 @@ footer{padding:96px 0 36px}
 .tlh{justify-content:center!important;padding:14px 32px 4px!important}.tlclr{height:42px!important;padding:0 18px!important;font-size:13.5px!important;color:var(--ink)!important;margin:0!important}@media (hover:hover) and (pointer:fine){.tlclr:hover{color:#fff!important}}
 .nbm .tl{flex:0 1 auto!important;overflow-y:auto}.nbm .tlh{flex:1 0 auto;align-items:flex-start}
 .nbm .tl:has(.tempty){flex:1 0 auto!important}
+/* Clear all: plain underlined text at the bottom of the list */
+.nbm .tl{flex:1 1 auto!important}
+.nbm .tlh{flex:none;align-items:center;padding:6px 32px 10px!important;position:relative;z-index:3}
+.tlclr{height:auto!important;padding:4px 6px!important;border:0!important;border-radius:4px!important;background:none!important;font-size:13px!important;font-weight:600;color:var(--muted)!important;text-decoration:underline;text-underline-offset:3px}
+@media (hover:hover) and (pointer:fine){.tlclr:hover{background:none!important;color:#1f5bff!important}}
