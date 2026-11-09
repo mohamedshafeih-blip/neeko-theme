@@ -1837,6 +1837,37 @@
 .sofa small{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#1f5bff}.sofa .x small{color:var(--muted)}
 .sofa span{font-size:11px;font-weight:600;padding:5px 8px;border-radius:7px;background:var(--card)}
 .sofv span{aspect-ratio:1.25}
+/* artboards polish: story photo always visible, only text fades in */
+.sodc.js:not(.done) .sostr .soarti>.soph{opacity:1!important;transform:none!important}
+.sodab{gap:14px;align-items:flex-end}
+.soart.sosq .soarti{width:168px;height:168px}.soart.sostr .soarti{width:95px;height:168px}
+.soarti{box-shadow:0 10px 22px -12px rgba(16,24,40,.45);border-radius:8px}
+.soph::after{background:rgba(10,14,24,.22)}
+/* carousel artboard */
+.soart.socar .soarti{width:134px;height:168px;background:#2a2f3a}
+.soct{display:flex;width:300%;height:100%}
+.soslide{position:relative;width:33.3334%;height:100%;flex:none}
+.soslide img{width:100%;height:100%;object-fit:cover;display:block}
+.soslide::after{content:"";position:absolute;inset:0;background:rgba(10,14,24,.22)}
+.soslide b{position:absolute;left:9px;right:9px;bottom:22px;z-index:1;color:#fff;font-size:12px;font-weight:800;line-height:1.1;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.soccn{position:absolute;right:6px;top:6px;z-index:2;display:inline-grid;font-style:normal;font-size:9px;font-weight:700;color:#fff;background:rgba(10,14,24,.55);padding:2px 6px;border-radius:99px}
+.soccn span{grid-area:1/1}.soccn span:not(:first-child){opacity:0}
+.socd{position:absolute;left:0;right:0;bottom:8px;z-index:2;display:flex;justify-content:center;gap:4px}
+.socd i{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.55)}.socd i:first-child{background:#fff}
+@media (prefers-reduced-motion:no-preference){
+  .pjd:not([hidden]) .soct{animation:soct 7.5s cubic-bezier(.65,0,.35,1) infinite}
+  .pjd:not([hidden]) .soccn span:nth-child(1){animation:socn1 7.5s steps(1) infinite}.pjd:not([hidden]) .soccn span:nth-child(2){animation:socn2 7.5s steps(1) infinite}.pjd:not([hidden]) .soccn span:nth-child(3){animation:socn3 7.5s steps(1) infinite}
+  .pjd:not([hidden]) .socd i:nth-child(1){animation:socd1 7.5s steps(1) infinite}.pjd:not([hidden]) .socd i:nth-child(2){animation:socd2 7.5s steps(1) infinite}.pjd:not([hidden]) .socd i:nth-child(3){animation:socd3 7.5s steps(1) infinite}
+}
+@keyframes soct{0%,27%{transform:none}33%,60%{transform:translateX(-33.3334%)}66%,93%{transform:translateX(-66.6667%)}99%,100%{transform:none}}
+@keyframes socn1{0%{opacity:1}30%{opacity:0}96%{opacity:1}}
+@keyframes socn2{0%{opacity:0}30%{opacity:1}63%{opacity:0}}
+@keyframes socn3{0%{opacity:0}63%{opacity:1}96%{opacity:0}}
+@keyframes socd1{0%{background:#fff}30%{background:rgba(255,255,255,.55)}96%{background:#fff}}
+@keyframes socd2{0%{background:rgba(255,255,255,.55)}30%{background:#fff}63%{background:rgba(255,255,255,.55)}}
+@keyframes socd3{0%{background:rgba(255,255,255,.55)}63%{background:#fff}96%{background:rgba(255,255,255,.55)}}
+.tight .soart.sosq .soarti{width:140px;height:140px}.tight .soart.sostr .soarti{width:79px;height:140px}.tight .soart.socar .soarti{width:112px;height:140px}
+@media (max-width:700px){.soart.socar{display:none}}
 
 olor:#fff}}
 /* report chart: reveal with clip (dashes break with non-scaling stroke) */
