@@ -1637,3 +1637,53 @@
 /* report chart: reveal with clip (dashes break with non-scaling stroke) */
 .sxrc .ln{stroke-dasharray:none!important;animation-name:sxln2!important}
 @keyframes sxln2{0%{clip-path:inset(0 100% 0 0)}38%,94%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 0);opacity:0}}
+
+/* service FAQ mini windows (sof- prefix) */
+@keyframes sofpop{from{opacity:0;transform:scale(.8)}}
+@keyframes sofring{0%,100%{box-shadow:inset 0 0 0 1.5px #1f5bff,0 0 0 0 rgba(31,91,255,0)}50%{box-shadow:inset 0 0 0 1.5px #1f5bff,0 0 0 5px rgba(31,91,255,.12)}}
+@keyframes sofln{0%{clip-path:inset(0 100% 0 0)}40%,94%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 0);opacity:0}}
+.sofp{display:grid;gap:6px}
+.sofp>div{display:flex;align-items:center;gap:5px;flex-wrap:wrap;padding:7px 9px;border-radius:10px;background:var(--soft)}
+.sofp>div.on{background:#e8efff;box-shadow:inset 0 0 0 1.5px #1f5bff}
+.sofp b{width:52px;font-size:11.5px}
+.sofp span{font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:99px;background:var(--card);border:1px solid var(--hair)}
+.sofp i{font-style:normal;font-size:10px;color:var(--muted)}
+.sofp .dots{display:inline-flex;gap:3px;margin-left:auto;padding:0;border:0;background:none}.sofp .dots i{width:7px;height:7px;border-radius:50%;background:#d5dbe6}.sofp .dots i.f{background:#1f5bff}
+.sofa{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sofa>div{display:flex;flex-direction:column;gap:5px;padding:9px;border-radius:10px;background:#e8efff}
+.sofa>div.x{background:var(--soft)}
+.sofa small{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#1f5bff}.sofa .x small{color:var(--muted)}
+.sofa span{font-size:11px;font-weight:600;padding:5px 8px;border-radius:7px;background:var(--card)}
+.sofi{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sofi>div{display:grid;gap:2px;padding:8px 10px;border-radius:10px;background:var(--soft)}
+.sofi small{font-size:10px;font-weight:700;color:var(--muted)}.sofi b{font-size:16px}
+.sofi svg,.sofl svg{width:100%;height:18px;overflow:visible}
+.sofn{display:block;margin-top:8px;font-size:10.5px;color:var(--muted)}
+.sofl{padding:10px 12px;border-radius:10px;background:var(--soft)}.sofl svg{height:46px}
+.sofl .m{display:flex;justify-content:space-between;font-size:9.5px;font-weight:600;color:var(--muted);margin-top:4px}
+.sofs{display:flex;align-items:center;gap:14px;padding:10px 12px;border-radius:10px;background:var(--soft)}
+.sofs .ring{position:relative;width:62px;height:62px;flex:none}.sofs .ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.sofs .ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:17px;color:#16a34a}
+.sofs ul{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:11px;flex:1}.sofs li{display:flex;justify-content:space-between;gap:8px}.sofs li span{color:var(--muted)}.sofs li b{color:#147a3d}
+.sofe{display:grid;gap:6px;padding:10px;border-radius:10px;background:var(--soft)}
+.sofe .h{display:flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:var(--muted)}.sofe .h em{margin-left:auto;font-style:normal;padding:3px 9px;border-radius:99px;background:#1f5bff;color:#fff}
+.sofe .t{position:relative;padding:8px 10px;border-radius:8px;background:var(--card);font-size:13px;font-weight:700;box-shadow:inset 0 0 0 1.5px #1f5bff}
+.sofe .t i{display:inline-block;width:1.5px;height:13px;background:#1f5bff;vertical-align:-2px;margin-left:2px;animation:pblink 1s step-end infinite}
+.sofe .l{height:6px;border-radius:9px;background:var(--soft-2)}.sofe .l.s{width:60%}
+.sofg{display:grid;gap:5px}
+.sofg>div{display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:9px;background:var(--soft);font-size:11px}
+.sofg>div b{flex:1;font-weight:600;color:var(--muted)}.sofg>div.me{background:#e8efff}.sofg>div.me b{color:var(--ink)}
+.sofg i{width:18px;height:18px;border-radius:5px;background:var(--card);display:grid;place-items:center;font-style:normal;font-size:10px;font-weight:800;color:var(--muted)}
+.sofg .me i{background:#1f5bff;color:#fff}.sofg em{font-style:normal;font-size:10px;font-weight:700;color:#147a3d;background:#e6f7ec;padding:2px 7px;border-radius:99px}
+.sofq{display:grid;gap:7px}
+.sofq .q{justify-self:end;max-width:82%;padding:7px 10px;border-radius:12px 12px 4px 12px;background:#1f5bff;color:#fff;font-size:11.5px}
+.sofq .a{padding:9px 10px;border-radius:12px 12px 12px 4px;background:var(--soft);font-size:11.5px;line-height:1.45}
+.sofq .a small{display:block;font-size:10px;font-weight:800;color:#1f5bff;margin-bottom:3px}
+.sofq .src{display:inline-flex;align-items:center;gap:5px;margin-top:6px;font-size:10px;font-weight:700;padding:3px 8px;border-radius:99px;background:var(--card);box-shadow:inset 0 0 0 1.5px #1f5bff}
+@media (prefers-reduced-motion:no-preference){
+  .fqc.open .sofp>div.on{animation:sofring 3s ease-in-out infinite}
+  .fqc.open :is(.sofi,.sofl) path{animation:sofln 6s cubic-bezier(.65,0,.35,1) infinite}
+  .fqc.open .sofs .ring circle.f{animation:sofln 6s cubic-bezier(.65,0,.35,1) infinite}
+  .fqc.open .sofg .me{animation:sofpop .4s cubic-bezier(.23,1,.32,1) .2s both}
+  .fqc.open .sofq .a{animation:sofpop .4s cubic-bezier(.23,1,.32,1) .5s both}
+}

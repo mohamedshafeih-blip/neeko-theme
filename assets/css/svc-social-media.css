@@ -1868,8 +1868,17 @@
 @keyframes socd3{0%{background:rgba(255,255,255,.55)}63%{background:#fff}96%{background:rgba(255,255,255,.55)}}
 .tight .soart.sosq .soarti{width:140px;height:140px}.tight .soart.sostr .soarti{width:79px;height:140px}.tight .soart.socar .soarti{width:112px;height:140px}
 @media (max-width:700px){.soart.socar{display:none}}
+/* artboard type polish */
+.sohd{width:auto!important;max-width:70%;display:inline-block}
+.sosq .sohd{font-size:16px;left:11px;top:12px}
+.sosq .sosub{top:66px;left:11px}
+.sostr .sohd{font-size:10.5px!important;max-width:78%;left:8px!important;top:12px!important}
+.sostr .sosub{font-size:7.5px!important;padding:2px 6px!important;left:8px!important;top:42px!important;max-width:calc(100% - 16px);box-sizing:border-box;overflow:hidden;text-overflow:ellipsis}
+.sostr .solg{width:18px;height:18px;font-size:7px;left:8px!important;bottom:8px}
+.sosel{inset:-3px -5px}
 
-olor:#fff}}
-/* report chart: reveal with clip (dashes break with non-scaling stroke) */
-.sxrc .ln{stroke-dasharray:none!important;animation-name:sxln2!important}
-@keyframes sxln2{0%{clip-path:inset(0 100% 0 0)}38%,94%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 0);opacity:0}}
+s cubic-bezier(.65,0,.35,1) infinite}
+  .fqc.open .sofs .ring circle.f{animation:sofln 6s cubic-bezier(.65,0,.35,1) infinite}
+  .fqc.open .sofg .me{animation:sofpop .4s cubic-bezier(.23,1,.32,1) .2s both}
+  .fqc.open .sofq .a{animation:sofpop .4s cubic-bezier(.23,1,.32,1) .5s both}
+}
