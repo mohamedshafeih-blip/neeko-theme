@@ -1593,6 +1593,7 @@
 .sxsmr.r1{animation-delay:.08s}.sxsmr.r2{animation-delay:.16s}.sxsmr.r3{animation-delay:.24s}.sxsmr.r4{animation-delay:.32s}
 .sxsmr.p{animation:sxrowin .5s cubic-bezier(.23,1,.32,1) both,sxrowp 14s ease infinite both}
 .sxsmr.r0.p{animation-delay:0s,1.4s}.sxsmr.r1.p{animation-delay:.08s,2.2s}.sxsmr.r2.p{animation-delay:.16s,3s}
+.sxgl{padding:6px!important;margin:-6px!important}
 
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
 @media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
