@@ -2042,3 +2042,6 @@
 @media (max-width:640px){.aprvs .apri{height:200px}}
 @media (max-width:640px){.apmbc .apnt{display:none}}
 /* ap-photography v1 */
+/* typed text reserves its final size so windows never grow while typing */
+.apgr{display:grid!important;align-items:start}.apgr>.apwrt,.apgr>.apghost{grid-area:1/1;min-width:0}
+.apghost{visibility:hidden;pointer-events:none;padding-right:4px}
