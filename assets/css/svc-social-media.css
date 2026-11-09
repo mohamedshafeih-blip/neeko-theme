@@ -1688,7 +1688,20 @@
 .sophoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 .soplay{box-shadow:0 2px 8px rgba(0,0,0,.25)}.soplay::after{border-left-color:#1f5bff}
 .sophoto img{object-position:50% 48%}
+/* artboards: full-bleed photo, white type */
+.soarti{background:#2a2f3a}
+.soph{inset:0!important;height:auto!important}
+.sostr .soph{height:auto!important}
+.soph::after{content:"";position:absolute;inset:0;background:rgba(10,14,24,.28)}
+.sohd{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.35);z-index:1}
+.sosel{z-index:2}
+.sosub,.solg{z-index:1}
+.sostr .sohd{font-size:11.5px;width:86%;top:14px}
+.sostr .sosub{top:48px}
+.sosync{z-index:3}
+.sosq .sosub{top:72px}.tight .sosq .sosub{top:62px}
 
-
-@media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
-@media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
+olor:#fff}}
+/* report chart: reveal with clip (dashes break with non-scaling stroke) */
+.sxrc .ln{stroke-dasharray:none!important;animation-name:sxln2!important}
+@keyframes sxln2{0%{clip-path:inset(0 100% 0 0)}38%,94%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 0);opacity:0}}
