@@ -47,7 +47,7 @@ get_header(); ?>
       <article class="fc rv">
         <div class="pv"><div class="hw hw2">
           <div class="hwt"><span class="hwd"><i></i><i></i><i></i></span><span class="hwn">Brand photos · Campaign</span><span class="chip g">Live</span></div>
-          <div class="hwg"><i class="v1" style="background-image:url(<?php echo NK_URI; ?>/assets/img/e33dc2874dcc.webp)"></i><i class="v2" style="background-image:url(<?php echo NK_URI; ?>/assets/img/f72e453e935e.webp)"></i><i class="v3" style="background-image:url(<?php echo NK_URI; ?>/assets/img/8f21eae040fd.webp)"></i><i class="v4" style="background-image:url(<?php echo NK_URI; ?>/assets/img/ea7d5d6173f2.webp</div>
+          <div class="hwg"><i class="v1" style="background-image:url(<?php echo NK_URI; ?>/assets/img/e33dc2874dcc.webp)"></i><i class="v2" style="background-image:url(<?php echo NK_URI; ?>/assets/img/f72e453e935e.webp)"></i><i class="v3" style="background-image:url(<?php echo NK_URI; ?>/assets/img/8f21eae040fd.webp)"></i><i class="v4" style="background-image:url(<?php echo NK_URI; ?>/assets/img/245aa85a0d60.webp)"></i></div>
           <div class="hwf"><span class="hwr"><b>1:1</b><b>4:5</b><b>9:16</b></span><span class="ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg>Approved</span></div>
         </div></div>
         <div class="bd"><h3>Create</h3><p>Posters, social posts, decks and AI brand photography, designed in days, not weeks.</p><a class="btn btn-blue" href="#brief">Brief a designer <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div>
