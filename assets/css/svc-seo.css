@@ -1626,6 +1626,8 @@
   .pjth i{font-size:12px}
   .pjlb{display:none!important}
 }
+/* phone: compact sitemap nodes */
+@media (max-width:480px){.ptr .pbx2{gap:5px}.ptr .nd{height:28px;padding:0 8px;gap:4px;font-size:11px}.ptr .nd::before,.ptr .nd i{width:6px;height:6px}}
 
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
 @media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
