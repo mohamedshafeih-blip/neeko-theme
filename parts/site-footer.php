@@ -7,7 +7,7 @@
     <div><h4>Company</h4><ul><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#tools">Integrations</a></li><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#faq">FAQ</a></li><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#brief">Start a brief</a></li></ul></div>
     <div><h4>Contact</h4><ul><li><a href="https://wa.me/60176604771" target="_blank" rel="noopener">+60 17-660 4771</a></li><li><a href="mailto:enquiry@neeko.my">enquiry@neeko.my</a></li><li>Kuala Lumpur, Malaysia</li></ul></div>
   </div>
-  <div class="leg"><span>&copy;&nbsp;2026 Berdua Sama Niaga (003225924-X)</span><span>Privacy · Terms</span></div>
+  <div class="leg"><span>&copy;&nbsp;<?php echo esc_html( date( 'Y' ) ); ?> Neeko · Berdua Sama Niaga (003225924-X) · All rights reserved.</span><span>Privacy · Terms</span></div>
 </div></footer>
 
 <script>

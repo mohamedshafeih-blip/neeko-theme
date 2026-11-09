@@ -1462,3 +1462,18 @@ footer{padding:96px 0 36px}
   .pc.hi .btn:hover{background:#fff;color:#1f5bff}
 }
 @media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
+
+/* compact footer on phones */
+@media (max-width:640px){
+  footer{padding-top:44px!important;padding-bottom:24px!important}
+  .fg{grid-template-columns:1fr 1fr!important;gap:24px 16px!important}
+  .fg>div:first-child,.fg>div:last-child{grid-column:1/-1}
+  .fg>div:first-child p{margin:10px 0 0;font-size:14px}
+  .fg h4{margin:0 0 6px!important}
+  .fg ul a{padding:4px 0!important}
+  .fg>div:last-child ul{display:flex;flex-wrap:wrap;gap:2px 18px}
+  .fg>div:last-child li{padding:4px 0}
+  .leg{flex-direction:column;align-items:flex-start;gap:6px;margin-top:28px!important;padding-top:18px!important;font-size:12px;line-height:1.5}
+}
+@media (max-width:640px){.fg ul{display:grid;gap:0!important;margin:0!important}.fg li{margin:0!important;line-height:1.45}.fg ul a{padding:3px 0!important}.fg>div:last-child ul{display:flex}.fg>div:last-child li{padding:3px 0}}
+@media (max-width:640px){.fg>div:last-child ul{gap:0 18px!important}}
