@@ -5,6 +5,7 @@
 define( 'NK_VER', '1.0.0' );
 define( 'NK_URI', get_template_directory_uri() );
 define( 'NK_DIR', get_template_directory() );
+require NK_DIR . '/inc/services.php';
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );

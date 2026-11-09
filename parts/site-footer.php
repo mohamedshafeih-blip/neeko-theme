@@ -277,7 +277,7 @@ care:{t:[['1 WordPress website','Monthly backup + updates','Basic health check',
 
 const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI assistant',crm:'CRM',api:'Integrations',erp:'ERP',software:'Custom software',mobile:'Mobile app',care:'Website care'};
 const fmt=n=>'RM'+n.toLocaleString('en-MY');
-const ck='<svg aria-hidden="true"><use href="<?php echo esc_url( home_url( '/' ) ); ?>#i-check"/></svg>';
+const ck='<svg aria-hidden="true"><use href="#i-check"/></svg>';
 const tabs=document.getElementById('ptabs'),plans=document.getElementById('plans');
 const price=t=>{
   if(t.one&&t.mo)return `<b>${fmt(t.one)}</b><small>setup</small></div><p class="one">then ${fmt(t.mo)} a month</p>`;
@@ -295,7 +295,7 @@ function show(id){
     <div class="pr num">${price(t)}
     ${F.d?`<p class="fr">${F.d[i]}</p>`:''}
     <ul>${(F.t?F.t[i]:t.f).map(f=>`<li>${ck}<span>${f}</span></li>`).join('')}</ul>
-    <a class="btn ${i===mid?'':'btn-line'}" href="<?php echo esc_url( home_url( '/' ) ); ?>#brief" data-add="${id}" data-tier="${i}">Add to my brief</a></article>`).join('');
+    <a class="btn ${i===mid?'':'btn-line'}" href="<?php echo esc_url( home_url( '/' ) ); ?>#brief" data-add="${id}" data-tier="${i}">Add to my brief</a>${(window.NK_SVC&&NK_SVC[id]&&NK_SVC[id]!==location.pathname)?`<a class="pfull" href="${NK_SVC[id]}">See full details →</a>`:''}</article>`).join('');
   plans.style.gridTemplateColumns=n<3?`repeat(${n},minmax(0,380px))`:'';
   plans.style.justifyContent=n<3?'center':'';
 }
@@ -460,7 +460,7 @@ function drawGoals(){
 function draw(added){
   save();counts();
   const n=st.order.length;let one=0,mo=0;
-  if(!n)$('tl').innerHTML='<li class="tempty"><span class="ti"><svg aria-hidden="true"><use href="<?php echo esc_url( home_url( '/' ) ); ?>#i-team"/></svg></span><b>Your team will appear here</b><span class="tt">Pick a goal or tick a service. Or start with one of these:</span><span class="tq"><button type="button" data-qg="0">Get online</button><button type="button" data-qg="7">Grow on social</button><button type="button" data-qg="1">Answer customers faster</button></span></li>';
+  if(!n)$('tl').innerHTML='<li class="tempty"><span class="ti"><svg aria-hidden="true"><use href="#i-team"/></svg></span><b>Your team will appear here</b><span class="tt">Pick a goal or tick a service. Or start with one of these:</span><span class="tq"><button type="button" data-qg="0">Get online</button><button type="button" data-qg="7">Grow on social</button><button type="button" data-qg="1">Answer customers faster</button></span></li>';
   else $('tl').innerHTML=st.order.map(id=>{const s=byId[id],cur=st.sel[id],t=s.t[cur],r=rec(s);one+=t.one||0;mo+=t.mo||0;
     return `<li class="tr"${id===added?'':' style="animation:none"'}><span class="tav" aria-hidden="true">${ROLE[id][1]}</span>
     <div class="who"><b>${ROLE[id][0]}</b><span>${s.n} <em>·</em> ${t.f.join(', ')}</span></div>
