@@ -1314,3 +1314,7 @@
   .fqc.open .sofg .me{animation:sofpop .4s cubic-bezier(.23,1,.32,1) .2s both}
   .fqc.open .sofq .a{animation:sofpop .4s cubic-bezier(.23,1,.32,1) .5s both}
 }
+/* score ring: draw the arc, don't clip it */
+.sofs .ring circle.f{stroke-dasharray:94.25!important;stroke-dashoffset:7.54;animation:none}
+@media (prefers-reduced-motion:no-preference){.fqc.open .sofs .ring circle.f{animation:sofarc 6s cubic-bezier(.65,0,.35,1) infinite!important}}
+@keyframes sofarc{0%{stroke-dashoffset:94.25}40%,94%{stroke-dashoffset:7.54}100%{stroke-dashoffset:7.54;opacity:0}}

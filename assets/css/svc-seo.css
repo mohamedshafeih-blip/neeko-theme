@@ -1690,3 +1690,7 @@
 .sxaos .pim{overflow:hidden;padding:0!important;background:none!important}.sxaos .pim img{width:100%;height:100%;object-fit:cover;display:block}
 /* schema page mock: shares .sxsp with the keyword-tool pointer; restore it here */
 .sxs .sxsp{position:relative;left:auto;top:auto;width:62%;height:auto;z-index:auto;opacity:1;animation:none;pointer-events:auto;display:flex}
+/* score ring: draw the arc, don't clip it */
+.sofs .ring circle.f{stroke-dasharray:94.25!important;stroke-dashoffset:7.54;animation:none}
+@media (prefers-reduced-motion:no-preference){.fqc.open .sofs .ring circle.f{animation:sofarc 6s cubic-bezier(.65,0,.35,1) infinite!important}}
+@keyframes sofarc{0%{stroke-dashoffset:94.25}40%,94%{stroke-dashoffset:7.54}100%{stroke-dashoffset:7.54;opacity:0}}
