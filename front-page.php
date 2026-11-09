@@ -19,7 +19,7 @@ get_header(); ?>
         </div>
         <div class="nbm">
           <div class="sizes2"><div class="lb"><b>Your business size</b><span id="sznote">Choose one and we’ll suggest packages.</span></div><div class="seg2" id="seg2" role="group" aria-label="Business size"></div></div>
-          <div class="tlh"><button type="button" class="tlclr" id="tlclr" hidden>Clear all</button></div><ul class="tl" id="tl" aria-live="polite"></ul>
+          <ul class="tl" id="tl" aria-live="polite"></ul><div class="tlh"><button type="button" class="tlclr" id="tlclr" hidden>Clear all</button></div>
           <div class="nbf">
             <div><p class="big" id="cnt">0 specialists <small>in one scope</small></p><p class="sum" id="sum"></p></div>
             <div class="r"><a class="btn btn-primary" id="send" target="_blank" rel="noopener" aria-disabled="true"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send this brief</a><a class="alt" id="mail" href="mailto:enquiry@neeko.my">Email it to us</a></div>
