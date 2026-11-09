@@ -7,24 +7,24 @@
 function nk_services() {
 	return array(
 		'Connect' => array(
-			array( 'website-design', 'Website design', 'WordPress, mobile-first' ),
-			array( 'seo', 'SEO', 'Get found on Google and AI' ),
-			array( 'social-media', 'Social media', 'Planned, designed, posted' ),
+			array( 'website-design', 'Website design', 'WordPress, mobile-first', 'i-globe' ),
+			array( 'seo', 'SEO', 'Get found on Google and AI', 'i-search' ),
+			array( 'social-media', 'Social media', 'Planned, designed, posted', 'i-ig' ),
 		),
 		'Create'  => array(
-			array( 'graphic-design', 'Graphic design', 'Posters, posts, decks' ),
-			array( 'ai-photography', 'AI photography', 'Brand images, fast' ),
+			array( 'graphic-design', 'Graphic design', 'Posters, posts, decks', 'i-pen' ),
+			array( 'ai-photography', 'AI photography', 'Brand images, fast', 'i-cam' ),
 		),
 		'Build'   => array(
-			array( 'ai-chat-assistant', 'AI chat assistant', 'Answers FAQs, hands over' ),
-			array( 'crm', 'CRM setup', 'Track every lead' ),
-			array( 'integrations', 'Connect your tools', 'API integration' ),
-			array( 'erp', 'ERP and operations', 'Orders, stock, approvals' ),
-			array( 'custom-software', 'Custom software', 'Portals, dashboards, tools' ),
-			array( 'mobile-app', 'Mobile app', 'For customers or staff' ),
+			array( 'ai-chat-assistant', 'AI chat assistant', 'Answers FAQs, hands over', 'i-chat' ),
+			array( 'crm', 'CRM setup', 'Track every lead', 'i-team' ),
+			array( 'integrations', 'Connect your tools', 'API integration', 'i-sheet' ),
+			array( 'erp', 'ERP and operations', 'Orders, stock, approvals', 'i-cart' ),
+			array( 'custom-software', 'Custom software', 'Portals, dashboards, tools', 'i-code' ),
+			array( 'mobile-app', 'Mobile app', 'For customers or staff', 'i-send' ),
 		),
 		'Care'    => array(
-			array( 'website-care', 'Website care', 'Backups, updates, fixes' ),
+			array( 'website-care', 'Website care', 'Backups, updates, fixes', 'i-shield' ),
 		),
 	);
 }
