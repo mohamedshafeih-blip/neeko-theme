@@ -1701,3 +1701,14 @@ footer{padding:96px 0 36px}
 .ibx .ia{background:var(--c)!important;color:#fff!important;border:0!important;box-shadow:none!important}
 .cg i{aspect-ratio:auto;height:118px}
 ::selection{background:rgba(31,91,255,.18)!important;color:inherit!important}
+.t4 .wbd{margin-right:0}
+.t4 .wbh{padding:14px}.t4 .wbh b{font-size:15px}
+.wbc span{display:block;height:auto;padding:7px 8px;border-radius:7px;background:var(--soft)}
+.wbc span b{font-size:10.5px}.wbc span small{font-size:9.5px}
+.cg3{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cg3 div{display:flex;flex-direction:column;gap:4px;min-height:0}
+.cg3 small{font-size:10px;font-weight:600}
+.cg3 i{flex:1;min-height:0;border-radius:9px;background-size:cover;background-position:center 30%}
+.cg3 b{font-size:11px;font-weight:600}
+.cg3 em{font-style:normal;font-size:10px;color:var(--muted);margin-top:-3px}
+@media (prefers-reduced-motion:no-preference){.cg3 i{animation:cgi 8s var(--ease) infinite both}.cg3 div:nth-child(2) i{animation-delay:.15s}.cg3 div:nth-child(3) i{animation-delay:.3s}}
