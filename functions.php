@@ -104,3 +104,10 @@ add_action( 'init', function () {
 	do_action( 'litespeed_purge_all' );
 	if ( function_exists( 'wp_cache_flush' ) ) wp_cache_flush();
 } );
+
+/* Staging: never page-cache, so every deploy shows straight away. */
+add_action( 'send_headers', function () {
+	if ( false !== strpos( home_url(), '//stage.' ) && ! headers_sent() ) {
+		header( 'X-LiteSpeed-Cache-Control: no-cache' );
+	}
+} );
