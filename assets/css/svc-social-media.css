@@ -1767,6 +1767,38 @@
 :root[data-theme="dark"] .soupl{background:rgba(11,14,20,.55)}
 .soigg{position:relative}
 .soupl{inset:0;border-radius:4px;background:rgba(255,255,255,.5);padding-top:10px}
+/* profile tile v3: full New post screen, then slide to profile (10s loop) */
+.soig{overflow:hidden;justify-content:stretch;padding:0;margin:-2px}
+.sotrk{display:flex;width:200%;flex:1;transform:translateX(-50%)}
+.sopn{width:50%;flex:none;display:flex;flex-direction:column;gap:12px;justify-content:center;padding:2px;box-sizing:border-box;min-width:0}
+.sonp{justify-content:flex-start;gap:10px}
+.sonph{display:flex;align-items:center;justify-content:space-between;height:32px;border-bottom:1px solid var(--hair);padding-bottom:6px}
+.sonph .x{font-size:13px;color:var(--muted);width:24px}.sonph b{font-size:13.5px}
+.soshr{display:inline-grid;font-size:12.5px;font-weight:700;color:#1f5bff}.soshr>span{grid-area:1/1;text-align:right}.soshr .b{opacity:0;color:var(--muted)}
+.sonpi{display:block;width:100%;aspect-ratio:1.1;border-radius:10px;overflow:hidden}.sonpi img{width:100%;height:100%;object-fit:cover;display:block}
+.sonpc{font-size:12.5px;line-height:1.45;color:var(--ink)}.sonpc i{font-style:normal;color:#1f5bff;font-weight:600}
+.sonpr{display:flex;align-items:center;justify-content:space-between;font-size:12px;padding:9px 0;border-top:1px solid var(--hair)}
+.sonpr span{font-weight:600}.sonpr em{font-style:normal;color:var(--muted)}
+.sonpb{display:block;height:3px;border-radius:9px;background:var(--soft-2);overflow:hidden;margin-top:auto}.sonpb i{display:block;height:100%;width:100%;background:#1f5bff;transform-origin:left;transform:scaleX(0)}
+.soig .sopt{z-index:6}
+@media (prefers-reduced-motion:no-preference){
+  .sotrk{animation:sotrk 10s cubic-bezier(.65,0,.35,1) infinite}
+  .soshr .a{animation:soshra 10s steps(1) infinite}.soshr .b{animation:soshrb 10s steps(1) infinite}
+  .sonpb i{animation:sonpb 10s cubic-bezier(.4,0,.2,1) infinite}
+  .sonew{animation:sonew3 10s cubic-bezier(.23,1,.32,1) infinite}
+  .sonw{animation:sonw3 10s ease infinite}
+  .soswp span:first-child{animation:soswa3 10s steps(1) infinite}.soswp span:last-child{animation:soswb3 10s steps(1) infinite}
+}
+@keyframes sotrk{0%,42%{transform:none;opacity:1}50%,94%{transform:translateX(-50%);opacity:1}97%{transform:translateX(-50%);opacity:0}97.5%{transform:none;opacity:0}100%{transform:none;opacity:1}}
+@keyframes soshra{0%{opacity:1}29%{opacity:0}}
+@keyframes soshrb{0%{opacity:0}29%{opacity:1}}
+@keyframes sonpb{0%,29%{transform:scaleX(0)}42%,100%{transform:scaleX(1)}}
+@keyframes sonew3{0%,52%{opacity:0;transform:scale(.88)}58%,100%{opacity:1;transform:none}}
+@keyframes sonw3{0%,56%{opacity:0;transform:scale(.7)}62%,94%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes soswa3{0%{opacity:1}55%{opacity:0}}
+@keyframes soswb3{0%{opacity:0}55%{opacity:1}}
+.soupl{display:none!important}
+.sonpi{flex:1 1 auto;aspect-ratio:auto;min-height:160px}
 
 olor:#fff}}
 /* report chart: reveal with clip (dashes break with non-scaling stroke) */
