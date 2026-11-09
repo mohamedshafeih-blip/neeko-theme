@@ -1703,6 +1703,7 @@
 /* insights fills its window height */
 .pbg>.pmw:has(.sodb){display:flex;flex-direction:column}.pbg>.pmw:has(.sodb)>.pmb{flex:1;display:flex;flex-direction:column}
 .sodb{flex:1}.sodbr{flex:1;align-items:stretch}
+.pbg>.pmw.wide>.pmb>.sodb{flex:1 1 auto}
 
 olor:#fff}}
 /* report chart: reveal with clip (dashes break with non-scaling stroke) */
