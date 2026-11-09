@@ -13,7 +13,8 @@
 <script>
 (()=>{
 const nav=document.getElementById('nav'),mb=document.getElementById('mb');
-const setNav=o=>{nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Menu');document.documentElement.classList.toggle('mpo',o)};
+const mp=document.getElementById('mp'),mpEnd=()=>mp&&mp.classList.toggle('end',mp.scrollTop+mp.clientHeight>=mp.scrollHeight-4);if(mp)mp.addEventListener('scroll',mpEnd,{passive:true});
+const setNav=o=>{nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Menu');document.documentElement.classList.toggle('mpo',o);if(o)requestAnimationFrame(mpEnd)};
 mb.onclick=()=>setNav(!nav.classList.contains('open'));
 nav.querySelectorAll('.mp a').forEach(a=>{a.addEventListener('click',()=>setNav(false));const u=new URL(a.href,location.href);if(u.pathname===location.pathname&&!u.hash&&u.pathname!=='/')a.setAttribute('aria-current','page')});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){setNav(false);mb.focus()}});
