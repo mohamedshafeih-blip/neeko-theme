@@ -1791,3 +1791,5 @@
 @media (min-width:1101px){.pjb2 .pjd.pbg[data-k="0"]{grid-template-areas:"b w w" "h a i"!important}.pjd[data-k="0"] .gdq{justify-content:space-between}}
 @media (max-width:1100px){.pjd[data-k="0"] .gdqr:nth-child(n+5){display:none}}
 .gdrq .gdrqm{flex:1;display:flex;flex-direction:column}.gdrq .gdrqm>p{flex:1}
+/* stage 4: queue shorter, print preview taller */
+@media (min-width:1101px){.pjb2 .pjd.pbg[data-k="3"]{grid-template-areas:"w w b" "w w a" "i h a"!important;grid-template-rows:auto 1fr auto!important}.pjd[data-k="3"] .gdq2{flex:0 0 auto!important}.pjd[data-k="3"] .gdppa{min-height:200px}}
