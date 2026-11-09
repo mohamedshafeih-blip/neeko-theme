@@ -41,7 +41,7 @@ get_header(); ?>
           <div class="aip"><svg aria-hidden="true"><use href="#i-search"/></svg><span>web design kuala lumpur</span></div>
           <ol class="rkl"><li class="me"><b class="rn"></b><span>yourbrand.my</span><em>↑ 3</em></li><li class="o1"><b class="rn"></b><span>agency-a.my</span></li><li class="o2"><b class="rn"></b><span>agency-b.my</span></li><li class="o3"><b class="rn"></b><span>agency-c.my</span></li></ol>
           </div></div>
-        <div class="bd"><h3>Connect</h3><p>Mobile-first WordPress websites, SEO and social media that bring the right people to you.</p><?php echo nk_svc_chips( 'Connect' ); ?><a class="btn btn-line" href="#brief">Plan a website <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div>
+        <div class="bd"><h3>Connect</h3><p>Mobile-first WordPress websites, SEO and social media that bring the right people to you.</p><a class="btn btn-line" href="#brief">Plan a website <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div>
       </article>
       <article class="fc rv">
         <div class="pv"><div class="aiw">
@@ -50,12 +50,12 @@ get_header(); ?>
           <div class="aii" style="background-image:url(<?php echo NK_URI; ?>/assets/img/7805d5d69752.jpg)"><span class="gen"><i></i>Generating…</span><span class="bar"><i></i></span></div>
           <div class="aif"><span>1 of 100</span><b>100 images from RM499</b></div>
         </div></div>
-        <div class="bd"><h3>Create</h3><p>Posters, social posts, decks and AI brand photography, designed in days, not weeks.</p><?php echo nk_svc_chips( 'Create' ); ?><a class="btn btn-blue" href="#brief">Brief a designer <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div>
+        <div class="bd"><h3>Create</h3><p>Posters, social posts, decks and AI brand photography, designed in days, not weeks.</p><a class="btn btn-blue" href="#brief">Brief a designer <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div>
       </article>
       <article class="fc rv">
         <div class="pv"><div class="ch"><p class="u">Do you deliver to Shah Alam?</p><p class="a">Yes! Orders before 3pm arrive next day. Want me to pass you to our team?</p><div class="ty"><i></i><i></i><i></i></div></div>
           <div class="fl"><i><svg><use href="#i-chat"/></svg></i>English + BM</div></div>
-        <div class="bd"><h3>Build</h3><p>AI chat assistants, CRM, custom software and apps that answer faster and cut admin work.</p><?php echo nk_svc_chips( 'Build' ); ?><a class="btn btn-line" href="#brief">Scope a build <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div>
+        <div class="bd"><h3>Build</h3><p>AI chat assistants, CRM, custom software and apps that answer faster and cut admin work.</p><a class="btn btn-line" href="#brief">Scope a build <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div>
       </article>
     </div>
   </div>
