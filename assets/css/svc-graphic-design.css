@@ -1785,3 +1785,5 @@
 .gdrqbw .gdrqb{flex:none}
 .gdrqt{position:absolute;right:0;bottom:calc(100% + 6px);white-space:nowrap}
 @media (max-width:700px){.gdrqbw .gdatn{display:none}}
+/* stage 3: overview top-left, what happens below */
+@media (min-width:1101px){.pjb2 .pjd.pbg[data-k="2"]{grid-template-areas:"i w w" "i w w" "h a b"!important}}
