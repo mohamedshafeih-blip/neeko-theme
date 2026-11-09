@@ -22,10 +22,10 @@ function nk_page_key() {
 
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'nk-fonts', 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap', array(), null );
-	wp_enqueue_style( 'nk-site', NK_URI . '/assets/css/site.css', array(), NK_VER );
+	wp_enqueue_style( 'nk-site', NK_URI . '/assets/css/site.css', array(), filemtime( NK_DIR . '/assets/css/site.css' ) );
 	$k = nk_page_key();
 	if ( $k && 'home' !== $k ) {
-		wp_enqueue_style( 'nk-svc-' . $k, NK_URI . '/assets/css/svc-' . $k . '.css', array( 'nk-site' ), NK_VER );
+		wp_enqueue_style( 'nk-svc-' . $k, NK_URI . '/assets/css/svc-' . $k . '.css', array( 'nk-site' ), filemtime( NK_DIR . '/assets/css/svc-' . $k . '.css' ) );
 	}
 	// Keep the front end lean: drop block-editor styles this theme doesn't use.
 	wp_dequeue_style( 'wp-block-library' );
@@ -89,3 +89,18 @@ add_action( 'wp_head', function () {
 		echo '<style>#nav{top:32px}@media (max-width:782px){#nav{top:46px}}</style>' . "\n";
 	}
 }, 99 );
+
+/* After each deploy (new git commit), purge the page cache once. */
+add_action( 'init', function () {
+	$head = @file_get_contents( NK_DIR . '/.git/HEAD' );
+	if ( ! $head ) return;
+	$head = trim( $head );
+	if ( 0 === strpos( $head, 'ref: ' ) ) {
+		$ref  = @file_get_contents( NK_DIR . '/.git/' . substr( $head, 5 ) );
+		$head = $ref ? trim( $ref ) : $head;
+	}
+	if ( get_option( 'nk_deployed' ) === $head ) return;
+	update_option( 'nk_deployed', $head, false );
+	do_action( 'litespeed_purge_all' );
+	if ( function_exists( 'wp_cache_flush' ) ) wp_cache_flush();
+} );

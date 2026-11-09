@@ -2,6 +2,7 @@
   <div class="nvb">
     <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Neeko home"><svg class="lgi" viewBox="0 0 32 32" aria-hidden="true"><path fill="#1f5bff" d="M16 3c9.6 0 13 3.4 13 13s-3.4 13-13 13S3 25.6 3 16 6.4 3 16 3Z"/><rect x="10.2" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/><rect x="18" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/></svg><span class="wm">Neeko</span></a>
     <ul class="nl">
+      <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
       <?php foreach ( nk_services() as $g => $items ) : ?><li><button type="button" aria-haspopup="true"><?php echo esc_html( $g ); ?><svg class="cv" aria-hidden="true"><use href="#i-cv"/></svg></button>
         <div class="dd"><?php foreach ( $items as $s ) : ?><a href="<?php echo esc_url( nk_svc_url( $s[0] ) ); ?>"><i><svg aria-hidden="true"><use href="#<?php echo esc_attr( $s[3] ); ?>"/></svg></i><b><?php echo esc_html( $s[1] ); ?></b><small><?php echo esc_html( $s[2] ); ?></small></a><?php endforeach; ?></div></li>
       <?php endforeach; ?>
