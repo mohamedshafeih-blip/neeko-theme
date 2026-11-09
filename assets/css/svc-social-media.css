@@ -1704,6 +1704,11 @@
 .pbg>.pmw:has(.sodb){display:flex;flex-direction:column}.pbg>.pmw:has(.sodb)>.pmb{flex:1;display:flex;flex-direction:column}
 .sodb{flex:1}.sodbr{flex:1;align-items:stretch}
 .pbg>.pmw.wide>.pmb>.sodb{flex:1 1 auto}
+/* posting overlay sits above the placeholder icon */
+.sopo{z-index:2;background:rgba(255,255,255,.94);display:flex;align-items:center;justify-content:center;gap:6px;font-size:10px}
+.sopo::before{content:"";width:12px;height:12px;border-radius:50%;border:2px solid #d5dbe6;border-top-color:#1f5bff;animation:pspin .8s linear infinite}
+.sonw{z-index:2}
+:root[data-theme="dark"] .sopo{background:rgba(19,24,36,.94)}
 
 olor:#fff}}
 /* report chart: reveal with clip (dashes break with non-scaling stroke) */
