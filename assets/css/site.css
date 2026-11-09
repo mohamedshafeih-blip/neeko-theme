@@ -1459,3 +1459,5 @@ footer{padding:96px 0 36px}
 .fc .bd .svl{margin-top:auto;margin-bottom:16px}
 .nr .login{white-space:nowrap}
 .nl .dd{min-width:280px}
+
+.pfw{text-align:center;margin:22px 0 0}.pfw:empty{display:none}.pfw .pfull{display:inline-flex;align-items:center;height:42px;padding:0 18px;border-radius:999px;border:1px solid var(--hair);background:var(--card);margin:0;color:var(--ink)}

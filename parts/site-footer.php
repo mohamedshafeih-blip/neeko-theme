@@ -295,7 +295,7 @@ function show(id){
     <div class="pr num">${price(t)}
     ${F.d?`<p class="fr">${F.d[i]}</p>`:''}
     <ul>${(F.t?F.t[i]:t.f).map(f=>`<li>${ck}<span>${f}</span></li>`).join('')}</ul>
-    <a class="btn ${i===mid?'':'btn-line'}" href="<?php echo esc_url( home_url( '/' ) ); ?>#brief" data-add="${id}" data-tier="${i}">Add to my brief</a>${(window.NK_SVC&&NK_SVC[id]&&NK_SVC[id]!==location.pathname)?`<a class="pfull" href="${NK_SVC[id]}">See full details →</a>`:''}</article>`).join('');
+    <a class="btn ${i===mid?'':'btn-line'}" href="<?php echo esc_url( home_url( '/' ) ); ?>#brief" data-add="${id}" data-tier="${i}">Add to my brief</a></article>`).join('');(function(){var w=document.getElementById('pfw');if(!w){w=document.createElement('p');w.id='pfw';w.className='pfw';plans.after(w)}var u=window.NK_SVC&&NK_SVC[id];w.innerHTML=(u&&u!==location.pathname)?'<a class="pfull" href="'+u+'">See the full '+(tabs.querySelector('[data-id="'+id+'"]')||{textContent:''}).textContent.trim()+' page →</a>':'';})();
   plans.style.gridTemplateColumns=n<3?`repeat(${n},minmax(0,380px))`:'';
   plans.style.justifyContent=n<3?'center':'';
 }
