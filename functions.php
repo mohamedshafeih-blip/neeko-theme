@@ -17,6 +17,7 @@ function nk_page_key() {
 	if ( is_front_page() ) return 'home';
 	if ( is_page( 'website-design' ) ) return 'website-design';
 	if ( is_page( 'seo' ) ) return 'seo';
+	if ( is_page( 'social-media' ) ) return 'social-media';
 	return '';
 }
 
@@ -64,7 +65,7 @@ remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 
 /* On activation: create the three pages (if missing) and set the homepage. */
 add_action( 'after_switch_theme', function () {
-	$pages = array( 'home' => 'Home', 'website-design' => 'Website design', 'seo' => 'SEO' );
+	$pages = array( 'home' => 'Home', 'website-design' => 'Website design', 'seo' => 'SEO', 'social-media' => 'Social media' );
 	$ids   = array();
 	foreach ( $pages as $slug => $title ) {
 		$p = get_page_by_path( $slug );
@@ -110,4 +111,16 @@ add_action( 'send_headers', function () {
 	if ( false !== strpos( home_url(), '//stage.' ) && ! headers_sent() ) {
 		header( 'X-LiteSpeed-Cache-Control: no-cache' );
 	}
+} );
+
+/* nk_ensure_pages: create approved service pages once if they don't exist yet (no manual step after deploy). */
+add_action( 'init', function () {
+	$want = array( 'social-media' => 'Social media' );
+	if ( get_option( 'nk_pages_v' ) === implode( ',', array_keys( $want ) ) ) return;
+	foreach ( $want as $slug => $title ) {
+		if ( ! get_page_by_path( $slug ) ) {
+			wp_insert_post( array( 'post_title' => $title, 'post_name' => $slug, 'post_status' => 'publish', 'post_type' => 'page' ) );
+		}
+	}
+	update_option( 'nk_pages_v', implode( ',', array_keys( $want ) ) );
 } );
