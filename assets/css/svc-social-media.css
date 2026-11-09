@@ -1799,6 +1799,44 @@
 @keyframes soswb3{0%{opacity:0}55%{opacity:1}}
 .soupl{display:none!important}
 .sonpi{flex:1 1 auto;aspect-ratio:auto;min-height:160px}
+/* FAQ mini windows */
+.sofp{display:grid;gap:6px}
+.sofp>div{display:flex;align-items:center;gap:5px;flex-wrap:wrap;padding:7px 9px;border-radius:10px;background:var(--soft)}
+.sofp>div.on{background:#e8efff;box-shadow:inset 0 0 0 1.5px #1f5bff}
+.sofp b{width:52px;font-size:11.5px}
+.sofp span{font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:99px;background:var(--card);border:1px solid var(--hair)}
+.sofp i{font-style:normal;font-size:10px;color:var(--muted)}
+.sofr{display:flex;gap:10px;align-items:center;padding:8px;border-radius:12px;background:var(--soft)}
+.sofrt{width:62px;height:62px;flex:none;border-radius:8px;overflow:hidden}.sofrt img{width:100%;height:100%;object-fit:cover;display:block}
+.sofr>div{display:grid;gap:3px;min-width:0}.sofr b{font-size:12.5px}.sofr small{font-size:10.5px;color:var(--muted)}
+.sofrb{display:flex;gap:6px;margin-top:4px}.sofrb em{font-style:normal;font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:99px}
+.sofrb .c{background:var(--card);border:1px solid var(--hair)}
+.sofrb .a{display:inline-grid;background:#16a34a;color:#fff}.sofrb .a>span{grid-area:1/1}.sofrb .a .x{opacity:0}
+.sofi{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sofi>div{display:grid;gap:2px;padding:8px 10px;border-radius:10px;background:var(--soft)}
+.sofi small{font-size:10px;font-weight:700;color:var(--muted)}.sofi b{font-size:16px}
+.sofi svg{width:100%;height:18px;overflow:visible}
+.sofn{display:block;margin-top:8px;font-size:10.5px;color:var(--muted)}
+.sofv{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.sofv span{position:relative;aspect-ratio:1;border-radius:9px;overflow:hidden}
+.sofv img{width:100%;height:100%;object-fit:cover;display:block}
+.sofv em{position:absolute;left:5px;bottom:5px;font-style:normal;font-size:9.5px;font-weight:700;background:rgba(255,255,255,.92);color:var(--ink);padding:2px 6px;border-radius:99px;white-space:nowrap}
+.sofv .x img{filter:grayscale(.6) opacity(.7)}.sofv .x em{background:var(--nk-yel-t,#fff8d6);color:var(--nk-yel-ink,#7a6400)}
+@media (prefers-reduced-motion:no-preference){
+  .fqc.open .sofrb .a{animation:sofra 6s ease infinite}.fqc.open .sofrb .a .x{animation:sofrx 6s steps(1) infinite}.fqc.open .sofrb .a .y{animation:sofry 6s steps(1) infinite}
+  .fqc.open .sofp>div.on{animation:soring 3s ease-in-out infinite}
+  .fqc.open .sofi path{clip-path:inset(0 0 0 0);animation:soln 6s cubic-bezier(.65,0,.35,1) infinite}
+  .fqc.open .sofv span{animation:sopop .4s cubic-bezier(.23,1,.32,1) both}.fqc.open .sofv span:nth-child(2){animation-delay:.12s}.fqc.open .sofv span:nth-child(3){animation-delay:.24s}
+}
+@keyframes sofra{0%,40%{background:#1f5bff;transform:none}42%{transform:scale(.92)}44%,92%{background:#16a34a;transform:none}100%{background:#1f5bff}}
+@keyframes sofrx{0%{opacity:1}43%{opacity:0}95%{opacity:1}}
+@keyframes sofry{0%{opacity:0}43%{opacity:1}95%{opacity:0}}
+.sofa{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sofa>div{display:flex;flex-direction:column;gap:5px;padding:9px;border-radius:10px;background:#e8efff}
+.sofa>div.x{background:var(--soft)}
+.sofa small{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#1f5bff}.sofa .x small{color:var(--muted)}
+.sofa span{font-size:11px;font-weight:600;padding:5px 8px;border-radius:7px;background:var(--card)}
+.sofv span{aspect-ratio:1.25}
 
 olor:#fff}}
 /* report chart: reveal with clip (dashes break with non-scaling stroke) */
