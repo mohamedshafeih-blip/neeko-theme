@@ -1743,6 +1743,30 @@
 .sopo{display:none!important}
 .sonw{background:#1f5bff;color:#fff}
 :root[data-theme="dark"] .soupc{background:#1c2232}
+/* upload pop-up v2: compact IG-style bar */
+.soupl{background:rgba(255,255,255,.55);place-items:start center;padding-top:42%}
+.soupc{width:90%;max-width:300px;display:flex;align-items:center;gap:10px;padding:8px 10px 8px 8px;border-radius:12px;grid-template-columns:none}
+.soupi{width:40px;height:40px;flex:none;aspect-ratio:auto;border-radius:7px}
+.soupm{flex:1;min-width:0;display:grid;gap:4px}
+.soupm>b{font-size:11.5px;line-height:1.2}
+.soups{position:relative;height:13px;margin:0;font-size:10.5px;font-weight:600}
+.soups em{position:absolute;left:0;top:0;font-style:normal;opacity:0;white-space:nowrap;color:var(--muted)}.soups .s3{color:var(--g-ink,#147a3d);opacity:1}
+.soupb{display:block;height:3px;border-radius:9px;background:var(--soft-2);overflow:hidden}
+.soupk{position:relative;width:20px;height:20px;flex:none}
+.soupk i{position:absolute;inset:0;display:grid;place-items:center;font-style:normal}
+.soupk .sp{border-radius:50%;border:2px solid #d5dbe6;border-top-color:#1f5bff;opacity:0}
+.soupk .ok{border-radius:50%;background:#16a34a;color:#fff;font-size:11px;font-weight:800}
+@media (prefers-reduced-motion:no-preference){
+  .soups .s1{animation:sous1 9s steps(1) infinite}.soups .s2{animation:sous2 9s steps(1) infinite}.soups .s3{animation:sous3 9s steps(1) infinite}
+  .soupk .sp{animation:souksp 9s steps(1) infinite,pspin .8s linear infinite}.soupk .ok{animation:souok 9s cubic-bezier(.34,1.4,.64,1) infinite}
+}
+@keyframes souksp{0%{opacity:1}48%{opacity:0}}
+@keyframes souok{0%,47%{opacity:0;transform:scale(.5)}50%,100%{opacity:1;transform:none}}
+@keyframes soupl{0%{opacity:0}4%,58%{opacity:1}64%,100%{opacity:0}}
+@keyframes soupc{0%{opacity:0;transform:translateY(-8px)}5%,58%{opacity:1;transform:none}64%,100%{opacity:0;transform:translateY(-6px)}}
+:root[data-theme="dark"] .soupl{background:rgba(11,14,20,.55)}
+.soigg{position:relative}
+.soupl{inset:0;border-radius:4px;background:rgba(255,255,255,.5);padding-top:10px}
 
 olor:#fff}}
 /* report chart: reveal with clip (dashes break with non-scaling stroke) */
