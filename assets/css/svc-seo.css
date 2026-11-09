@@ -1634,3 +1634,6 @@
 
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
 @media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
+/* report chart: reveal with clip (dashes break with non-scaling stroke) */
+.sxrc .ln{stroke-dasharray:none!important;animation-name:sxln2!important}
+@keyframes sxln2{0%{clip-path:inset(0 100% 0 0)}38%,94%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 0);opacity:0}}

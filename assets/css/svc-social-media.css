@@ -1679,6 +1679,15 @@
 .socmt p b{font-size:10px;color:var(--muted);font-weight:700}
 .socmt p span{color:var(--ink);font-weight:600}
 :root[data-theme="dark"] .socmt{background:#262c38}
+/* chart: reveal with clip instead of dashes (dashes break with non-scaling stroke) */
+.sorc2 .ln{stroke-dasharray:none!important}
+@keyframes soln{0%{clip-path:inset(0 100% 0 0)}38%,94%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 0);opacity:0}}
+.sorc2 svg{overflow:visible}
+/* top post: real photo */
+.sophoto::after{display:none}
+.sophoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.soplay{box-shadow:0 2px 8px rgba(0,0,0,.25)}.soplay::after{border-left-color:#1f5bff}
+.sophoto img{object-position:50% 48%}
 
 
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
