@@ -1620,6 +1620,15 @@
 .pjd:not([hidden]) .sxtmc .sxpbtn .t2{animation:sxfin .3s 3.5s both}
 .pjd:not([hidden]) .sxpub .sxlive{animation:pbbin .35s cubic-bezier(.23,1,.32,1) 3.7s both}
 @media (prefers-reduced-motion:reduce){.sxtmm,.sxtmc,.sxtmc .sxpp{animation:none!important}}
+/* phone: stage slider = dots on the rail + current stage caption below */
+@media (max-width:700px){
+  .pjth{font-size:0!important;padding:0 4px!important;gap:0!important}
+  .pjth i{font-size:12px}
+  .pjlb{position:static!important;display:flex!important;justify-content:center;width:auto!important;height:auto!important;overflow:visible!important;clip:auto!important;clip-path:none!important;margin-top:14px!important}
+  .pjlb button{display:none!important}
+  .pjlb button.on{display:inline-grid!important;width:auto!important;max-width:100%;padding:8px 16px 8px 8px;border-radius:999px}
+  .pjlb button.on .pjt{font-size:13.5px;white-space:nowrap;width:auto!important}
+}
 
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
 @media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
