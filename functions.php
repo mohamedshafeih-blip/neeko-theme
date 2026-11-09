@@ -19,6 +19,7 @@ function nk_page_key() {
 	if ( is_page( 'seo' ) ) return 'seo';
 	if ( is_page( 'social-media' ) ) return 'social-media';
 	if ( is_page( 'graphic-design' ) ) return 'graphic-design';
+	if ( is_page( 'ai-photography' ) ) return 'ai-photography';
 	return '';
 }
 
@@ -116,7 +117,7 @@ add_action( 'send_headers', function () {
 
 /* nk_ensure_pages: create approved service pages once if they don't exist yet (no manual step after deploy). */
 add_action( 'init', function () {
-	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design' );
+	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design', 'ai-photography' => 'AI photography' );
 	if ( get_option( 'nk_pages_v' ) === implode( ',', array_keys( $want ) ) ) return;
 	foreach ( $want as $slug => $title ) {
 		if ( ! get_page_by_path( $slug ) ) {
