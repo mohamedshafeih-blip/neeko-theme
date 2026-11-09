@@ -1567,5 +1567,17 @@
 .bt.tall .pv.btv>.wg:has(.sxg){display:flex!important;flex-direction:column!important;flex:1}
 .bt.tall .pv.btv>.wg:has(.sxg)>.sxg{flex:1}
 .sxrp{padding:12px;gap:10px}.sxrc{min-height:60px;margin-top:20px}
+
+/* SERP tile: stack results, no big gaps */
+.sxgl{justify-content:flex-start!important;gap:10px!important;overflow:hidden;min-height:0}
+.sxg{min-height:0}
+/* SEMrush table pointer */
+.sxsm{position:relative}
+.sxsp{position:absolute;left:0;top:0;width:18px;height:18px;z-index:5;pointer-events:none;opacity:0;animation-duration:9s;animation-timing-function:cubic-bezier(.65,0,.35,1);animation-iteration-count:infinite;animation-fill-mode:both}
+@media (prefers-reduced-motion:reduce){.sxsp{display:none}}
+.sxsm .sxsp{background:none!important;padding:0!important;border-radius:0!important;width:18px!important;height:18px!important;box-shadow:none!important;overflow:visible}
+
+.sxg .pgq .caret{animation:pblink 1s step-end infinite}.sxgq{white-space:nowrap}
+
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
 @media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
