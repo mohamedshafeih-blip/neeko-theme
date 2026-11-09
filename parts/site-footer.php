@@ -459,7 +459,7 @@ function drawGoals(){
 }
 function draw(added){
   save();counts();
-  const n=st.order.length;let one=0,mo=0;
+  const n=st.order.length;let one=0,mo=0;if($('tlclr'))$('tlclr').hidden=!n;
   if(!n)$('tl').innerHTML='<li class="tempty"><span class="ti"><svg aria-hidden="true"><use href="#i-team"/></svg></span><b>Your team will appear here</b><span class="tt">Pick a goal or tick a service. Or start with one of these:</span><span class="tq"><button type="button" data-qg="0">Get online</button><button type="button" data-qg="7">Grow on social</button><button type="button" data-qg="1">Answer customers faster</button></span></li>';
   else $('tl').innerHTML=st.order.map(id=>{const s=byId[id],cur=st.sel[id],t=s.t[cur],r=rec(s);one+=t.one||0;mo+=t.mo||0;
     return `<li class="tr"${id===added?'':' style="animation:none"'}><span class="tav" aria-hidden="true">${ROLE[id][1]}</span>
@@ -490,7 +490,7 @@ document.addEventListener('click',e=>{
   const z=e.target.closest('[data-size]');if(z){st.size=+z.dataset.size;st.order.forEach(id=>st.sel[id]=rec(byId[id]));drawSize();draw();return}
   const x=e.target.closest('[data-x]');if(x){const id=x.dataset.x;st.extra=(st.extra||[]).filter(v=>v!==id);if(goalSet().has(id)){st.removed=(st.removed||[]).filter(v=>v!==id);st.removed.push(id)}sync();drawGoals();draw();return}
   const ct=e.target.closest('[data-cat]');if(ct){cat=ct.dataset.cat==='all'?null:ct.dataset.cat;document.querySelectorAll('[data-cat]').forEach(b=>b.setAttribute('aria-selected',b.dataset.cat===(cat||'all')));drawList();return}
-  if(e.target.closest('#clr')){st.goals=[];st.extra=[];st.removed=[];sync();drawGoals();draw();return}
+  if(e.target.closest('#tlclr')){st.goals=[];st.extra=[];st.removed=[];[...st.order].forEach(remove);sync();drawGoals();draw();return}   if(e.target.closest('#clr')){st.goals=[];st.extra=[];st.removed=[];sync();drawGoals();draw();return}
 });
 if(!_saved)sync();drawSize();drawGoals();draw();$('goals').addEventListener('scroll',gfade,{passive:true});addEventListener('resize',gfade);requestAnimationFrame(gfade);
 })();
