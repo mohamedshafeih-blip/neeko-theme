@@ -15,11 +15,11 @@ get_header(); ?>
       <div class="nbb">
         <div class="nbs">
           <div class="qk"><p class="qkh"><span>What are your goals?</span><button type="button" class="clr" id="clr" hidden aria-label="Clear goals" title="Clear goals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg></button></p><div class="gls" id="goals"></div><small id="goalhint"></small></div>
-          <div class="list" id="list"></div>
+          <div class="list" id="list"></div><div class="tlh"><button type="button" class="tlclr" id="tlclr" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4.4h4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Start over</button></div>
         </div>
         <div class="nbm">
           <div class="sizes2"><div class="lb"><b>Your business size</b><span id="sznote">Choose one and we’ll suggest packages.</span></div><div class="seg2" id="seg2" role="group" aria-label="Business size"></div></div>
-          <ul class="tl" id="tl" aria-live="polite"></ul><div class="tlh"><button type="button" class="tlclr" id="tlclr" hidden>Clear all</button></div>
+          <ul class="tl" id="tl" aria-live="polite"></ul>
           <div class="nbf">
             <div><p class="big" id="cnt">0 specialists <small>in one scope</small></p><p class="sum" id="sum"></p></div>
             <div class="r"><a class="btn btn-primary" id="send" target="_blank" rel="noopener" aria-disabled="true"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send this brief</a><a class="alt" id="mail" href="mailto:enquiry@neeko.my">Email it to us</a></div>
