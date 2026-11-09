@@ -1653,6 +1653,32 @@
 @keyframes sobm{0%,48%{opacity:0}51%,91%{opacity:1}94%,100%{opacity:0}}
 @keyframes solen{0%,47%{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(16,24,40,.14)}48%,96%{background:transparent;color:var(--muted);box-shadow:none}97%,100%{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(16,24,40,.14)}}
 @keyframes solbm{0%,47%{background:transparent;color:var(--muted);box-shadow:none}48%,96%{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(16,24,40,.14)}97%,100%{background:transparent;color:var(--muted);box-shadow:none}}
+/* artboards + reel thumb: real photos */
+.soph{left:0!important;right:0!important;bottom:0!important;top:auto!important;width:auto!important;height:50%!important;border-radius:0!important;background:none!important;overflow:hidden}
+.soph img{display:block;width:100%;height:100%;object-fit:cover}
+.sostr .soph{height:56%!important}
+.sosub{top:62px}.sostr .sosub{top:50px}
+.solg{box-shadow:0 0 0 2px #fff}
+.sotlv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.sotlv em{z-index:1}
+.tight .sosub{top:56px}
+/* reel edit polish */
+.sotlk{gap:7px 8px}
+.sotru{display:flex;justify-content:space-between;font-size:9px;font-weight:600;color:var(--muted);border-bottom:1px solid var(--hair);padding-bottom:3px}
+.sotk.v{height:30px;gap:3px}
+.sotk.v i{background:var(--im) left center/auto 100% repeat-x!important;border-radius:5px;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+.sotk.v i:nth-child(2){background-position:-30px center!important;box-shadow:inset 0 0 0 2px #1f5bff}
+.sotk.v i:nth-child(3){background-position:-60px center!important}
+.sotk.t i{border-radius:5px}
+.sotlv{border-radius:8px;box-shadow:0 4px 10px -6px rgba(16,24,40,.4)}
+.sotlh{top:14px}
+@keyframes sohead{from{left:44px}to{left:calc(100% - 2px)}}
+/* client comment polish: stays inside its card */
+.socmt{left:12px;right:12px;top:16px;align-items:center;gap:7px;padding:7px 9px 7px 7px;border-radius:10px;background:#fff;box-shadow:0 6px 16px -6px rgba(16,24,40,.28)}
+.socmt .pav2{width:22px;height:22px;box-shadow:none}
+.pbg .socmt p{display:grid;gap:1px;background:none;padding:0;box-shadow:none;border-radius:0;font-size:10.5px!important;line-height:1.3;min-width:0}
+.socmt p b{font-size:10px;color:var(--muted);font-weight:700}
+.socmt p span{color:var(--ink);font-weight:600}
+:root[data-theme="dark"] .socmt{background:#262c38}
 
 
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
