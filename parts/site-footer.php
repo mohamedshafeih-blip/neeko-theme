@@ -77,7 +77,7 @@ document.addEventListener('click',e=>{const q=e.target.closest('[data-qg]');if(!
     const t=Math.max(touched[0]?ts(ST[si]):0,touched[1]?tr(RV[s2.value]):0);
     o.classList.add('on');o.querySelectorAll('.sb i').forEach((x,k)=>x.classList.toggle('f',k<=t));const kb=o.querySelector('.kb2');kb.textContent=TIER[t];o.querySelector('b').textContent=`${TIER[t]} business`;
     const btn=document.querySelector(`#seg2 [data-size="${t}"]`);if(btn&&!w._intro&&btn.getAttribute('aria-pressed')!=='true')btn.click()}
-  s2.addEventListener('input',()=>{touched[1]=true;up()});s2.addEventListener('poke',up);up();requestAnimationFrame(up);setTimeout(up,450);addEventListener('load',()=>setTimeout(up,50));
+  s2.addEventListener('input',()=>{touched[1]=true;up()});addEventListener('nk:reset',()=>{ready=false;touched=[false,false];si=0;toW(0,true);s2.value=0;pos(s2,rm(RV[0]));wi.forEach((e,i)=>e.classList.toggle('on',i===0));s2.closest('.bzc').classList.remove('set');o.classList.remove('on');o.querySelectorAll('.sb i').forEach(x=>x.classList.remove('f'));o.querySelector('.kb2').textContent='Not set';setTimeout(()=>{ready=true},700)});s2.addEventListener('poke',up);up();requestAnimationFrame(up);setTimeout(up,450);addEventListener('load',()=>setTimeout(up,50));
   // entrance: auto-set demo (wheel spins up, slider glides, bars fill)
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){
     const S0=si,V0=+s2.value,io3=new IntersectionObserver(es=>{if(!es.some(x=>x.isIntersecting))return;io3.disconnect();
@@ -490,7 +490,7 @@ document.addEventListener('click',e=>{
   const z=e.target.closest('[data-size]');if(z){st.size=+z.dataset.size;st.order.forEach(id=>st.sel[id]=rec(byId[id]));drawSize();draw();return}
   const x=e.target.closest('[data-x]');if(x){const id=x.dataset.x;st.extra=(st.extra||[]).filter(v=>v!==id);if(goalSet().has(id)){st.removed=(st.removed||[]).filter(v=>v!==id);st.removed.push(id)}sync();drawGoals();draw();return}
   const ct=e.target.closest('[data-cat]');if(ct){cat=ct.dataset.cat==='all'?null:ct.dataset.cat;document.querySelectorAll('[data-cat]').forEach(b=>b.setAttribute('aria-selected',b.dataset.cat===(cat||'all')));drawList();return}
-  if(e.target.closest('#tlclr')){st.goals=[];st.extra=[];st.removed=[];[...st.order].forEach(remove);sync();drawGoals();draw();return}   if(e.target.closest('#clr')){st.goals=[];st.extra=[];st.removed=[];sync();drawGoals();draw();return}
+  if(e.target.closest('#tlclr')){st.goals=[];st.extra=[];st.removed=[];st.size=null;[...st.order].forEach(remove);sync();drawSize();drawGoals();draw();dispatchEvent(new Event('nk:reset'));return}   if(e.target.closest('#clr')){st.goals=[];st.extra=[];st.removed=[];sync();drawGoals();draw();return}
 });
 if(!_saved)sync();drawSize();drawGoals();draw();$('goals').addEventListener('scroll',gfade,{passive:true});addEventListener('resize',gfade);requestAnimationFrame(gfade);
 })();
