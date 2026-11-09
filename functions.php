@@ -81,3 +81,10 @@ add_action( 'after_switch_theme', function () {
 	}
 	flush_rewrite_rules();
 } );
+
+/* Keep the fixed menu below the admin bar for logged-in users. */
+add_action( 'wp_head', function () {
+	if ( is_admin_bar_showing() ) {
+		echo '<style>#nav{top:32px}@media (max-width:782px){#nav{top:46px}}</style>' . "\n";
+	}
+}, 99 );
