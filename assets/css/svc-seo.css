@@ -1594,6 +1594,32 @@
 .sxsmr.p{animation:sxrowin .5s cubic-bezier(.23,1,.32,1) both,sxrowp 14s ease infinite both}
 .sxsmr.r0.p{animation-delay:0s,1.4s}.sxsmr.r1.p{animation-delay:.08s,2.2s}.sxsmr.r2.p{animation-delay:.16s,3s}
 .sxgl{padding:6px!important;margin:-6px!important}
+/* stage 3: Teams-style review chat */
+.sxtm{display:flex;flex-direction:column;background:var(--card,#fff);border-radius:10px;overflow:hidden;min-width:0;box-shadow:0 0 0 1px var(--hair)}
+.sxtmh{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-bottom:1px solid var(--hair);font-size:12px}
+.sxtma{display:flex}.sxtma .pav2{width:22px;height:22px;margin-left:-6px;box-shadow:0 0 0 2px var(--card,#fff)}
+.sxtmb{flex:1;display:flex;flex-direction:column;justify-content:center;gap:11px;padding:12px}
+.sxtmm{display:flex;gap:9px;align-items:flex-start}
+.sxtmm .pav2{width:28px;height:28px;flex:none;box-shadow:none}
+.pbg .sxtmn{display:flex;align-items:baseline;gap:6px;margin:0 0 2px!important;font-size:11.5px!important}
+.sxtmn b{font-weight:700}.sxtmm.m2 .sxtmn b{color:#1f5bff}.sxtmn small{font-size:10px;color:var(--muted)}
+.pbg .sxtmt{margin:0!important;font-size:12px!important;line-height:1.45;color:var(--ink)!important}
+.sxtmc{margin-left:37px;border:1px solid var(--hair);border-left:3px solid #1f5bff;border-radius:8px;padding:9px 10px;display:flex;flex-direction:column;gap:8px;background:var(--soft)}
+.pbg .sxtmct{display:flex;align-items:center;gap:6px;margin:0!important;font-size:11.5px!important;font-weight:700;min-width:0}
+.sxtmct i{font-style:normal;font-size:8px;font-weight:800;color:#fff;background:#1f5bff;border-radius:3px;padding:2px 4px;flex:none}
+.sxtmct span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sxtmc .sxpbtn{height:32px;font-size:12px}
+.sxtmi{display:flex;align-items:center;justify-content:space-between;margin:0 12px 12px;padding:7px 10px;border-radius:8px;border:1px solid var(--hair);font-size:11px;color:var(--muted)}
+.sxtmi i{width:14px;height:14px;border-radius:3px;background:#c5d5ff}
+.pjd:not([hidden]) .sxtmm.m1{animation:pbbin .4s cubic-bezier(.23,1,.32,1) .4s both}
+.pjd:not([hidden]) .sxtmm.m2{animation:pbbin .4s cubic-bezier(.23,1,.32,1) 1.1s both}
+.pjd:not([hidden]) .sxtmc{animation:pbbin .4s cubic-bezier(.23,1,.32,1) 1.8s both}
+.pjd:not([hidden]) .sxtmc .sxpp{animation:sxpp 1.5s cubic-bezier(.65,0,.35,1) 2.3s both}
+.pjd:not([hidden]) .sxtmc .sxpbtn{animation:sxbtn .3s 3.45s both}
+.pjd:not([hidden]) .sxtmc .sxpbtn .t1{animation:sxdots .15s 3.45s both}
+.pjd:not([hidden]) .sxtmc .sxpbtn .t2{animation:sxfin .3s 3.5s both}
+.pjd:not([hidden]) .sxpub .sxlive{animation:pbbin .35s cubic-bezier(.23,1,.32,1) 3.7s both}
+@media (prefers-reduced-motion:reduce){.sxtmm,.sxtmc,.sxtmc .sxpp{animation:none!important}}
 
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
 @media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
