@@ -1529,10 +1529,7 @@ footer{padding:96px 0 36px}
 .hwq .rk::after{content:"#1"}
 .hwg{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px}
 .hwg i{border-radius:9px;background-size:cover;background-color:var(--soft);position:relative}
-.hwg .v1{background-position:60% 30%}
-.hwg .v2{background-position:20% 50%;background-size:180%;filter:saturate(.8) hue-rotate(-12deg)}
-.hwg .v3{background-position:80% 20%;background-size:160%;filter:saturate(1.15) brightness(1.04)}
-.hwg .v4{background-position:55% 25%;background-size:200%;filter:grayscale(.15) contrast(1.05)}
+.hwg i{background-position:center 30%}
 .hwg .v1{box-shadow:0 0 0 2px var(--card),0 0 0 4px #1f5bff}
 .hwf{display:flex;align-items:center;justify-content:space-between}
 .hwr{display:flex;gap:4px}.hwr b{height:22px;padding:0 8px;border-radius:7px;border:1px solid var(--hair);display:grid;place-items:center;font-size:10.5px;color:var(--muted);font-weight:600}
