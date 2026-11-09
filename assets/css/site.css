@@ -1455,3 +1455,9 @@ footer{padding:96px 0 36px}
 .nl .dd{min-width:280px}
 
 .pfw{text-align:center;margin:22px 0 0}.pfw:empty{display:none}.pfw .pfull{display:inline-flex;align-items:center;height:42px;padding:0 18px;border-radius:999px;border:1px solid var(--hair);background:var(--card);margin:0;color:var(--ink)}
+/* white buttons turn blue on hover */
+@media (hover:hover) and (pointer:fine){
+  .btn-line,.pfw .pfull{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+  .btn-line:hover,.pfw .pfull:hover{background:#1f5bff;border-color:#1f5bff;color:#fff;text-decoration:none}
+  .pc.hi .btn:hover{background:#fff;color:#1f5bff}
+}

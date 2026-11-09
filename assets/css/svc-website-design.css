@@ -1250,3 +1250,4 @@
 .pbg>.pmw:has(.sxs){display:flex;flex-direction:column}.pbg>.pmw:has(.sxs)>.pmb{flex:1;display:flex;flex-direction:column}
 .pbg .sxs{flex:1;display:flex;align-items:center}.sxsp{gap:8px;padding:12px}.sxsp .pim{height:56px}
 .sxes .lsh{flex:1}.sxes .lsh .pim{height:auto!important;align-self:stretch;min-height:64px}.sxas .lsh{flex:1}.sxas .lsh .pim{height:auto!important;align-self:stretch;min-height:56px}
+@media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}

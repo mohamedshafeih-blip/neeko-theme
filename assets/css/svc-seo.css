@@ -1567,3 +1567,4 @@
 .bt.tall .pv.btv>.wg:has(.sxg){display:flex!important;flex-direction:column!important;flex:1}
 .bt.tall .pv.btv>.wg:has(.sxg)>.sxg{flex:1}
 .sxrp{padding:12px;gap:10px}.sxrc{min-height:60px;margin-top:20px}
+@media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
