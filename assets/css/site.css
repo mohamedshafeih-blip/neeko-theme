@@ -1716,3 +1716,14 @@ footer{padding:96px 0 36px}
 .hwt .hi{width:28px;height:28px;border-radius:50%;background:var(--soft);color:var(--muted);display:grid;place-items:center;flex:none;font-style:normal}
 .hwt .hi svg{width:13px;height:13px}
 .hwt .hi+.hi{margin-left:-2px}
+/* declutter */
+.hw{padding:0 16px 16px;gap:12px}.hwt{margin:0 -16px -2px;padding:0 16px}
+.ibx{gap:6px}.ibr{height:46px}
+.fw{gap:10px}.fw li{padding:11px 12px 11px 8px}
+.bkd span{padding:9px 0}
+.bkp{padding:12px;gap:10px}
+.t4 .wbd{padding:10px;gap:10px}
+.shl{gap:6px}.shl li{height:34px}
+.cg3{gap:10px}
+.hwf{justify-content:flex-end}
+.hw1 .hwq{display:none}
