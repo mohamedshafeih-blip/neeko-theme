@@ -1696,8 +1696,8 @@ footer{padding:96px 0 36px}
 .shl li{animation:shi 9s var(--ease) infinite both}.shl .r2{animation-delay:.3s}.shl .r3{animation-delay:.6s}
 @keyframes shi{0%,8%{opacity:0;transform:translateX(-6px)}16%,100%{opacity:1;transform:none}}
 }
-.ptabs button[aria-selected="true"]{background:var(--blue-soft)!important;color:#1f5bff!important}
 .ptabs button:not([aria-selected="true"]):hover{color:var(--ink)}
 .ptabs.ov.st.en{-webkit-mask-image:none!important;mask-image:none!important}
 .ibx .ia{background:var(--c)!important;color:#fff!important;border:0!important;box-shadow:none!important}
 .cg i{aspect-ratio:auto;height:118px}
+::selection{background:rgba(31,91,255,.18)!important;color:inherit!important}
