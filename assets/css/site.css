@@ -1503,3 +1503,4 @@ footer{padding:96px 0 36px}
 .nbf .big{letter-spacing:-0.01em!important;word-spacing:.04em}.nbf .big small{margin-left:4px}.nbf .sum{letter-spacing:.005em;word-spacing:.12em;margin-top:8px!important}.nbf .sum b{letter-spacing:.01em}
 @media (max-width:640px){.hero .svtg[aria-expanded="false"]~.list{padding:0!important;background:none!important;min-height:0!important}}
 @media (max-width:640px){.hero .nbs .tlh{margin:14px 0 16px!important}}
+@media (max-width:640px){.hero .svtg[aria-expanded="true"]~.list{margin-top:12px!important;border-radius:14px}}
