@@ -1575,3 +1575,11 @@ footer{padding:96px 0 36px}
 @keyframes hm3{0%,30%{opacity:0;transform:translateY(6px)}36%,92%{opacity:1;transform:none}100%{opacity:0}}
 @keyframes hm4{0%,46%{opacity:0;transform:translateY(12px)}53%,92%{opacity:1;transform:none}100%{opacity:0;transform:translateY(12px)}}
 }
+/* tools windows: match feature window chrome */
+#tools .pv .wg{padding:0 14px 14px!important;box-shadow:0 1px 2px rgba(16,24,40,.05),0 8px 24px -12px rgba(16,24,40,.12)}
+#tools .wt{justify-content:flex-start;gap:8px;height:38px;margin:0 -14px 12px;padding:0 14px;border-bottom:1px solid var(--hair);font-size:12px}
+#tools .wt .wtn{margin-right:auto;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#tools .wt .hwd{margin:0}
+#tools .wt .chip{margin-left:0;flex:none;height:22px;padding:0 9px;font-size:10.5px;background:var(--card);color:var(--ink);border-color:var(--hair)}
+#tools .pv>.ig,#tools .pv>.wg{box-shadow:0 1px 2px rgba(16,24,40,.05),0 8px 24px -12px rgba(16,24,40,.12)}
+#tools .wt .hwd i{width:7px;height:7px;border-radius:50%;background:var(--hair);display:block}
