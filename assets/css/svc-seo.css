@@ -1587,6 +1587,12 @@
 .sxsma b{animation-duration:14s;animation-delay:3.6s}
 .sxsm .sxsp{animation-duration:14s}
 .sxaot .sk,.sxaot p{animation-duration:14s}
+/* rows fade in once; only the ticks loop */
+@keyframes sxrowin{from{opacity:0;transform:translateY(4px)}}
+.sxsmr{animation:sxrowin .5s cubic-bezier(.23,1,.32,1) both}
+.sxsmr.r1{animation-delay:.08s}.sxsmr.r2{animation-delay:.16s}.sxsmr.r3{animation-delay:.24s}.sxsmr.r4{animation-delay:.32s}
+.sxsmr.p{animation:sxrowin .5s cubic-bezier(.23,1,.32,1) both,sxrowp 14s ease infinite both}
+.sxsmr.r0.p{animation-delay:0s,1.4s}.sxsmr.r1.p{animation-delay:.08s,2.2s}.sxsmr.r2.p{animation-delay:.16s,3s}
 
 @media (hover:hover) and (pointer:fine){.btn-line:hover{background:#1f5bff!important;border-color:#1f5bff!important;color:#fff!important}}
 @media (hover:hover) and (pointer:fine){.btn-blue{transition:background-color .2s ease}.btn-blue:hover{background:#1546D6!important;color:#fff}}
