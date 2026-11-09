@@ -1688,3 +1688,5 @@
   .fqc.open .sofq .a{animation:sofpop .4s cubic-bezier(.23,1,.32,1) .5s both}
 }
 .sxaos .pim{overflow:hidden;padding:0!important;background:none!important}.sxaos .pim img{width:100%;height:100%;object-fit:cover;display:block}
+/* schema page mock: shares .sxsp with the keyword-tool pointer; restore it here */
+.sxs .sxsp{position:relative;left:auto;top:auto;width:62%;height:auto;z-index:auto;opacity:1;animation:none;pointer-events:auto;display:flex}
