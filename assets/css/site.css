@@ -1445,18 +1445,12 @@ footer{padding:96px 0 36px}
 .dd.ddm a{display:flex;flex-direction:column;gap:2px;padding:8px 10px}
 .dd.ddm a b{font-size:14px}
 .dd.ddm a small{font-size:12px}
-.svl{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px}
-.svl a{display:inline-flex;align-items:center;gap:4px;height:30px;padding:0 12px;border-radius:999px;background:var(--soft);border:1px solid var(--hair);font-size:13px;font-weight:600;color:var(--ink);text-decoration:none}
-.svl a::after{content:"→";color:var(--muted);font-weight:500}
-.svl a:focus-visible{outline:2px solid #1f5bff;outline-offset:2px}
 
 .dd.ddm a{align-items:flex-start;text-align:left}
-.svl{align-content:flex-start;flex:none}
 .pfull{display:block;margin-top:12px;text-align:center;font-size:13.5px;font-weight:600;color:#1f5bff;text-decoration:none}
 .pfull:hover{text-decoration:underline}
 :root[data-theme="dark"] .pfull{color:#8fb0ff}
 .pc.hi .pfull{color:#fff}
-.fc .bd .svl{margin-top:auto;margin-bottom:16px}
 .nr .login{white-space:nowrap}
 .nl .dd{min-width:280px}
 
