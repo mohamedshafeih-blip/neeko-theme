@@ -91,9 +91,26 @@ p{margin:0;text-wrap:pretty}
 .nvb .btn{height:44px}
 .mb{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--hair);background:var(--card);cursor:pointer;place-items:center}
 .mb svg{width:18px;height:18px}
-.mp{display:none;width:min(1200px,100% - 32px);margin:8px auto 0;padding:10px;border-radius:24px;background:var(--card);border:1px solid var(--hair);box-shadow:var(--sh-lg)}
-.mp a{display:block;padding:12px 14px;border-radius:12px;text-decoration:none;font-weight:500}
-.nav.open .mp{display:block}
+.mp{display:none;width:min(560px,100% - 24px);margin:8px auto 0;padding:8px;border-radius:24px;background:var(--card);border:1px solid var(--hair);box-shadow:var(--sh-lg);max-height:calc(100dvh - 92px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.nav.open .mp{display:block;animation:mpIn .22s var(--ease) both}
+@keyframes mpIn{from{opacity:0;transform:translateY(-6px)}}
+.mpg{padding:6px 0 4px}.mpg+.mpg{border-top:1px solid var(--hair)}
+.mpl{display:block;padding:8px 10px 4px;font-size:12px;font-weight:600;color:var(--muted)}
+.mpi{display:grid;grid-template-columns:32px 1fr;column-gap:12px;align-items:center;padding:8px 10px;border-radius:12px;text-decoration:none;color:var(--ink)}
+.mpi i{grid-row:span 2;width:32px;height:32px;border-radius:10px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center}
+.mpi i svg{width:15px;height:15px}
+.mpi b{font-size:14.5px;font-weight:600;line-height:1.25}
+.mpi small{font-size:12.5px;color:var(--muted);line-height:1.3}
+.mpi:active,.mpi[aria-current]{background:var(--soft)}
+.mpi[aria-current] i{background:var(--blue);color:#fff}
+.mpc{display:flex;flex-wrap:wrap;gap:6px;padding:12px 6px 6px;border-top:1px solid var(--hair)}
+.mpc a{padding:8px 14px;border-radius:999px;background:var(--soft);font-size:13.5px;font-weight:600;text-decoration:none;color:var(--ink)}
+.mpa{position:sticky;bottom:-8px;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px -8px -8px;padding:10px 14px 14px;background:var(--card);border-top:1px solid var(--hair)}
+.mpa .btn{height:46px;justify-content:center;width:100%}
+.mpw{background:var(--soft);color:var(--ink);gap:8px}.mpw svg{width:16px;height:16px}
+.mb .mbx,.nav.open .mb .mbo{display:none}.nav.open .mb .mbx{display:block}
+html.mpo{overflow:hidden}
+@media (hover:hover) and (pointer:fine){.mpi:hover{background:var(--soft)}.mpc a:hover{background:var(--soft-2)}}
 
 /* sky */
 .sky{position:relative;isolation:isolate;overflow:hidden;background:var(--page)}

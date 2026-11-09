@@ -13,8 +13,12 @@
 <script>
 (()=>{
 const nav=document.getElementById('nav'),mb=document.getElementById('mb');
-mb.onclick=()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
-nav.querySelectorAll('.mp a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false)});
+const setNav=o=>{nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Menu');document.documentElement.classList.toggle('mpo',o)};
+mb.onclick=()=>setNav(!nav.classList.contains('open'));
+nav.querySelectorAll('.mp a').forEach(a=>{a.addEventListener('click',()=>setNav(false));const u=new URL(a.href,location.href);if(u.pathname===location.pathname&&!u.hash&&u.pathname!=='/')a.setAttribute('aria-current','page')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){setNav(false);mb.focus()}});
+document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target))setNav(false)});
+matchMedia('(min-width:1101px)').addEventListener('change',e=>{if(e.matches)setNav(false)});
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>b.parentNode.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b)));
 // newsletter -> email
 const nlf=document.getElementById('nlf');if(nlf)nlf.onsubmit=e=>{e.preventDefault();const v=document.getElementById('nle').value;location.href='mailto:enquiry@neeko.my?subject='+encodeURIComponent('Newsletter signup')+'&body='+encodeURIComponent('Please add '+v+' to the Neeko newsletter.')};
