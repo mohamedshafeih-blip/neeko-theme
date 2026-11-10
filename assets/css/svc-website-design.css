@@ -1333,6 +1333,6 @@
 @media (max-width:700px){.scw.sck{display:none}}
 
 /* shorter: setup checklist hidden at all widths (10 Nov) */
-.scw.sck{display:none}
+@media (max-width:1000px){.scw.sck{display:none}}
 
 @media (max-width:700px){.tpl2{display:none!important}.scw .scb{display:none}}
