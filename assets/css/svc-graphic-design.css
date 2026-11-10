@@ -1798,3 +1798,6 @@
 .bn .wg>.gdbd{flex:1 0 218px;height:auto;min-height:218px;contain:size}.bn .gdbd .gdcol{overflow:hidden}
 
 @media (max-width:700px){.gdcv .gdly{display:none}}
+
+/* web banner: placeholder first, photo appears only after the drop (10 Nov) */
+@media (prefers-reduced-motion:no-preference){.gdcp .gdtgt>img,.gdcp .gdtgt>b,.gdcp .gdtgt>i{animation:gddropin 9s ease infinite!important}}

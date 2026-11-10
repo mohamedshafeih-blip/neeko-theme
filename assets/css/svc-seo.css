@@ -1712,3 +1712,6 @@
 @media (max-width:1000px){.sxgl .sxgo{display:none}}
 
 @media (max-width:700px){.sxdk .sxdkv{display:none}}
+
+/* report window: grow to fit its content (chips were clipped) (10 Nov) */
+.bn .fc .pv.btv>.wg:has(>.sxrp){height:auto;min-height:100%}
