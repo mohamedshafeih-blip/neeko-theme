@@ -133,13 +133,14 @@ add_action( 'init', function () {
 
 /* One-time: article URLs as /articles/post-name/ and publish any seeded guide that was scheduled by timezone. */
 add_action( 'init', function () {
-	if ( get_option( 'nk_art_fix' ) === '2' ) return;
-	update_option( 'nk_art_fix', '2', false );
-	update_option( 'permalink_structure', '/articles/%postname%/' );
-	update_option( 'category_base', 'topic' );
+	if ( get_option( 'nk_art_fix' ) === '3' ) return;
+	update_option( 'nk_art_fix', '3', false );
+	global $wp_rewrite;
+	$wp_rewrite->set_permalink_structure( '/articles/%postname%/' );
+	$wp_rewrite->set_category_base( 'topic' );
 	foreach ( array( 'website-cost-malaysia', 'prepare-before-website-project', 'seo-first-three-months', 'ai-chat-assistant-small-business' ) as $slug ) {
 		$q = get_posts( array( 'name' => $slug, 'post_status' => 'future', 'numberposts' => 1 ) );
 		if ( $q ) wp_publish_post( $q[0]->ID );
 	}
-	flush_rewrite_rules( false );
+	$wp_rewrite->flush_rules( false );
 }, 30 );
