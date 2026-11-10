@@ -122,7 +122,7 @@ add_action( 'init', function () {
 			'post_content'  => $a['body'],
 			'post_status'   => 'publish',
 			'post_type'     => 'post',
-			'post_date'     => gmdate( 'Y-m-d H:i:s', gmmktime( 9, 0, 0, 11, 10, 2026 ) - ( $day++ * 4 * DAY_IN_SECONDS ) ),
+			'post_date'     => gmdate( 'Y-m-d H:i:s', gmmktime( 0, 30, 0, 11, 10, 2026 ) - ( $day++ * 4 * DAY_IN_SECONDS ) ),
 			'post_category' => $tid ? array( $tid ) : array(),
 		) );
 		if ( $id && ! is_wp_error( $id ) ) update_post_meta( $id, '_nk_img', $a['img'] );
@@ -130,3 +130,16 @@ add_action( 'init', function () {
 	$unc = get_category_by_slug( 'uncategorized' );
 	if ( $unc && 0 === (int) $unc->count ) wp_update_term( $unc->term_id, 'category', array( 'name' => 'Guides', 'slug' => 'guides' ) );
 }, 20 );
+
+/* One-time: article URLs as /articles/post-name/ and publish any seeded guide that was scheduled by timezone. */
+add_action( 'init', function () {
+	if ( get_option( 'nk_art_fix' ) === '2' ) return;
+	update_option( 'nk_art_fix', '2', false );
+	update_option( 'permalink_structure', '/articles/%postname%/' );
+	update_option( 'category_base', 'topic' );
+	foreach ( array( 'website-cost-malaysia', 'prepare-before-website-project', 'seo-first-three-months', 'ai-chat-assistant-small-business' ) as $slug ) {
+		$q = get_posts( array( 'name' => $slug, 'post_status' => 'future', 'numberposts' => 1 ) );
+		if ( $q ) wp_publish_post( $q[0]->ID );
+	}
+	flush_rewrite_rules( false );
+}, 30 );
