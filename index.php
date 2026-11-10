@@ -1,7 +1,7 @@
-<?php get_header(); ?>
-<main class="nk-plain"><section class="sec"><div class="wrap">
-<?php while ( have_posts() ) : the_post(); ?>
-<article><h1><?php the_title(); ?></h1><?php the_content(); ?></article>
-<?php endwhile; ?>
-</div></section></main>
+<?php
+/* Neeko: fallback */
+get_header(); ?>
+<main>
+<?php get_template_part( 'parts/articles-list' ); ?>
+</main>
 <?php get_footer();

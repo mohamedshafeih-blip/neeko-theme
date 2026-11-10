@@ -4,10 +4,10 @@
   <div class="fg">
     <div><a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Neeko home"><svg class="lgi" viewBox="0 0 32 32" aria-hidden="true"><path fill="#1f5bff" d="M16 3c9.6 0 13 3.4 13 13s-3.4 13-13 13S3 25.6 3 16 6.4 3 16 3Z"/><rect x="10.2" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/><rect x="18" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/></svg><span class="wm">Neeko</span></a><p>A freelancer collective in Kuala Lumpur. Creative minds, connected solutions.</p></div>
     <div><h4>Services</h4><ul><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#features">Connect</a></li><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#features">Create</a></li><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#features">Build</a></li><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#pricing">Pricing</a></li></ul></div>
-    <div><h4>Company</h4><ul><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#tools">Integrations</a></li><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#faq">FAQ</a></li><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#brief">Start a brief</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="<?php echo esc_url( nk_url( 'about' ) ); ?>">About</a></li><li><a href="<?php echo esc_url( nk_url( 'articles' ) ); ?>">Articles</a></li><li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#faq">FAQ</a></li><li><a href="<?php echo esc_url( nk_url( 'contact' ) ); ?>">Contact</a></li></ul></div>
     <div><h4>Contact</h4><ul><li><a href="https://wa.me/60176604771" target="_blank" rel="noopener">+60 17-660 4771</a></li><li><a href="mailto:enquiry@neeko.my">enquiry@neeko.my</a></li><li>Kuala Lumpur, Malaysia</li></ul></div>
   </div>
-  <div class="leg"><span>&copy;&nbsp;<?php echo esc_html( date( 'Y' ) ); ?> Neeko · Berdua Sama Niaga (003225924-X) · All rights reserved.</span><span>Privacy · Terms</span></div>
+  <div class="leg"><span>&copy;&nbsp;<?php echo esc_html( date( 'Y' ) ); ?> Neeko · Berdua Sama Niaga (003225924-X) · All rights reserved.</span><span class="lgl"><a href="<?php echo esc_url( nk_url( 'privacy' ) ); ?>">Privacy</a> · <a href="<?php echo esc_url( nk_url( 'terms' ) ); ?>">Terms</a></span></div>
 </div></footer>
 
 <script>
@@ -168,6 +168,7 @@ const upd=()=>{if(!steps.length)return;const g=document.querySelectorAll('#goals
 document.addEventListener('change',()=>setTimeout(upd,0));document.addEventListener('click',()=>setTimeout(upd,0));setTimeout(upd,50);
 })();
 </script>
+<?php if ( nk_has_brief() ) : ?>
 <script>
 (()=>{
 const SIZES=[
@@ -503,4 +504,5 @@ document.addEventListener('click',e=>{
 if(!_saved)sync();drawSize();drawGoals();draw();$('goals').addEventListener('scroll',gfade,{passive:true});addEventListener('resize',gfade);requestAnimationFrame(gfade);
 })();
 </script>
+<?php endif; ?>
 
