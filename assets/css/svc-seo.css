@@ -1707,3 +1707,8 @@
 
 /* phone: trim filler (9 Nov) */
 @media (max-width:700px){.sxgl .sxgo{display:none}}
+
+/* shorter: skeleton results hidden at all widths (10 Nov) */
+.sxgl .sxgo{display:none}
+
+@media (max-width:700px){.sxdk .sxdkv{display:none}}

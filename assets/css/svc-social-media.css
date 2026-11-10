@@ -1902,3 +1902,12 @@ s cubic-bezier(.65,0,.35,1) infinite}
 .pic b{font-size:14px;font-weight:600;letter-spacing:-.01em;line-height:1.3}
 .pbg .pic span{margin-top:1px;font-size:12.5px;line-height:1.4}
 .pic{gap:0!important}.pic>div{padding:14px 0!important}
+
+/* shorter on phones (10 Nov) */
+@media (max-width:700px){
+  .sonpi{aspect-ratio:4/3;height:auto!important}.sonpi img{width:100%;height:100%;object-fit:cover}
+  .sonpr:not(:has(.sw)){display:none}
+  .soigg>:nth-child(n+7){display:none}
+  .sosch .sosimgs{display:none}
+}
+@media (max-width:700px){.sosch .soscap p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}

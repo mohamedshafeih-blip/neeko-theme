@@ -1793,3 +1793,8 @@
 .gdrq .gdrqm{flex:1;display:flex;flex-direction:column}.gdrq .gdrqm>p{flex:1}
 /* stage 4: queue shorter, print preview taller */
 @media (min-width:1101px){.pjb2 .pjd.pbg[data-k="3"]{grid-template-areas:"w w b" "w w a" "i h a"!important;grid-template-rows:auto 1fr auto!important}.pjd[data-k="3"] .gdq2{flex:0 0 auto!important}.pjd[data-k="3"] .gdppa{min-height:200px}}
+
+/* request board keeps one height so the bento row (and Raya poster) never jumps (10 Nov) */
+.bn .wg>.gdbd{flex:1 0 218px;height:auto;min-height:218px;contain:size}.bn .gdbd .gdcol{overflow:hidden}
+
+@media (max-width:700px){.gdcv .gdly{display:none}}

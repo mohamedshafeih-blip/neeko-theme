@@ -14,6 +14,9 @@
 (()=>{
 const nav=document.getElementById('nav'),mb=document.getElementById('mb');
 const mp=document.getElementById('mp'),mpEnd=()=>mp&&mp.classList.toggle('end',mp.scrollTop+mp.clientHeight>=mp.scrollHeight-4);if(mp)mp.addEventListener('scroll',mpEnd,{passive:true});
+const fqOpen=h=>{if(!h||!h.startsWith('#faq-'))return;const c=document.querySelector(h);const q=c&&c.querySelector('.fqq');if(q&&q.getAttribute('aria-expanded')!=='true')q.click()};
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#faq-"]');if(a)setTimeout(()=>fqOpen(a.getAttribute('href')),350)});
+if(location.hash)addEventListener('load',()=>fqOpen(location.hash));
 const setNav=o=>{nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Menu');document.documentElement.classList.toggle('mpo',o);if(o)requestAnimationFrame(mpEnd)};
 mb.onclick=()=>setNav(!nav.classList.contains('open'));
 nav.querySelectorAll('.mp a').forEach(a=>{a.addEventListener('click',()=>setNav(false));const u=new URL(a.href,location.href);if(u.pathname===location.pathname&&!u.hash&&u.pathname!=='/')a.setAttribute('aria-current','page')});

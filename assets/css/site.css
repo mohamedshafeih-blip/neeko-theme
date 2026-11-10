@@ -1842,3 +1842,10 @@ footer{padding:96px 0 36px}
 .fqc.open .a5>:nth-child(2){animation-delay:.6s}.fqc.open .a5>:nth-child(3){animation-delay:1.3s}.fqc.open .a5>:nth-child(4){animation-delay:2s}
 @keyframes a5in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 }
+
+/* feature cards: CTA at the bottom of every card (10 Nov) */
+.bn .fc>.bd{min-height:0!important;padding:12px 26px 22px}
+.bn .fc>.bd>p{margin-bottom:6px}
+.bn .fc .fcb{margin-top:auto;align-self:flex-start;height:40px;padding:0 16px;font-size:14px;gap:8px}
+.bn .fc .fcb svg{width:13px;height:13px}
+@media (max-width:700px){.bn .fc>.bd{padding:10px 20px 20px;gap:6px}.bn .fc>.bd>p{margin-bottom:8px}.bn .fc .fcb{height:38px;padding:0 14px;font-size:13.5px}.bn .fc>.pv{margin:8px;padding:14px}}
