@@ -641,3 +641,11 @@ a.pgcc:hover .ar{color:var(--blue)}
 .pgfc.lead h3{font-size:clamp(24px,2.6vw,32px);letter-spacing:-0.03em;line-height:1.15}
 .pgfc.lead .bd>.btn{margin-top:8px}
 @media (max-width:860px){.pgfc.lead{grid-template-columns:1fr}.pgfc.lead .pv{min-height:0;height:240px}.pgfc.lead .bd{padding:12px 22px 22px}}
+
+/* articles + single post: no grey frame, white panels, sticky sidebar, 2x2 cards */
+.pg-hero-w{overflow:clip}
+.pgW.pgW-lib,.pgW.pgW-rd{background:none;border:0;box-shadow:none;padding:0;border-radius:0;gap:20px}
+.pgW-lib .pgW-sd,.pgW-lib .pgW-mn,.pgW-rd .pgW-sd,.pgW-rd .pgW-mn{border:1px solid var(--hair);box-shadow:var(--sh)}
+.pgW.pgW-lib .pgag{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (min-width:1001px){.pgW-lib .pgW-sd,.pgW-rd .pgW-sd{position:sticky;top:96px;max-height:calc(100svh - 120px);overflow-y:auto}}
+@media (max-width:700px){.pgW.pgW-lib .pgag{grid-template-columns:1fr}}

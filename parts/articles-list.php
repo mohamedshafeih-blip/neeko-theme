@@ -24,7 +24,7 @@ nk_win_start( $wt, array( 'i-search', 'i-doc' ), $side, 'pgW-lib', $n . ' articl
 if ( have_posts() ) {
 	echo '<div class="pgag">';
 	$i = 0;
-	while ( have_posts() ) { the_post(); nk_post_card( null, ( 0 === $i && ! is_paged() && ! is_search() && ! $cur ) ? 'lead' : '' ); $i++; }
+	while ( have_posts() ) { the_post(); nk_post_card(); $i++; }
 	echo '</div>';
 	$links = paginate_links( array( 'type' => 'array', 'prev_text' => '← Newer', 'next_text' => 'Older →' ) );
 	if ( $links ) { echo '<nav class="pgpg" aria-label="Pages">' . implode( '', $links ) . '</nav>'; } // phpcs:ignore
