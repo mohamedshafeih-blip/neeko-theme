@@ -658,3 +658,13 @@ a.pgcc:hover .ar{color:var(--blue)}
 .pgW-l.pgD-lb{margin:10px 8px 6px;padding:12px 2px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
 .pgW-l.pgD-lb{display:flex;align-items:center;gap:12px;margin:14px 8px 6px;padding:0 2px;border:0}
 .pgW-l.pgD-lb::after{content:"";flex:1;height:1px;background:var(--hair)}
+
+/* about: question checklist + basic contact */
+.pgD-ck{width:18px;height:18px;flex:none;border-radius:6px;border:1.5px solid color-mix(in srgb,var(--faint) 60%,transparent);display:grid;place-items:center;transition:background-color .2s,border-color .2s}
+.pgD-ck svg{width:11px;height:11px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .2s}
+.pgD-qi.done .pgD-ck{background:var(--blue);border-color:var(--blue)}
+.pgD-qi.done .pgD-ck svg{opacity:1}
+.pgD-q.pgD-qi.done{color:var(--muted)}
+.pgD-q.pgD-qi:hover .pgD-ck{border-color:var(--blue)}
+.pgD-ctc{margin:12px 2px 0;padding-top:14px;border-top:1px solid var(--hair)}
+.pgD-ctc p{margin:0 10px 6px;font-size:12.5px;font-weight:600;color:var(--faint)}
