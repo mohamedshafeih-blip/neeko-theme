@@ -3,7 +3,7 @@
 get_header();
 ?>
 <main>
-<?php nk_page_hero( array( array( 'Terms of service', null ) ), 'Terms of service', 'The rules for using neeko.my and working with Neeko. Your quotation sets out the specific scope of your project; these terms cover everything around it.', '', 'pg-hero-sm' ); ?>
+<?php nk_page_hero( array( array( 'Terms of service', null ) ), 'Terms of service', 'The rules for using neeko.my and working with Neeko. Your quotation sets out the specific scope of your project; these terms cover everything around it.', '', 'pg-hero-sm pg-hero-w', true ); ?>
 <?php
 nk_legal( array(
 'about' => array( 'About these terms', <<<'HTML'
@@ -75,7 +75,8 @@ HTML ),
 'contact' => array( 'Changes and contact', <<<'HTML'
 <p>We may update these terms. The version on this page at the time you accept a quotation applies to that project. Questions? Email <a href="mailto:enquiry@neeko.my">enquiry@neeko.my</a> or WhatsApp <a href="https://wa.me/60176604771">+60 17-660 4771</a>.</p>
 HTML ),
-), '10 November 2026' );
+), '10 November 2026', 'terms' );
 ?>
+</div></section>
 </main>
 <?php get_footer();

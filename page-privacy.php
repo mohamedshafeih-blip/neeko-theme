@@ -3,7 +3,7 @@
 get_header();
 ?>
 <main>
-<?php nk_page_hero( array( array( 'Privacy policy', null ) ), 'Privacy policy', 'How Neeko collects, uses and protects your personal data, in line with Malaysia’s Personal Data Protection Act 2010 (PDPA).', '', 'pg-hero-sm' ); ?>
+<?php nk_page_hero( array( array( 'Privacy policy', null ) ), 'Privacy policy', 'How Neeko collects, uses and protects your personal data, in line with Malaysia’s Personal Data Protection Act 2010 (PDPA).', '', 'pg-hero-sm pg-hero-w', true ); ?>
 <?php
 nk_legal( array(
 'who' => array( 'Who we are', <<<'HTML'
@@ -71,7 +71,8 @@ HTML ),
 'changes' => array( 'Language and changes', <<<'HTML'
 <p>A Bahasa Malaysia version of this notice is available on request. We may update this policy and will show the date of the latest change on this page. See also our <a href="__TERMS__">terms of service</a>.</p>
 HTML ),
-), '10 November 2026' );
+), '10 November 2026', 'privacy' );
 ?>
+</div></section>
 </main>
 <?php get_footer();

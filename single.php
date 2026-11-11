@@ -13,15 +13,15 @@ list( $cat, $catu ) = nk_post_cat();
 </div></section>
 
 <section class="sec pg-post"><div class="wrap">
-  <figure class="pgph pghi rv"><img src="<?php echo esc_url( nk_post_img() ); ?>" alt="" width="1200" height="675" loading="eager" fetchpriority="high"></figure>
-  <div class="pgpl">
-    <article class="pg-prose" id="pgart"><?php the_content(); ?></article>
-    <aside class="pgsd">
-      <nav class="pgtoc" id="pgtoc" aria-label="In this article" hidden><p class="pgtl">In this article</p><ol></ol></nav>
-      <div class="pgbx"><p class="pgtl">Need a hand?</p><p>Tell us what you need and get a clear quotation. Prices start from RM120.</p><a class="btn btn-blue" href="<?php echo esc_url( home_url( '/#brief' ) ); ?>">Start your brief <svg aria-hidden="true"><use href="#i-ne"/></svg></a><a class="btn btn-line" href="https://wa.me/60176604771" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp us</a></div>
-      <div class="pgsh"><span>Share</span><a href="https://wa.me/?text=<?php echo rawurlencode( get_the_title() . ' ' . get_permalink() ); ?>" target="_blank" rel="noopener" aria-label="Share on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo rawurlencode( get_permalink() ); ?>" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg aria-hidden="true"><use href="#i-in"/></svg></a><button type="button" id="pgcp" aria-label="Copy link"><svg aria-hidden="true"><use href="#i-link"/></svg><em>Copy link</em></button></div>
-    </aside>
-  </div>
+<?php
+$side  = nk_side_head( esc_html( $cat ), (int) nk_read_time() . ' min read · ' . esc_html( get_the_date( 'j M Y' ) ), 'i-doc' ) . '<nav class="pgtoc pgW-tc" id="pgtoc" aria-label="In this article" hidden><p class="pgW-l">In this article</p><ol class="pgW-toc"></ol></nav>';
+$side .= '<div class="pgW-cta"><b>Need a hand?</b><p>Tell us what you need and get a clear quotation. Prices start from RM120.</p><a class="btn btn-blue" href="' . esc_url( home_url( '/#brief' ) ) . '">Start your brief <svg aria-hidden="true"><use href="#i-ne"/></svg></a><a class="btn btn-line" href="https://wa.me/60176604771" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp us</a></div>';
+$side .= '<div class="pgsh"><span>Share</span><a href="https://wa.me/?text=' . rawurlencode( get_the_title() . ' ' . get_permalink() ) . '" target="_blank" rel="noopener" aria-label="Share on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=' . rawurlencode( get_permalink() ) . '" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg aria-hidden="true"><use href="#i-in"/></svg></a><button type="button" id="pgcp" aria-label="Copy link"><svg aria-hidden="true"><use href="#i-link"/></svg><em>Copy link</em></button></div>';
+nk_win_start( esc_html( wp_make_link_relative( get_permalink() ) ), array( 'i-globe', array( 'i-ne', $blog, 'All articles' ) ), $side, 'pgW-rd', esc_html( $cat ) . ' · ' . (int) nk_read_time() . ' min read' );
+?>
+  <figure class="pgW-hi"><img src="<?php echo esc_url( nk_post_img() ); ?>" alt="" width="1200" height="675" loading="eager" fetchpriority="high"></figure>
+  <article class="pg-prose" id="pgart"><?php the_content(); ?></article>
+<?php nk_win_end(); ?>
 </div></section>
 
 <?php
