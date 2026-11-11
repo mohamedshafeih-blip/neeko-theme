@@ -10,7 +10,7 @@ $I = NK_URI . '/assets/img/';
 	'Write your message below and send it on WhatsApp or by email. Tell us what you need and we’ll reply with next steps and a quotation.',
 	'', 'pg-hero-w', true
 );
-$side  = '<div class="pgc-lg"><svg class="pgc-mk" viewBox="0 0 32 32" role="img" aria-label="Neeko"><path fill="#1f5bff" d="M16 3c9.6 0 13 3.4 13 13s-3.4 13-13 13S3 25.6 3 16 6.4 3 16 3Z"/><g class="pgc-ey"><g class="pgc-bk"><rect class="pgc-el" x="10.2" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/><rect class="pgc-er" x="18" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/></g></g></svg><b>Neeko</b></div>';
+$side  = '<div class="pgc-lg"><svg class="pgc-mk" viewBox="0 0 32 32" role="img" aria-label="Neeko"><g class="pgc-hd"><path fill="#1f5bff" d="M16 3c9.6 0 13 3.4 13 13s-3.4 13-13 13S3 25.6 3 16 6.4 3 16 3Z"/><g class="pgc-ey"><rect x="10.2" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/><rect x="18" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/></g></g></svg><b>Neeko</b></div>';
 $side .= '<div class="pgc-gt"><b>Get in touch</b><small>WhatsApp is the quickest way to reach us.</small></div><nav class="pgW-nv pgc-ch" aria-label="Contact channels">';
 $side .= '<a href="https://wa.me/60176604771" target="_blank" rel="noopener"><i class="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg></i><span><b>WhatsApp</b><small>+60 17-660 4771</small></span><svg class="pgc-ar" aria-hidden="true"><use href="#i-ne"/></svg></a>';
 $side .= '<a href="mailto:enquiry@neeko.my"><i><svg aria-hidden="true"><use href="#i-mail"/></svg></i><span><b>Email us</b><small>enquiry@neeko.my</small></span><svg class="pgc-ar" aria-hidden="true"><use href="#i-ne"/></svg></a>';
