@@ -653,3 +653,5 @@ a.pgcc:hover .ar{color:var(--blue)}
 /* about Q&A list: calm hover (no blue pill fill) */
 .pgD-q.pgD-qi:hover{background:var(--soft);color:var(--ink)}
 .pgD-q.pgD-qi:hover svg{color:var(--blue)}
+.pgD-q.pgD-qi{padding:8px 10px;font-size:13.5px}
+.pgD-ql{gap:2px}
