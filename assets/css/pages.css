@@ -649,3 +649,7 @@ a.pgcc:hover .ar{color:var(--blue)}
 .pgW.pgW-lib .pgag{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 @media (min-width:1001px){.pgW-lib .pgW-sd,.pgW-rd .pgW-sd{position:sticky;top:96px;max-height:calc(100svh - 120px);overflow-y:auto}}
 @media (max-width:700px){.pgW.pgW-lib .pgag{grid-template-columns:1fr}}
+
+/* about Q&A list: calm hover (no blue pill fill) */
+.pgD-q.pgD-qi:hover{background:var(--soft);color:var(--ink)}
+.pgD-q.pgD-qi:hover svg{color:var(--blue)}
