@@ -626,3 +626,17 @@ a.pgcc:hover .ar{color:var(--blue)}
 .pgc-tg{list-style:none;margin:8px 8px 4px;padding:16px 0 4px;border-top:1px solid var(--hair);display:flex;flex-wrap:wrap;gap:8px}
 .pgc-tg li{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:var(--soft);font-size:13px;font-weight:500;color:var(--muted)}
 .pgc-tg svg{width:14px;height:14px;color:var(--blue);flex:none}
+
+/* article cards: flat editorial list, no hover motion */
+.pgac,.pgW-lib .pgac{border:0;box-shadow:none;background:none;border-radius:0;overflow:visible;transition:none}
+.pgac:hover{transform:none;box-shadow:none}
+.pgai,.pgac.lead .pgai,.pgW-lib .pgac.lead .pgai{margin:0;border-radius:16px}
+.pgai img,.pgac:hover .pgai img{transform:none;transition:none}
+.pgab,.pgW-lib .pgab{padding:16px 2px 4px;gap:8px}
+.pgam{flex-wrap:nowrap;white-space:nowrap;overflow:hidden;gap:0 10px}
+.pgam>*+*::before{margin-right:10px}
+.pgac h3 a{transition:color .2s}
+.pgac:hover h3 a{color:var(--blue)}
+.pgW-lib .pgag{gap:36px 24px}
+.pgac.lead,.pgW-lib .pgac.lead{gap:20px 36px;padding-bottom:32px;border-bottom:1px solid var(--hair)}
+.pgac.lead .pgab,.pgW-lib .pgac.lead .pgab{padding:0 2px;align-content:center}
