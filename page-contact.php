@@ -55,9 +55,10 @@ nk_win_start( 'New message', array( array( 'i-wa', 'https://wa.me/60176604771', 
 <script>
 (()=>{const w=document.querySelector('.pgc-lg');if(!w||matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(hover: hover)').matches)return;const l=w.querySelector('.pgc-mk');let q=0;
 const set=(o)=>{for(const k in o)w.style.setProperty(k,o[k])};
-addEventListener('mousemove',v=>{if(q)return;q=requestAnimationFrame(()=>{q=0;const r=l.getBoundingClientRect(),x=v.clientX-r.left-r.width/2,y=v.clientY-r.top-r.height/2,d=Math.hypot(x,y)||1,k=Math.min(d/220,1),nx=x/d*k,ny=y/d*k;
+const rest=()=>set({'--tx':'0px','--ty':'0px','--rz':'0deg'});let lx=0,ly=0,lt=0,to=0;
+addEventListener('mousemove',v=>{const t=performance.now(),sp=Math.hypot(v.clientX-lx,v.clientY-ly)/Math.max(t-lt,1);lx=v.clientX;ly=v.clientY;lt=t;if(sp<.8||q)return;clearTimeout(to);to=setTimeout(rest,1400);q=requestAnimationFrame(()=>{q=0;const r=l.getBoundingClientRect(),x=v.clientX-r.left-r.width/2,y=v.clientY-r.top-r.height/2,d=Math.hypot(x,y)||1,k=Math.min(d/220,1),nx=x/d*k,ny=y/d*k;
 set({'--tx':(nx*2.4).toFixed(2)+'px','--ty':(ny*1.8).toFixed(2)+'px','--rz':(nx*7).toFixed(1)+'deg'})})},{passive:true});
-document.addEventListener('mouseleave',()=>set({'--tx':'0px','--ty':'0px','--rz':'0deg'}));})();
+document.addEventListener('mouseleave',rest);})();
 (()=>{const f=document.getElementById('pgfm');if(!f)return;const er=document.getElementById('pger');
 const txt=()=>{const v=n=>(f.elements[n].value||'').trim();const need=(f.querySelector('[name=need]:checked')||{}).value||'Not sure yet';return `Hi Neeko, I'd like to get in touch.\n\nName: ${v('name')}\nCompany: ${v('company')||'-'}\nContact: ${v('contact')}\nNeed: ${need}\n\n${v('msg')}`};
 const ok=()=>{const bad=[...f.querySelectorAll('[required]')].filter(x=>!x.value.trim());const c=f.elements.contact.value.trim();const cOk=!c||/@.+\./.test(c)||c.replace(/\D/g,'').length>=8;
