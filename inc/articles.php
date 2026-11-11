@@ -34,12 +34,13 @@ function nk_post_card( $post = null, $cls = '' ) {
 	list( $cat ) = nk_post_cat( $post );
 	$u = get_permalink( $post );
 	?>
-	<article class="pgac rv <?php echo esc_attr( $cls ); ?>">
-		<a class="pgai" href="<?php echo esc_url( $u ); ?>" tabindex="-1" aria-hidden="true"><img src="<?php echo esc_url( nk_post_img( $post ) ); ?>" alt="" loading="lazy" width="896" height="672"></a>
-		<div class="pgab">
+	<article class="fc pgfc rv <?php echo esc_attr( $cls ); ?>">
+		<a class="pv" href="<?php echo esc_url( $u ); ?>" tabindex="-1" aria-hidden="true"><img src="<?php echo esc_url( nk_post_img( $post ) ); ?>" alt="" loading="lazy" width="896" height="672"></a>
+		<div class="bd">
 			<p class="pgam"><span><?php echo esc_html( $cat ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c', $post ) ); ?>"><?php echo esc_html( get_the_date( 'j M Y', $post ) ); ?></time><span><?php echo (int) nk_read_time( $post ); ?> min read</span></p>
 			<h3><a href="<?php echo esc_url( $u ); ?>"><?php echo esc_html( get_the_title( $post ) ); ?></a></h3>
-			<p><?php echo esc_html( wp_trim_words( has_excerpt( $post ) ? $post->post_excerpt : wp_strip_all_tags( $post->post_content ), 24 ) ); ?></p>
+			<p class="pgfx"><?php echo esc_html( wp_trim_words( has_excerpt( $post ) ? $post->post_excerpt : wp_strip_all_tags( $post->post_content ), 24 ) ); ?></p>
+			<a class="btn btn-line" href="<?php echo esc_url( $u ); ?>" aria-label="Read: <?php echo esc_attr( get_the_title( $post ) ); ?>">Read article <svg aria-hidden="true"><use href="#i-ne"/></svg></a>
 		</div>
 	</article>
 	<?php
