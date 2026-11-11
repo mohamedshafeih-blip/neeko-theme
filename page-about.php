@@ -1,5 +1,5 @@
 <?php
-/* Neeko: about */
+/* Neeko: about (mini-window layout, same components as Home) */
 get_header();
 $I = NK_URI . '/assets/img/';
 $S = nk_services();
@@ -12,61 +12,33 @@ $S = nk_services();
 	'<a class="btn btn-blue" href="' . esc_url( home_url( '/#brief' ) ) . '">Start your brief <svg aria-hidden="true"><use href="#i-ne"/></svg></a><a class="btn btn-line" href="#how">How we work</a>'
 ); ?>
 
-<section class="sec" id="who"><div class="wrap pgsp">
-  <figure class="pgph rv"><img src="<?php echo $I; ?>nk-about-team.webp" alt="Neeko specialists reviewing a project together around a table" width="896" height="672" loading="eager"></figure>
-  <div class="pgsx rv">
-    <span class="eb">Our way of working</span>
-    <h2>The right skills. A shared direction.</h2>
-    <p>Most businesses don’t need a big agency, and they don’t want to manage five freelancers either. Neeko sits in between: we bring the relevant specialists into your scope, from visual communication and customer touchpoints to the systems behind the work.</p>
-    <p>You get one brief, one quotation and one point of contact, while the work is done by people who focus on that craft every day.</p>
-    <dl class="pgfx">
-      <div><dt>12</dt><dd>Services in one brief</dd></div>
-      <div><dt>3</dt><dd>Practices: Create, Connect, Build</dd></div>
-      <div><dt>RM120</dt><dd>Lowest starting price, all published</dd></div>
-    </dl>
+<section class="sec" id="who"><div class="wrap">
+  <div class="wh rv"><div class="sh"><h2>The right skills. A shared direction.</h2><p>Not a big agency, not five freelancers to manage. One brief, one quotation and one point of contact, with specialists doing the work.</p></div><a class="btn btn-blue" href="<?php echo esc_url( home_url( '/#brief' ) ); ?>"><span class="dot"></span>Start your brief</a></div>
+  <div class="ic3">
+    <article class="fc ixc rv "><div class="pv"><div class="hw t1"><div class="hwt"><span class="hwn">Neeko specialists</span><i class="hi"><svg aria-hidden="true"><use href="#i-team"/></svg></i><i class="hi"><svg aria-hidden="true"><use href="#i-chat"/></svg></i></div><div class="ibx"><div class="ibr"><i class="ia" style="--c:#1f5bff">W</i><span><b>Web designer</b><small>WordPress builds and UI</small></span><em><s style="--c:#1f5bff">Connect</s></em></div><div class="ibr"><i class="ia" style="--c:#e1306c">G</i><span><b>Graphic designer</b><small>Posters, decks, AI photos</small></span><em><s style="--c:#e1306c">Create</s></em></div><div class="ibr"><i class="ia" style="--c:#22c55e">S</i><span><b>SEO specialist</b><small>Google and AI search</small></span><em><s style="--c:#22c55e">Connect</s></em></div><div class="ibr"><i class="ia" style="--c:#7c5cff">A</i><span><b>Automation engineer</b><small>AI assistants, CRM, APIs</small></span><em><s style="--c:#7c5cff">Build</s></em></div></div></div></div><div class="bd"><h3>The right specialists</h3><p>Each project brings in the people who do that craft every day, not one generalist doing everything.</p><a class="btn btn-blue" href="<?php echo esc_url( home_url( '/#brief' ) ); ?>">Start your brief <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div></article>
+    <article class="fc ixc rv "><div class="pv"><div class="hw pga-pl"><div class="hwt"><span class="hwn">Starting prices</span><i class="hi"><svg aria-hidden="true"><use href="#i-card"/></svg></i></div><ul><li><i><svg aria-hidden="true"><use href="#i-pen"/></svg></i><span>Graphic design</span><b><small>from</small>RM120<small></small></b></li><li><i><svg aria-hidden="true"><use href="#i-cam"/></svg></i><span>AI photography</span><b><small>from</small>RM299<small></small></b></li><li><i><svg aria-hidden="true"><use href="#i-globe"/></svg></i><span>Website</span><b><small>from</small>RM3,900<small></small></b></li><li><i><svg aria-hidden="true"><use href="#i-ig"/></svg></i><span>Social media</span><b><small>from</small>RM1,200<small>/mo</small></b></li><li><i><svg aria-hidden="true"><use href="#i-search"/></svg></i><span>SEO</span><b><small>from</small>RM899<small>/mo</small></b></li></ul></div></div><div class="bd"><h3>Prices up front</h3><p>Every service shows a starting price. Your quotation confirms the final scope before work begins.</p><a class="btn btn-line" href="<?php echo esc_url( home_url( '/#pricing' ) ); ?>">See all pricing <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div></article>
+    <article class="fc ixc rv "><div class="pv"><div class="hw pga-ph"><div class="hwt"><span class="hwn">Neeko · Kuala Lumpur</span><i class="hi"><svg aria-hidden="true"><use href="#i-pin"/></svg></i></div><div class="pga-im"><img src="<?php echo $I; ?>nk-about-team.webp" alt="Neeko specialists reviewing a project together around a table" width="896" height="672" loading="lazy"></div></div></div><div class="bd"><h3>Based in Kuala Lumpur</h3><p>We work with businesses across Malaysia over WhatsApp, email and video calls.</p><a class="btn btn-line" href="<?php echo esc_url( nk_url( 'contact' ) ); ?>">Contact us <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div></article>
   </div>
 </div></section>
 
 <section class="sec" id="practices"><div class="wrap">
-  <div class="sh rv"><h2>Three practices, one team</h2><p>Start with one need, or connect the work across your customer journey and operations.</p></div>
-  <div class="c3 pgpr">
-    <?php
-	$P = array(
-		array( 'Create', 'Design, content and imagery', 'Posters, social posts, decks and AI brand photography, designed in days.', 'nk-about-create.webp', 'A designer arranging products for a photo shoot' ),
-		array( 'Connect', 'Websites, search and social', 'Mobile-first WordPress websites, SEO and social media that bring the right people to you.', 'nk-about-connect.webp', 'A web designer presenting a website layout on screen' ),
-		array( 'Build', 'Software, systems and automation', 'AI chat assistants, CRM, integrations, custom software and apps that cut admin work.', 'nk-about-build.webp', 'A developer testing an app on a phone next to his laptop' ),
-	);
-	foreach ( $P as $n => $p ) :
-		?>
-    <article class="fc rv pgpc">
-      <div class="pv pgpi"><img src="<?php echo $I . $p[3]; ?>" alt="<?php echo esc_attr( $p[4] ); ?>" width="760" height="570" loading="lazy"><span class="pgpn">0<?php echo $n + 1; ?></span></div>
-      <div class="bd"><h3><?php echo esc_html( $p[0] ); ?> <small><?php echo esc_html( $p[1] ); ?></small></h3><p><?php echo esc_html( $p[2] ); ?></p>
-        <div class="pgsl"><?php foreach ( $S[ $p[0] ] as $s ) : ?><a href="<?php echo esc_url( nk_svc_url( $s[0] ) ); ?>"><svg aria-hidden="true"><use href="#<?php echo esc_attr( $s[3] ); ?>"/></svg><?php echo esc_html( $s[1] ); ?></a><?php endforeach; ?><?php if ( 'Build' === $p[0] ) : ?><a href="<?php echo esc_url( nk_svc_url( 'website-care' ) ); ?>"><svg aria-hidden="true"><use href="#i-shield"/></svg>Website care</a><?php endif; ?></div>
-      </div>
-    </article>
-	<?php endforeach; ?>
+  <div class="wh rv"><div class="sh"><h2>Three practices, one team</h2><p>Start with one need, or connect the work across your customer journey and operations.</p></div></div>
+  <div class="ic3">
+    <article class="fc ixc rv "><div class="pv"><div class="hw pga-pr"><div class="hwt"><span class="hwn">Create</span><i class="hi"><svg aria-hidden="true"><use href="#i-spark"/></svg></i><i class="hi"><svg aria-hidden="true"><use href="#i-ne"/></svg></i></div><div class="pga-im"><img src="<?php echo $I; ?>nk-about-create.webp" alt="A designer arranging products for a photo shoot" width="760" height="570" loading="lazy"></div><div class="tpl"><?php foreach ( $S['Create'] as $s ) : ?><span><svg aria-hidden="true"><use href="#<?php echo esc_attr( $s[3] ); ?>"/></svg><?php echo esc_html( $s[1] ); ?></span><?php endforeach; ?></div></div></div><div class="bd"><h3>Create</h3><p>Posters, social posts, decks and AI brand photography, designed in days.</p><a class="btn btn-line" href="<?php echo esc_url( nk_svc_url( 'graphic-design' ) ); ?>">Graphic design <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div></article>
+    <article class="fc ixc rv "><div class="pv"><div class="hw pga-pr"><div class="hwt"><span class="hwn">Connect</span><i class="hi"><svg aria-hidden="true"><use href="#i-globe"/></svg></i><i class="hi"><svg aria-hidden="true"><use href="#i-ne"/></svg></i></div><div class="pga-im"><img src="<?php echo $I; ?>nk-about-connect.webp" alt="A web designer presenting a website layout on screen" width="760" height="570" loading="lazy"></div><div class="tpl"><?php foreach ( $S['Connect'] as $s ) : ?><span><svg aria-hidden="true"><use href="#<?php echo esc_attr( $s[3] ); ?>"/></svg><?php echo esc_html( $s[1] ); ?></span><?php endforeach; ?></div></div></div><div class="bd"><h3>Connect</h3><p>Mobile-first WordPress websites, SEO and social media that bring the right people to you.</p><a class="btn btn-blue" href="<?php echo esc_url( nk_svc_url( 'website-design' ) ); ?>">Website design <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div></article>
+    <article class="fc ixc rv "><div class="pv"><div class="hw pga-pr"><div class="hwt"><span class="hwn">Build</span><i class="hi"><svg aria-hidden="true"><use href="#i-chat"/></svg></i><i class="hi"><svg aria-hidden="true"><use href="#i-ne"/></svg></i></div><div class="pga-im"><img src="<?php echo $I; ?>nk-about-build.webp" alt="A developer testing an app on a phone next to his laptop" width="760" height="570" loading="lazy"></div><div class="tpl"><?php foreach ( $S['Build'] as $s ) : ?><span><svg aria-hidden="true"><use href="#<?php echo esc_attr( $s[3] ); ?>"/></svg><?php echo esc_html( $s[1] ); ?></span><?php endforeach; ?></div></div></div><div class="bd"><h3>Build</h3><p>AI chat assistants, CRM, integrations, custom software and apps that cut admin work.</p><a class="btn btn-line" href="<?php echo esc_url( nk_svc_url( 'ai-chat-assistant' ) ); ?>">AI chat assistant <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div></article>
   </div>
 </div></section>
 
 <section class="sec" id="how"><div class="wrap">
-  <div class="sh rv"><h2>A clear process, with room to refine</h2><p>A project moves forward when the scope, responsibilities and review points are clear.</p></div>
-  <ol class="pgst">
-    <li class="rv"><i>01</i><h3>Understand</h3><p>Your business, audience, current assets and the problem to solve.</p></li>
-    <li class="rv"><i>02</i><h3>Agree</h3><p>Deliverables, timing, responsibilities, review points and the commercial scope.</p></li>
-    <li class="rv"><i>03</i><h3>Create and build</h3><p>Design, content or development, with reviews at the planned stages.</p></li>
-    <li class="rv"><i>04</i><h3>Launch and continue</h3><p>Agreed checks, final approval and handover, followed by support or recurring work.</p></li>
-  </ol>
-  <div class="pgyp rv"><span class="pgyi"><svg aria-hidden="true"><use href="#i-check"/></svg></span><p><b>Your part in the process.</b> Accurate information, brand assets, relevant system access and one consolidated set of feedback at each review.</p><a class="btn btn-line" href="<?php echo esc_url( home_url( '/#faq' ) ); ?>">Read the FAQ <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div>
-</div></section>
-
-<section class="sec" id="values"><div class="wrap">
-  <div class="sh rv"><h2>What you can expect from us</h2><p>The same promises on every project, big or small.</p></div>
-  <div class="pgvg">
-    <article class="pgvc rv"><i><svg aria-hidden="true"><use href="#i-card"/></svg></i><h3>Prices up front</h3><p>Every service shows a starting price. Your quotation confirms scope, timing, payment milestones and anything billed separately.</p></article>
-    <article class="pgvc rv"><i><svg aria-hidden="true"><use href="#i-pen"/></svg></i><h3>Room to refine</h3><p>Website builds include unlimited amendments on staging within the agreed scope. Other services follow their stated revision allowance.</p></article>
-    <article class="pgvc rv"><i><svg aria-hidden="true"><use href="#i-team"/></svg></i><h3>People in the loop</h3><p>Automation answers the routine questions. A real person handles everything that needs judgement.</p></article>
-    <article class="pgvc rv"><i><svg aria-hidden="true"><use href="#i-search"/></svg></i><h3>Honest reporting</h3><p>We agree the work before it starts and report on what was done. No guaranteed rankings, no vanity numbers.</p></article>
+  <div class="wh rv"><div class="sh"><h2>A clear process, with room to refine</h2><p>A project moves forward when the scope, responsibilities and review points are clear.</p></div><a class="btn btn-line" href="<?php echo esc_url( home_url( '/#faq' ) ); ?>">Read the FAQ <svg aria-hidden="true"><use href="#i-ne"/></svg></a></div>
+  <div class="ic3 pga-2">
+    <article class="fc ixc rv "><div class="pv"><div class="hw pga-bf"><div class="hwt"><span class="hwn">New brief</span><i class="hi"><svg aria-hidden="true"><use href="#i-pen"/></svg></i><i class="hi"><svg aria-hidden="true"><use href="#i-ne"/></svg></i></div><dl><div><dt>Business</dt><dd>Kopi Lane · Café, Bangsar · More table bookings</dd></div><div><dt>Services</dt><dd><span>Website</span><span>SEO</span><span>Social media</span></dd></div><div><dt>Estimate</dt><dd><b>from RM4,499</b></dd></div></dl></div></div><div class="bd"><h3><em class="pga-n">01</em>Understand</h3><p>Your business, audience, current assets and the problem to solve.</p></div></article>
+    <article class="fc ixc rv "><div class="pv"><div class="hw fq6"><div class="hwt"><span class="hwn">Your quotation</span><i class="hi"><svg aria-hidden="true"><use href="#i-pen"/></svg></i><i class="hi"><svg aria-hidden="true"><use href="#i-ne"/></svg></i></div><div class="qd"><div class="qdh"><b>Quotation</b><small>Prepared for your business</small></div><div class="ql"><span>Scope and timing</span><em class="y"><svg class="hck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg>Confirmed</em></div><div class="ql"><span>Payment milestones</span><em class="y"><svg class="hck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg>Confirmed</em></div><div class="ql"><span>Licences, ad spend</span><em class="n">Separate</em></div></div></div></div><div class="bd"><h3><em class="pga-n">02</em>Agree</h3><p>Deliverables, timing, responsibilities, review points and the commercial scope.</p></div></article>
+    <article class="fc ixc rv "><div class="pv"><div class="hw fq2"><div class="hwt"><span class="hwn">Staging versions</span><i class="hi"><svg aria-hidden="true"><use href="#i-globe"/></svg></i><i class="hi"><svg aria-hidden="true"><use href="#i-ne"/></svg></i></div><ul class="vl"><li class="ap"><b class="vt">v4</b><span>Final tweaks</span><em>Today</em><s><svg class="hck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg>Approved</s></li><li class=""><b class="vt">v3</b><span>Homepage copy updated</span><em>Yesterday</em></li><li class=""><b class="vt">v2</b><span>New colour palette</span><em>Mon</em></li><li class=""><b class="vt">v1</b><span>First draft on staging</span><em>Fri</em></li></ul></div></div><div class="bd"><h3><em class="pga-n">03</em>Create and build</h3><p>Design, content or development, with reviews at the planned stages. Website builds include unlimited amendments on staging within scope.</p></div></article>
+    <article class="fc ixc rv "><div class="pv"><div class="hw t6"><div class="hwt"><span class="hwn">Site health</span><i class="hi"><svg aria-hidden="true"><use href="#i-shield"/></svg></i><i class="hi"><svg aria-hidden="true"><use href="#i-ne"/></svg></i></div><div class="shs"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18" class="bg"/><circle cx="22" cy="22" r="18" class="fg" pathLength="100"/></svg><b>98</b><span><b>All systems healthy</b><small>Checked 5 min ago</small></span></div><ul class="shl"><li class="r1"><svg class="hck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><span>Daily backup</span><em>3:00 am</em></li><li class="r2"><svg class="hck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><span>Plugins and core updated</span><em>12 updates</em></li><li class="r3"><svg class="hck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><span>SSL certificate</span><em>Valid</em></li></ul><div class="shu"><span><b>Uptime</b><small>Last 30 days</small></span><div class="ub"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="w"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div><div class="bd"><h3><em class="pga-n">04</em>Launch and continue</h3><p>Agreed checks, final approval and handover, followed by support, care or recurring work.</p></div></article>
   </div>
+  <div class="pgyp rv"><span class="pgyi"><svg aria-hidden="true"><use href="#i-check"/></svg></span><p><b>Your part in the process.</b> Accurate information, brand assets, relevant system access and one consolidated set of feedback at each review.</p></div>
   <p class="pgco rv">Neeko is a trading name of <b>Berdua Sama Niaga</b> (003225924-X), registered in Malaysia.</p>
 </div></section>
 

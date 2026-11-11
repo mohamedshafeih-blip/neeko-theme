@@ -232,3 +232,33 @@ a.pgcc:hover .ar{color:var(--blue)}
 .pg4g>*{min-width:0}.pg4s input{min-width:0}
 @media (max-width:640px){.pv.pg4w{max-width:300px}.pg4s .btn{padding:0 18px}}
 .pg4t{grid-template-columns:minmax(0,1fr)}.pg4s{max-width:min(460px,100%)}
+
+/* about v2: mini windows (pga-) */
+.pga-pl ul{list-style:none;margin:0;padding:0;display:grid;flex:1;align-content:space-between}
+.pga-pl li{display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px solid var(--hair);font-size:13.5px}
+.pga-pl li:first-child{border-top:0}
+.pga-pl li>i{width:30px;height:30px;border-radius:9px;background:var(--soft);border:1px solid var(--hair);color:var(--blue);display:grid;place-items:center;flex:none}
+.pga-pl li>i svg{width:14px;height:14px}
+.pga-pl li span{flex:1;font-weight:500}
+.pga-pl li b{font-weight:600;white-space:nowrap}
+.pga-pl li b small{font-size:11.5px;font-weight:500;color:var(--faint)}
+.pga-pl li b small:first-child{margin-right:4px}
+.pga-im{flex:1 1 0;min-height:0;position:relative;border-radius:10px;overflow:hidden;background:var(--soft)}
+.pga-im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pga-pr .tpl{margin:0!important;flex-wrap:nowrap;overflow:hidden;-webkit-mask:linear-gradient(90deg,#000 85%,transparent);mask:linear-gradient(90deg,#000 85%,transparent)}
+.pga-pr .tpl span{flex:none}
+.pga-pr .tpl svg{color:var(--blue)}
+.pga-bf dl{margin:0;display:grid;flex:1;align-content:space-between}
+.pga-bf dl>div{display:grid;gap:6px;padding:9px 0;border-top:1px solid var(--hair)}
+.pga-bf dl>div:first-child{border-top:0;padding-top:2px}
+.pga-bf dt{font-size:11.5px;color:var(--faint);font-weight:500}
+.pga-bf dd{margin:0;font-size:13.5px;font-weight:500;display:flex;flex-wrap:wrap;gap:6px}
+.pga-bf dd span{height:26px;padding:0 10px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-size:12px;font-weight:600;display:inline-flex;align-items:center}
+.pga-bf dd b{font-size:17px;letter-spacing:-0.02em}
+.ic3.pga-2{grid-template-columns:repeat(2,1fr)}
+.pga-2 .ixc .pv{height:310px}
+.pga-n{font-style:normal;font-size:13px;font-weight:600;color:var(--blue);margin-right:10px;letter-spacing:0}
+#how .pgyp{margin-top:20px}
+@media (max-width:760px){.ic3.pga-2{grid-template-columns:1fr}}
+.pga-pl li b small{display:inline}.pga-pl li{padding:0}
+.pga-bf dl>div{padding:8px 0}
