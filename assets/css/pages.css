@@ -610,3 +610,19 @@ a.pgcc:hover .ar{color:var(--blue)}
  .pgW-br .pgW-t{font-size:13px}
 }
 @media (min-width:1240px){.pgW-lib .pgag{grid-template-columns:repeat(3,1fr)}}
+
+/* contact sidebar: animated logo, get-in-touch, tags */
+.pgc-lg{display:flex;flex-direction:column;align-items:center;padding:12px 8px 0}
+.pgc-mk{width:150px;height:150px;display:block}
+.pgc-lg b{margin-top:-8px;font-size:26px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+.pgc-ey{transition:transform .12s ease-out}
+.pgc-bk{transform-box:fill-box;transform-origin:center;animation:pgcBlink 4.5s infinite}
+@keyframes pgcBlink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.12)}}
+@media (prefers-reduced-motion:reduce){.pgc-bk{animation:none}.pgc-ey{transition:none}}
+.pgc-gt{display:grid;gap:2px;margin:12px 8px 6px;padding:14px 2px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.pgc-gt b{font-size:15px;font-weight:700;color:var(--ink)}
+.pgc-gt small{font-size:13px;color:var(--muted)}
+.pgc-ch .pgc-ar{width:15px;height:15px;color:var(--faint);flex:none}
+.pgc-tg{list-style:none;margin:8px 8px 4px;padding:16px 0 4px;border-top:1px solid var(--hair);display:flex;flex-wrap:wrap;gap:8px}
+.pgc-tg li{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:var(--soft);font-size:13px;font-weight:500;color:var(--muted)}
+.pgc-tg svg{width:14px;height:14px;color:var(--blue);flex:none}
