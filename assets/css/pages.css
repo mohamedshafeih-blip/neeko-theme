@@ -668,3 +668,12 @@ a.pgcc:hover .ar{color:var(--blue)}
 .pgD-q.pgD-qi:hover .pgD-ck{border-color:var(--blue)}
 .pgD-ctc{margin:12px 2px 0;padding-top:14px;border-top:1px solid var(--hair)}
 .pgD-ctc p{margin:0 10px 6px;font-size:12.5px;font-weight:600;color:var(--faint)}
+/* Mobile QC 12 Nov */
+.pgD-h small{display:block}.pgD-h small::before{display:inline-block;margin-right:6px;vertical-align:1px}
+@media (max-width:640px){
+ .pgc-mk{width:96px;height:96px}.pgc-lg{padding:4px 8px 0}.pgc-lg b{margin-top:-4px;font-size:22px}
+ .pgfc .pv{height:auto!important;aspect-ratio:16/10}
+ .pgW-lib .pgW-c{padding:10px}
+ .pg-art .pgam{font-size:13px;gap:6px 8px}.pg-art .pgam>*+*::before{margin-right:8px}
+}
+.pgc-gt small{text-wrap:pretty}
