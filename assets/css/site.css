@@ -1853,3 +1853,5 @@ footer{padding:96px 0 36px}
 .leg .lgl a{color:inherit;text-decoration:none}.leg .lgl a:hover{color:var(--ink)}
 
 .lang button{white-space:nowrap;flex:none}
+
+.hero h1 .h1k{display:block;font-size:clamp(15px,1.5vw,19px);font-weight:600;letter-spacing:-0.01em;line-height:1.3;color:var(--blue);margin-bottom:14px}

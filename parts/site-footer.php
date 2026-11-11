@@ -424,8 +424,7 @@ const rm=n=>'RM'+Math.round(n).toLocaleString('en-MY');
 const short=n=>n>=1000?'RM'+(n/1000).toFixed(n%1000?1:0).replace('.0','')+'k':'RM'+n;
 const $=id=>document.getElementById(id);
 let st={size:null,order:[],sel:{},goals:[],extra:[],removed:[]};
-let _saved=false;try{const v=JSON.parse(localStorage.getItem('neeko-nb')||'null');if(v&&Array.isArray(v.order)){st=v;_saved=true}}catch(e){}
-if(!_saved)st.goals=[0];
+const _saved=false;try{localStorage.removeItem('neeko-nb')}catch(e){} // start every visit with an empty brief; team size + revenue stay preset
 const save=()=>{try{localStorage.setItem('neeko-nb',JSON.stringify(st))}catch(e){}};
 const rec=s=>Math.min(st.size==null?0:REC[st.size],s.t.length-1);
 const minP=s=>{const t=s.t[0];return t.one!=null?short(t.one):short(t.mo)+'/mo'};
