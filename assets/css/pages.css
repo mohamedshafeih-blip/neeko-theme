@@ -612,13 +612,15 @@ a.pgcc:hover .ar{color:var(--blue)}
 @media (min-width:1240px){.pgW-lib .pgag{grid-template-columns:repeat(3,1fr)}}
 
 /* contact sidebar: animated logo, get-in-touch, tags */
-.pgc-lg{display:flex;flex-direction:column;align-items:center;padding:12px 8px 0}
-.pgc-mk{width:150px;height:150px;display:block}
+.pgc-lg{display:flex;flex-direction:column;align-items:center;padding:12px 8px 0;perspective:520px}
+.pgc-mk{width:150px;height:150px;display:block;overflow:visible;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s var(--ease)}
 .pgc-lg b{margin-top:-8px;font-size:26px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
-.pgc-ey{transition:transform .12s ease-out}
+.pgc-ey{transform:translate(var(--tx,0px),var(--ty,0px));transition:transform .18s var(--ease)}
+.pgc-el,.pgc-er{transform-box:fill-box;transform-origin:center;transition:transform .18s var(--ease)}
+.pgc-el{transform:scale(var(--sl,1))}.pgc-er{transform:scale(var(--sr,1))}
 .pgc-bk{transform-box:fill-box;transform-origin:center;animation:pgcBlink 4.5s infinite}
 @keyframes pgcBlink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.12)}}
-@media (prefers-reduced-motion:reduce){.pgc-bk{animation:none}.pgc-ey{transition:none}}
+@media (prefers-reduced-motion:reduce){.pgc-bk{animation:none}.pgc-ey,.pgc-mk,.pgc-el,.pgc-er{transition:none}}
 .pgc-gt{display:grid;gap:2px;margin:12px 8px 6px;padding:14px 2px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
 .pgc-gt b{font-size:15px;font-weight:700;color:var(--ink)}
 .pgc-gt small{font-size:13px;color:var(--muted)}

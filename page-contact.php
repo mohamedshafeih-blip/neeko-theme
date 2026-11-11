@@ -10,7 +10,7 @@ $I = NK_URI . '/assets/img/';
 	'Write your message below and send it on WhatsApp or by email. Tell us what you need and we’ll reply with next steps and a quotation.',
 	'', 'pg-hero-w', true
 );
-$side  = '<div class="pgc-lg"><svg class="pgc-mk" viewBox="0 0 32 32" role="img" aria-label="Neeko"><path fill="#1f5bff" d="M16 3c9.6 0 13 3.4 13 13s-3.4 13-13 13S3 25.6 3 16 6.4 3 16 3Z"/><g class="pgc-ey"><g class="pgc-bk"><rect x="10.2" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/><rect x="18" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/></g></g></svg><b>Neeko</b></div>';
+$side  = '<div class="pgc-lg"><svg class="pgc-mk" viewBox="0 0 32 32" role="img" aria-label="Neeko"><path fill="#1f5bff" d="M16 3c9.6 0 13 3.4 13 13s-3.4 13-13 13S3 25.6 3 16 6.4 3 16 3Z"/><g class="pgc-ey"><g class="pgc-bk"><rect class="pgc-el" x="10.2" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/><rect class="pgc-er" x="18" y="11.7" width="3.8" height="8.6" rx="1.9" fill="#fff"/></g></g></svg><b>Neeko</b></div>';
 $side .= '<div class="pgc-gt"><b>Get in touch</b><small>WhatsApp is the quickest way to reach us.</small></div><nav class="pgW-nv pgc-ch" aria-label="Contact channels">';
 $side .= '<a href="https://wa.me/60176604771" target="_blank" rel="noopener"><i class="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg></i><span><b>WhatsApp</b><small>+60 17-660 4771</small></span><svg class="pgc-ar" aria-hidden="true"><use href="#i-ne"/></svg></a>';
 $side .= '<a href="mailto:enquiry@neeko.my"><i><svg aria-hidden="true"><use href="#i-mail"/></svg></i><span><b>Email us</b><small>enquiry@neeko.my</small></span><svg class="pgc-ar" aria-hidden="true"><use href="#i-ne"/></svg></a>';
@@ -53,8 +53,11 @@ nk_win_start( 'New message', array( array( 'i-wa', 'https://wa.me/60176604771', 
 <?php nk_page_cta( 'Rather plan it yourself?', 'Pick your goals in the brief builder to see your team and estimate, then send it to us.', true ); ?>
 </main>
 <script>
-(()=>{const l=document.querySelector('.pgc-mk'),e=l&&l.querySelector('.pgc-ey');if(!e||matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(hover: hover)').matches)return;let q=0;
-addEventListener('mousemove',v=>{if(q)return;q=requestAnimationFrame(()=>{q=0;const r=l.getBoundingClientRect(),x=v.clientX-r.left-r.width/2,y=v.clientY-r.top-r.height/2,d=Math.hypot(x,y)||1,k=Math.min(d/160,1);e.style.transform=`translate(${(x/d*2.6*k).toFixed(2)}px,${(y/d*2.2*k).toFixed(2)}px)`})},{passive:true});})();
+(()=>{const w=document.querySelector('.pgc-lg');if(!w||matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(hover: hover)').matches)return;const l=w.querySelector('.pgc-mk');let q=0;
+const set=(o)=>{for(const k in o)w.style.setProperty(k,o[k])};
+addEventListener('mousemove',v=>{if(q)return;q=requestAnimationFrame(()=>{q=0;const r=l.getBoundingClientRect(),x=v.clientX-r.left-r.width/2,y=v.clientY-r.top-r.height/2,d=Math.hypot(x,y)||1,k=Math.min(d/220,1),nx=x/d*k,ny=y/d*k;
+set({'--tx':(nx*3.6).toFixed(2)+'px','--ty':(ny*3).toFixed(2)+'px','--ry':(nx*18).toFixed(1)+'deg','--rx':(-ny*14).toFixed(1)+'deg','--sl':(1+(-nx)*.22+Math.abs(ny)*.04).toFixed(3),'--sr':(1+nx*.22+Math.abs(ny)*.04).toFixed(3)})})},{passive:true});
+document.addEventListener('mouseleave',()=>set({'--tx':'0px','--ty':'0px','--ry':'0deg','--rx':'0deg','--sl':'1','--sr':'1'}));})();
 (()=>{const f=document.getElementById('pgfm');if(!f)return;const er=document.getElementById('pger');
 const txt=()=>{const v=n=>(f.elements[n].value||'').trim();const need=(f.querySelector('[name=need]:checked')||{}).value||'Not sure yet';return `Hi Neeko, I'd like to get in touch.\n\nName: ${v('name')}\nCompany: ${v('company')||'-'}\nContact: ${v('contact')}\nNeed: ${need}\n\n${v('msg')}`};
 const ok=()=>{const bad=[...f.querySelectorAll('[required]')].filter(x=>!x.value.trim());const c=f.elements.contact.value.trim();const cOk=!c||/@.+\./.test(c)||c.replace(/\D/g,'').length>=8;
