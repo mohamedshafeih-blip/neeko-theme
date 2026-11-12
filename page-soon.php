@@ -10,9 +10,10 @@ $ico = function ( $i ) { return '<svg aria-hidden="true"><use href="#' . esc_att
 $btn = '<a class="btn btn-blue" href="' . esc_url( $wa ) . '" target="_blank" rel="noopener">' . $ico( 'i-wa' ) . 'Ask on WhatsApp</a><a class="btn btn-line" href="#pgU-pk">See packages</a>';
 ?>
 <main class="pgU-pg">
-<?php nk_page_hero( array( array( $d['group'], home_url( '/#pricing' ) ), array( $d['name'], null ) ), esc_html( $d['h1'] ), esc_html( $d['sub'] ), $btn, 'pgU-hero pg-hero-w', true ); ?>
-<div class="pgU rv">
+<section class="pgU" id="top">
   <div class="pgU-bl" aria-hidden="true" inert>
+	<div class="pgU-mh"><small><?php echo esc_html( $d['group'] ); ?> · <?php echo esc_html( $d['name'] ); ?></small><b><?php echo esc_html( $d['h1'] ); ?></b><p><?php echo esc_html( $d['sub'] ); ?></p><span><i></i><i></i></span></div>
+	<div class="pgU-g">
 	<?php foreach ( $d['win'] as $w ) : ?>
 	<div class="hw pgU-w pgU-<?php echo esc_attr( $w[2] ); ?>">
 		<?php if ( 'photo' === $w[2] ) : ?>
@@ -29,6 +30,7 @@ $btn = '<a class="btn btn-blue" href="' . esc_url( $wa ) . '" target="_blank" re
 		<?php endif; ?>
 	</div>
 	<?php endforeach; ?>
+	</div>
   </div>
 
   <div class="pgU-fl pgU-f1" aria-hidden="true"><i class="pgU-sp"></i><span>Writing FAQ answers</span><b class="pgU-dt"><i></i><i></i><i></i></b></div>
@@ -38,7 +40,7 @@ $btn = '<a class="btn btn-blue" href="' . esc_url( $wa ) . '" target="_blank" re
 	<div class="hwt"><span class="hwn"><i class="pgU-sp" aria-hidden="true"></i><span id="pgU-t">Updating this page</span></span><a class="hi" href="<?php echo esc_url( $wa ); ?>" target="_blank" rel="noopener" aria-label="Ask on WhatsApp"><?php echo $ico( 'i-wa' ); // phpcs:ignore ?></a></div>
 	<div class="pgU-hd">
 	  <i class="pgU-ic"><?php echo $ico( $d['icon'] ); // phpcs:ignore ?></i>
-	  <div><b><?php echo esc_html( $d['name'] ); ?></b><small>The full page is on its way. Packages and prices below are current.</small></div>
+	  <div><h1><?php echo esc_html( $d['name'] ); ?></h1><small>The full page is on its way. Packages and prices below are current.</small></div>
 	</div>
 	<div class="pgU-bar" role="progressbar" aria-label="Page progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68"><i></i></div>
 	<ul class="pgU-tk">
@@ -60,8 +62,6 @@ $btn = '<a class="btn btn-blue" href="' . esc_url( $wa ) . '" target="_blank" re
 	</ul>
 	<div class="pgU-bt"><a class="btn btn-blue" href="<?php echo esc_url( $wa ); ?>" target="_blank" rel="noopener"><?php echo $ico( 'i-wa' ); // phpcs:ignore ?>Ask on WhatsApp</a><a class="btn btn-line" href="<?php echo esc_url( home_url( '/#brief' ) ); ?>">Start your brief</a></div>
   </section>
-</div>
-</div></section>
-<?php nk_page_cta(); ?>
+</section>
 </main>
 <?php get_footer();
