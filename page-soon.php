@@ -33,14 +33,14 @@ $btn = '<a class="btn btn-blue" href="' . esc_url( $wa ) . '" target="_blank" re
 	</div>
   </div>
 
-  <div class="pgU-fl pgU-f1" aria-hidden="true"><i class="pgU-sp"></i><span>Writing FAQ answers</span><b class="pgU-dt"><i></i><i></i><i></i></b></div>
+  <div class="pgU-fl pgU-f1" aria-hidden="true"><i class="pgU-sp"></i><span><?php echo esc_html( $d['f1'] ?? 'Writing FAQ answers' ); ?></span><b class="pgU-dt"><i></i><i></i><i></i></b></div>
   <div class="pgU-fl pgU-f2" aria-hidden="true"><img src="<?php echo NK_URI; ?>/assets/img/<?php echo 'website-care' === $slug ? 'nk-about-team' : 'nk-about-create'; ?>.webp" alt=""><span>Placing real photos</span><b class="pgU-mb"><i></i></b></div>
 
   <section class="hw pgU-ov" id="pgU-pk" aria-labelledby="pgU-t">
 	<div class="hwt"><span class="hwn"><i class="pgU-sp" aria-hidden="true"></i><span id="pgU-t">Updating this page</span></span><a class="hi" href="<?php echo esc_url( $wa ); ?>" target="_blank" rel="noopener" aria-label="Ask on WhatsApp"><?php echo $ico( 'i-wa' ); // phpcs:ignore ?></a></div>
 	<div class="pgU-hd">
 	  <i class="pgU-ic"><?php echo $ico( $d['icon'] ); // phpcs:ignore ?></i>
-	  <div><h1><?php echo esc_html( $d['name'] ); ?></h1><small>The full page is on its way. Packages and prices below are current.</small></div>
+	  <div><h1><?php echo esc_html( $d['name'] ); ?></h1><small><?php echo esc_html( $d['note'] ?? 'The full page is on its way. Packages and prices below are current.' ); ?></small></div>
 	</div>
 	<div class="pgU-bar" role="progressbar" aria-label="Page progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68"><i></i></div>
 	<ul class="pgU-tk">
@@ -48,6 +48,14 @@ $btn = '<a class="btn btn-blue" href="' . esc_url( $wa ) . '" target="_blank" re
 	  <li class="on"><i class="pgU-sp" aria-hidden="true"></i><span><?php echo esc_html( $d['tasks'][1] ); ?></span><em>In progress</em></li>
 	  <li><i></i><span><?php echo esc_html( $d['tasks'][2] ); ?></span><em>Next</em></li>
 	</ul>
+	<?php if ( ! empty( $d['live'] ) ) : ?>
+	<p class="pgU-l">Live now</p>
+	<ul class="pgU-pk pgU-lv">
+	<?php foreach ( $d['live'] as $l ) : ?>
+	  <li><a href="https://<?php echo esc_attr( $l[1] ); ?>" target="_blank" rel="noopener"><span><b><?php echo esc_html( $l[0] ); ?></b><small><?php echo esc_html( $l[1] . ' · ' . $l[2] ); ?></small></span><i><?php echo $ico( 'i-ne' ); // phpcs:ignore ?></i></a></li>
+	<?php endforeach; ?>
+	</ul>
+	<?php else : ?>
 	<p class="pgU-l">Packages</p>
 	<ul class="pgU-pk">
 	<?php foreach ( $d['pk'] as $n => $p ) : ?>
@@ -60,6 +68,7 @@ $btn = '<a class="btn btn-blue" href="' . esc_url( $wa ) . '" target="_blank" re
 		?></span></li>
 	<?php endforeach; ?>
 	</ul>
+	<?php endif; ?>
 	<div class="pgU-bt"><a class="btn btn-blue" href="<?php echo esc_url( $wa ); ?>" target="_blank" rel="noopener"><?php echo $ico( 'i-wa' ); // phpcs:ignore ?>Ask on WhatsApp</a><a class="btn btn-line" href="<?php echo esc_url( home_url( '/#brief' ) ); ?>">Start your brief</a></div>
   </section>
 </section>

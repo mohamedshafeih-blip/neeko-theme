@@ -10,6 +10,7 @@
       <li><button type="button" aria-haspopup="true">Company<svg class="cv" aria-hidden="true"><use href="#i-cv"/></svg></button>
         <div class="dd">
           <a href="<?php echo esc_url( nk_url( 'about' ) ); ?>"><i><svg aria-hidden="true"><use href="#i-team"/></svg></i><b>About</b><small>Who we are, how we work</small></a>
+          <a href="<?php echo esc_url( nk_url( 'portfolio' ) ); ?>"><i><svg aria-hidden="true"><use href="#i-pen"/></svg></i><b>Portfolio</b><small>Sites and work we have shipped</small></a>
           <a href="<?php echo esc_url( nk_url( 'articles' ) ); ?>"><i><svg aria-hidden="true"><use href="#i-doc"/></svg></i><b>Articles</b><small>Guides with real prices</small></a>
           <a href="<?php echo esc_url( nk_url( 'faq' ) ); ?>"><i><svg aria-hidden="true"><use href="#i-chat"/></svg></i><b>FAQ</b><small>Timing, scope and pricing</small></a>
           <a href="<?php echo esc_url( nk_url( 'contact' ) ); ?>"><i><svg aria-hidden="true"><use href="#i-mail"/></svg></i><b>Contact</b><small>WhatsApp or email us</small></a></div></li>
@@ -23,7 +24,7 @@
   </div>
   <nav class="mp" id="mp" aria-label="Mobile">
     <?php foreach ( nk_services() as $g => $items ) : ?><div class="mpg"><span class="mpl"><?php echo esc_html( $g ); ?></span><?php foreach ( $items as $s ) : ?><a class="mpi" href="<?php echo esc_url( nk_svc_url( $s[0] ) ); ?>"><i><svg aria-hidden="true"><use href="#<?php echo esc_attr( $s[3] ); ?>"/></svg></i><b><?php echo esc_html( $s[1] ); ?></b><small><?php echo esc_html( $s[2] ); ?></small></a><?php endforeach; ?></div>
-    <?php endforeach; ?><div class="mpc"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#pricing">Pricing</a><a href="<?php echo esc_url( nk_url( 'about' ) ); ?>">About</a><a href="<?php echo esc_url( nk_url( 'articles' ) ); ?>">Articles</a><a href="<?php echo esc_url( nk_url( 'faq' ) ); ?>">FAQ</a><a href="<?php echo esc_url( nk_url( 'contact' ) ); ?>">Contact</a><a href="#">Log in</a></div>
+    <?php endforeach; ?><div class="mpc"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#pricing">Pricing</a><a href="<?php echo esc_url( nk_url( 'about' ) ); ?>">About</a><a href="<?php echo esc_url( nk_url( 'portfolio' ) ); ?>">Portfolio</a><a href="<?php echo esc_url( nk_url( 'articles' ) ); ?>">Articles</a><a href="<?php echo esc_url( nk_url( 'faq' ) ); ?>">FAQ</a><a href="<?php echo esc_url( nk_url( 'contact' ) ); ?>">Contact</a><a href="#">Log in</a></div>
     <div class="mpa"><a class="btn mpw" href="https://wa.me/60176604771" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp us</a><a class="btn btn-blue" href="<?php echo esc_url( home_url( '/' ) ); ?>#brief">Start a brief</a></div>
   </nav>
 </header>
