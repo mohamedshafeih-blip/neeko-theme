@@ -11,7 +11,6 @@
         <div class="dd">
           <a href="<?php echo esc_url( nk_url( 'about' ) ); ?>"><i><svg aria-hidden="true"><use href="#i-team"/></svg></i><b>About</b><small>Who we are, how we work</small></a>
           <a href="<?php echo esc_url( nk_url( 'articles' ) ); ?>"><i><svg aria-hidden="true"><use href="#i-doc"/></svg></i><b>Articles</b><small>Guides with real prices</small></a>
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>#tools"><i><svg aria-hidden="true"><use href="#i-spark"/></svg></i><b>Integrations</b><small>The tools we connect</small></a>
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>#faq"><i><svg aria-hidden="true"><use href="#i-chat"/></svg></i><b>FAQ</b><small>Timing, scope and pricing</small></a>
           <a href="<?php echo esc_url( nk_url( 'contact' ) ); ?>"><i><svg aria-hidden="true"><use href="#i-mail"/></svg></i><b>Contact</b><small>WhatsApp or email us</small></a></div></li>
     </ul>

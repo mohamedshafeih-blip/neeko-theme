@@ -18,7 +18,7 @@ function nk_services() {
 		'Build'   => array(
 			array( 'ai-chat-assistant', 'AI chat assistant', 'Answers FAQs, hands over', 'i-chat' ),
 			array( 'crm', 'CRM setup', 'Track every lead', 'i-team' ),
-			array( 'integrations', 'Connect your tools', 'API integration', 'i-sheet' ),
+			array( 'integrations', 'API integration', 'Connect your tools', 'i-sheet' ),
 			array( 'erp', 'ERP and operations', 'Orders, stock, approvals', 'i-cart' ),
 			array( 'custom-software', 'Custom software', 'Portals, dashboards, tools', 'i-code' ),
 			array( 'mobile-app', 'Mobile app', 'For customers or staff', 'i-send' ),
