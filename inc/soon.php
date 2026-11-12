@@ -28,28 +28,6 @@ function nk_soon() {
 				array( 'Languages', 'i-globe', 'list', array( 'English', 'Bahasa Melayu', 'Mixed replies' ) ),
 			),
 		),
-		'portfolio' => array(
-			'name'  => 'Portfolio',
-			'group' => 'Company',
-			'icon'  => 'i-pen',
-			'h1'    => 'Websites, campaigns and designs we have shipped',
-			'sub'   => 'Live sites, social campaigns and brand work for Malaysian businesses and agencies.',
-			'desc'  => 'Neeko portfolio: live websites, social media campaigns, graphic design and AI photography for Malaysian businesses. Case studies coming soon.',
-			'title' => 'Portfolio: websites and design work — Neeko',
-			'note'  => 'Case studies are on their way. These sites are live now.',
-			'f1'    => 'Writing case studies',
-			'pk'    => array(),
-			'live'  => array( array( 'Family Wellbeing (LPPKN)', 'familywellbeing.com.my', 'Website' ), array( 'MamaCare', 'mamacare.my', 'Website' ), array( 'Lux Agarwood', 'luxagarwood.com', 'Website' ), array( 'Two Plants', 'twoplants.my', 'Website' ) ),
-			'tasks' => array( 'Live sites list', 'Case studies', 'Before and after shots' ),
-			'win'   => array(
-				array( '', '', 'photo', $I . 'nk-about-create.webp' ),
-				array( 'Projects', 'i-globe', 'list', array( 'familywellbeing.com.my', 'mamacare.my', 'luxagarwood.com', 'twoplants.my' ) ),
-				array( '', '', 'photo', $I . 'nk-art-cost.webp' ),
-				array( 'Clients', 'i-team', 'list', array( 'Family Wellbeing (LPPKN)', 'MamaCare', 'Lux Agarwood', 'Two Plants' ) ),
-				array( '', '', 'photo', $I . 'nk-about-team.webp' ),
-				array( 'Services', 'i-pen', 'list', array( 'Website design', 'Social media', 'Graphic design', 'AI photography' ) ),
-			),
-		),
 		'crm' => array(
 			'name'  => 'CRM setup',
 			'group' => 'Build',
@@ -200,7 +178,7 @@ add_action( 'wp_head', function () {
 	}
 	$ld = array( '@context' => 'https://schema.org', '@graph' => array(
 		array( '@type' => 'ProfessionalService', '@id' => 'https://neeko.my/#org', 'name' => 'Neeko', 'url' => 'https://neeko.my/', 'telephone' => '+60176604771', 'areaServed' => 'MY' ),
-		$d['pk'] ? array( '@type' => 'Service', 'name' => $d['name'], 'serviceType' => $d['name'], 'provider' => array( '@id' => 'https://neeko.my/#org' ), 'areaServed' => 'MY', 'url' => $url, 'offers' => $off ) : array( '@type' => 'CollectionPage', 'name' => $d['title'], 'url' => $url, 'about' => array( '@id' => 'https://neeko.my/#org' ) ),
+		array( '@type' => 'Service', 'name' => $d['name'], 'serviceType' => $d['name'], 'provider' => array( '@id' => 'https://neeko.my/#org' ), 'areaServed' => 'MY', 'url' => $url, 'offers' => $off ),
 		array( '@type' => 'BreadcrumbList', 'itemListElement' => array( array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => 'https://neeko.my/' ), array( '@type' => 'ListItem', 'position' => 2, 'name' => $d['name'], 'item' => $url ) ) ),
 	) );
 	echo '<meta name="description" content="' . esc_attr( $d['desc'] ) . '"><meta property="og:title" content="' . esc_attr( $d['title'] ) . '"><meta property="og:description" content="' . esc_attr( $d['desc'] ) . '"><meta property="og:url" content="' . esc_url( $url ) . '"><meta property="og:type" content="website">' . "\n";
