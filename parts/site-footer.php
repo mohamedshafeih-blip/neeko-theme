@@ -284,7 +284,7 @@ care:{t:[['1 WordPress website','Monthly backup + updates','Basic health check',
  n:'Business-hours support. Time allowances don’t roll over. No 24/7 emergency SLA.'}
 };
 
-const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI assistant',crm:'CRM',api:'Integrations',erp:'ERP',software:'Custom software',mobile:'Mobile app',care:'Website care'};
+const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI chat assistant',crm:'CRM setup',api:'API integration',erp:'ERP and operations',software:'Custom software',mobile:'Mobile app',care:'Website care'};
 const fmt=n=>'RM'+n.toLocaleString('en-MY');
 const ck='<svg aria-hidden="true"><use href="#i-check"/></svg>';
 const tabs=document.getElementById('ptabs'),plans=document.getElementById('plans');
@@ -308,7 +308,7 @@ function show(id){
   plans.style.gridTemplateColumns=n<3?`repeat(${n},minmax(0,380px))`:'';
   plans.style.justifyContent=n<3?'center':'';
 }
-const TO=(()=>{const F=['seo','social','design','web'];return [...F.map(id=>S.find(x=>x.id===id)).filter(Boolean),...S.filter(x=>!F.includes(x.id))]})();
+const TO=S; // same order as the header menu: Connect, Create, Build, Care
 const one=c=>TO.map(s=>`<button type="button"${c?' tabindex="-1" aria-hidden="true" data-clone="1"':' role="tab"'} data-id="${s.id}">${L[s.id]||s.n}</button>`).join('');
 tabs.innerHTML=one(0);
 const mid=id=>tabs.querySelector(`button:not([data-clone])[data-id="${id}"]`);let prog=0;
