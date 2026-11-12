@@ -304,7 +304,7 @@ function show(id){
     <div class="pr num">${price(t)}
     ${F.d?`<p class="fr">${F.d[i]}</p>`:''}
     <ul>${(F.t?F.t[i]:t.f).map(f=>`<li>${ck}<span>${f}</span></li>`).join('')}</ul>
-    <a class="btn ${i===mid?'':'btn-line'}" href="<?php echo esc_url( home_url( '/' ) ); ?>#brief" data-add="${id}" data-tier="${i}">Add to my brief</a></article>`).join('');(function(){var w=document.getElementById('pfw');if(!w){w=document.createElement('p');w.id='pfw';w.className='pfw';plans.after(w)}var u=window.NK_SVC&&NK_SVC[id];w.innerHTML=(u&&u!==location.pathname)?'<a class="pfull" href="'+u+'">See the full '+(tabs.querySelector('[data-id="'+id+'"]')||{textContent:''}).textContent.trim()+' page →</a>':'';})();
+    <a class="btn ${i===mid?'':'btn-line'}" href="<?php echo esc_url( home_url( '/' ) ); ?><?php echo is_front_page() ? '' : '?add=${id}&tier=${i}'; ?>#brief" data-add="${id}" data-tier="${i}">Add to my brief</a></article>`).join('');(function(){var w=document.getElementById('pfw');if(!w){w=document.createElement('p');w.id='pfw';w.className='pfw';plans.after(w)}var u=window.NK_SVC&&NK_SVC[id];w.innerHTML=(u&&u!==location.pathname)?'<a class="pfull" href="'+u+'">See the full '+(tabs.querySelector('[data-id="'+id+'"]')||{textContent:''}).textContent.trim()+' page →</a>':'';})();
   plans.style.gridTemplateColumns=n<3?`repeat(${n},minmax(0,380px))`:'';
   plans.style.justifyContent=n<3?'center':'';
 }
@@ -321,6 +321,12 @@ plans.addEventListener('click',e=>{const a=e.target.closest('[data-add]');if(!a)
   setTimeout(()=>{const sel=document.querySelector(`select[data-pk="${id}"]`);if(sel){sel.value=ti;sel.dispatchEvent(new Event('change',{bubbles:true}))}},30);
 });
 show('web');
+// Arrived from a service page's "Add to my brief": preselect that service + package on the Home brief.
+(()=>{const q=new URLSearchParams(location.search),id=q.get('add');if(!id||!document.getElementById('list'))return;const ti=q.get('tier')||'0';
+ addEventListener('load',()=>setTimeout(()=>{const all=document.querySelector('.svt button');if(all&&all.getAttribute('aria-selected')!=='true'&&all.getAttribute('aria-pressed')!=='true')all.click();
+  const c=document.querySelector(`#list input[value="${CSS.escape(id)}"]`);if(c&&!c.checked)c.click();
+  setTimeout(()=>{const sel=document.querySelector(`select[data-pk="${CSS.escape(id)}"]`);if(sel){sel.value=ti;sel.dispatchEvent(new Event('change',{bubbles:true}))}const b=document.getElementById('brief');if(b)b.scrollIntoView({block:'start'})},40);
+  history.replaceState(null,'',location.pathname+'#brief')},80))})();
 const loop=()=>{};
 const edge=()=>{const m=tabs.scrollWidth-tabs.clientWidth;tabs.classList.toggle('ov',m>2);tabs.classList.toggle('st',tabs.scrollLeft<4);tabs.classList.toggle('en',tabs.scrollLeft>m-4)};
 const ctr=()=>{const b=tabs.querySelector('[aria-selected="true"]');if(b)tabs.scrollLeft=b.offsetLeft-(tabs.clientWidth-b.offsetWidth)/2};
