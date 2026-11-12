@@ -1879,3 +1879,18 @@ footer{padding:96px 0 36px}
 :root[data-theme="dark"] .pbg .pmw.pwl{background:color-mix(in srgb,var(--blue) 30%,var(--card))}
 :root[data-theme="dark"] .pbg .pmw.pwl .pmh{color:#c9d8ff}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pbg .pmw.pwl{background:color-mix(in srgb,var(--blue) 30%,var(--card))}:root:not([data-theme="light"]) .pbg .pmw.pwl .pmh{color:#c9d8ff}}
+
+/* Recent work: blurred until case studies are ready (service pages, .wkU) */
+.wk2{position:relative}.wk2:has(>.wkU){overflow:hidden!important;scroll-snap-type:none!important}
+.wk2>.wkc{filter:blur(6px) saturate(.9);opacity:.7;pointer-events:none;user-select:none}
+.wkU{position:absolute;inset:0;z-index:2;display:grid;place-items:center;padding:16px}
+.wkUw{height:auto!important;width:min(400px,100%);gap:12px;padding-bottom:16px;box-shadow:0 1px 2px rgba(16,24,40,.06),0 30px 70px -24px rgba(16,24,40,.35)}
+.wkUw .hwn{display:flex;align-items:center;gap:8px}
+.wkUw p{margin:0;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.wkUw .btn{height:42px;font-size:14px;gap:8px}.wkUw .btn svg{width:16px;height:16px}
+.wkU-sp{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid color-mix(in srgb,var(--blue) 22%,transparent);border-top-color:var(--blue);box-sizing:border-box;animation:wkUs .8s linear infinite}
+@keyframes wkUs{to{transform:rotate(360deg)}}
+.wkU-bar{height:6px;border-radius:9px;background:var(--soft-2);overflow:hidden}
+.wkU-bar i{display:block;height:100%;width:64%;border-radius:inherit;background:linear-gradient(90deg,var(--blue) 0 40%,color-mix(in srgb,var(--blue) 55%,#fff) 50%,var(--blue) 60% 100%);background-size:250% 100%;animation:wkUg 2.4s linear infinite}
+@keyframes wkUg{from{background-position:100% 0}to{background-position:-150% 0}}
+@media (prefers-reduced-motion:reduce){.wkU-sp,.wkU-bar i{animation:none}}
