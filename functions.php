@@ -134,6 +134,7 @@ add_action( 'init', function () {
 add_action( 'send_headers', function () {
 	if ( false !== strpos( home_url(), '//stage.' ) && ! headers_sent() ) {
 		header( 'X-LiteSpeed-Cache-Control: no-cache' );
+		header( 'X-Robots-Tag: noindex, nofollow', true );
 	}
 } );
 
@@ -168,3 +169,8 @@ add_action( 'do_faviconico', function () {
 	wp_redirect( NK_URI . '/assets/icon/favicon.ico', 301 );
 	exit;
 } );
+
+/* Staging must never be indexed: noindex meta + robots.txt blocks everything (live neeko.my is unaffected). */
+function nk_is_stage() { return false !== strpos( home_url(), '//stage.' ); }
+add_filter( 'wp_robots', function ( $r ) { return nk_is_stage() ? array( 'noindex' => true, 'nofollow' => true ) : $r; }, 99 );
+add_filter( 'robots_txt', function ( $txt ) { return nk_is_stage() ? "User-agent: *\nDisallow: /\n" : $txt; }, 99 );
