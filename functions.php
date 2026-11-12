@@ -156,3 +156,15 @@ add_action( 'init', function () {
 require NK_DIR . '/inc/soon.php';
 require NK_DIR . '/inc/articles.php';
 require NK_DIR . '/inc/pages.php';
+
+/* Favicon from the theme (unless a Site Icon is set in WordPress). /favicon.ico redirects to the theme copy. */
+add_action( 'wp_head', function () {
+	if ( function_exists( 'has_site_icon' ) && has_site_icon() ) return;
+	$u = NK_URI . '/assets/icon/';
+	echo '<link rel="icon" href="' . esc_url( $u . 'favicon.ico' ) . '" sizes="48x48"><link rel="icon" href="' . esc_url( $u . 'favicon.svg' ) . '" type="image/svg+xml"><link rel="apple-touch-icon" href="' . esc_url( $u . 'apple-touch-icon.png' ) . '"><link rel="manifest" href="' . esc_url( $u . 'site.webmanifest' ) . '"><meta name="theme-color" content="#ffffff">' . "\n";
+}, 3 );
+add_action( 'do_faviconico', function () {
+	if ( function_exists( 'has_site_icon' ) && has_site_icon() ) return;
+	wp_redirect( NK_URI . '/assets/icon/favicon.ico', 301 );
+	exit;
+} );
