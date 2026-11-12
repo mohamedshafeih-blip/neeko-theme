@@ -734,3 +734,9 @@ a.pgcc:hover .ar{color:var(--blue)}
 @media (min-width:1001px){.pgW.pgF{align-items:start}.pgF .pgW-sd{position:sticky;top:96px;align-self:start;max-height:calc(100svh - 120px);overflow-y:auto}}
 @media (max-width:1000px){.pgW.pgF{gap:12px}.pgF .pgW-mn,.pgF .pgW-c{gap:12px}.pgF .pgW-c{padding:0}}
 @media (max-width:640px){.pgF .pgW-c{padding:0}.pgF-g,.pgF-g+.pgF-g{padding:14px 6px 8px;border-radius:16px}.pgF .pgW-h{border-radius:16px}}
+/* 13 Nov: About + Contact also drop the grey frame (same as Articles / FAQ) */
+.pgW.pgW-ct{background:none;border:0;box-shadow:none;padding:0;border-radius:0;gap:20px}
+.pgW-ct .pgW-sd,.pgW-ct .pgW-mn{border:1px solid var(--hair);box-shadow:var(--sh)}
+.pgD-w{background:none;border:0;box-shadow:none;padding:0;border-radius:0;gap:20px}
+.pgD-sd,.pgD-mn{border:1px solid var(--hair);box-shadow:var(--sh)}
+@media (max-width:1000px){.pgW.pgW-ct,.pgD-w{gap:12px;padding:0}}
