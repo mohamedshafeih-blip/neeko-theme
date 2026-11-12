@@ -1872,3 +1872,10 @@ footer{padding:96px 0 36px}
 .pbg .pmw.pwl .pic{background:#f7f9ff;box-shadow:none}
 :root[data-theme="dark"] .pbg .pmw.pwl .pic{background:var(--card)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pbg .pmw.pwl .pic{background:var(--card)}}
+/* What happens: medium blue tint frame (not solid, not too light) */
+.pbg .pmw.pwl{background:color-mix(in srgb,var(--blue) 22%,#fff)}
+.pbg .pmw.pwl .pmh{color:#1747c9}
+.pbg .pmw.pwl .pmh em i{background:color-mix(in srgb,var(--blue) 40%,#fff)}
+:root[data-theme="dark"] .pbg .pmw.pwl{background:color-mix(in srgb,var(--blue) 30%,var(--card))}
+:root[data-theme="dark"] .pbg .pmw.pwl .pmh{color:#c9d8ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pbg .pmw.pwl{background:color-mix(in srgb,var(--blue) 30%,var(--card))}:root:not([data-theme="light"]) .pbg .pmw.pwl .pmh{color:#c9d8ff}}
