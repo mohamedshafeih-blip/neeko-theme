@@ -1801,3 +1801,4 @@
 
 /* web banner: placeholder first, photo appears only after the drop (10 Nov) */
 @media (prefers-reduced-motion:no-preference){.gdcp .gdtgt>img,.gdcp .gdtgt>b,.gdcp .gdtgt>i{animation:gddropin 9s ease infinite!important}}
+@media (min-width:1101px){body .pjb2 .pjd.pbg[data-k="2"]{grid-template-rows:auto minmax(0,1fr)!important}}
