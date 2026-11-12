@@ -741,3 +741,4 @@ a.pgcc:hover .ar{color:var(--blue)}
 .pgD-sd,.pgD-mn{border:1px solid var(--hair);box-shadow:var(--sh)}
 @media (max-width:1000px){.pgW.pgW-ct,.pgD-w{gap:12px;padding:0}}
 .pgF .pgW-h{display:none}
+.pgD-l{overscroll-behavior:auto}

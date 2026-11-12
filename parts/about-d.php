@@ -25,5 +25,9 @@ const ask=(k,byUser)=>{if(byUser)stop();const qa=L.querySelector('.pgD-qa[data-k
 const next=()=>{clearTimeout(tm);const q=[...L.querySelectorAll('.pgD-qa[hidden]')][0];if(q&&auto)tm=setTimeout(()=>ask(q.dataset.k,false),6500)};
 qs.forEach(q=>q.addEventListener('click',()=>ask(q.dataset.k,true)));
 ['wheel','touchstart','keydown'].forEach(e=>L.addEventListener(e,stop,{passive:true}));
+/* Wheel goes to the page until the chat window is docked under the menu, then to the chat; at either end of the chat it goes back to the page. */
+const W=L.closest('.pgD-w')||L;L.addEventListener('wheel',e=>{if(e.ctrlKey||Math.abs(e.deltaX)>Math.abs(e.deltaY))return;const nav=document.getElementById('nav'),top=(nav?nav.getBoundingClientRect().bottom:0)+16,r=W.getBoundingClientRect(),dy=e.deltaMode===1?e.deltaY*16:e.deltaY,off=r.top-top;let pg=0;
+ if(dy>0&&off>1)pg=Math.min(dy,off);else if(dy<0&&off<-1)pg=Math.max(dy,off);else if(dy>0?L.scrollTop+L.clientHeight>=L.scrollHeight-1:L.scrollTop<=0)pg=dy;
+ if(pg){e.preventDefault();scrollBy({top:pg,behavior:'instant'})}},{passive:false});
 const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){io.disconnect();if(!rm)next()}},{threshold:.5});io.observe(L);})();
 </script>
