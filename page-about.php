@@ -7,6 +7,6 @@ $look = isset( $_GET['look'] ) && in_array( $_GET['look'], array( 'a', 'b', 'c',
 ?>
 <main class="pg-look-<?php echo esc_attr( $look ); ?>">
 <?php include NK_DIR . '/parts/about-' . $look . '.php'; ?>
-<?php nk_page_cta( 'Let’s scope your next project', 'Tell us what you need. We’ll bring the right specialists and send a clear quotation.' ); ?>
+<?php nk_page_cta(); ?>
 </main>
 <?php get_footer();

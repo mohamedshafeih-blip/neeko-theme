@@ -50,7 +50,7 @@ nk_win_start( 'New message', array( array( 'i-wa', 'https://wa.me/60176604771', 
   </div>
 </div></section>
 
-<?php nk_page_cta( 'Rather plan it yourself?', 'Pick your goals in the brief builder to see your team and estimate, then send it to us.', true ); ?>
+<?php nk_page_cta(); ?>
 </main>
 <script>
 (()=>{const w=document.querySelector('.pgc-lg');if(!w||matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(hover: hover)').matches)return;const l=w.querySelector('.pgc-mk');let q=0;

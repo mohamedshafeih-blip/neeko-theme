@@ -37,7 +37,7 @@ foreach ( $F as $k => $t ) :
   <div class="pgF-no" id="pgFno" hidden><i><svg aria-hidden="true"><use href="#i-search"/></svg></i><b>No answer for “<span id="pgFt"></span>” yet</b><span>Ask us directly and a real person replies.</span><a class="btn btn-blue" id="pgFwa" href="https://wa.me/60176604771" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Ask on WhatsApp</a></div>
 <?php nk_win_end(); ?>
 </div></section>
-<?php nk_page_cta( 'Still have a question?', 'Pick your goals in the brief builder to see your team and estimate, or ask us on WhatsApp.', true ); ?>
+<?php nk_page_cta(); ?>
 </main>
 <?php
 $ld = array();

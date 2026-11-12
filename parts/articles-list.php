@@ -33,4 +33,4 @@ if ( have_posts() ) {
 }
 nk_win_end();
 echo '</div></section>';
-nk_page_cta( 'Have a question we haven’t answered?', 'Send us a brief or a WhatsApp message and a real person replies.' );
+nk_page_cta();
