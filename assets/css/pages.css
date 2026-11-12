@@ -740,3 +740,4 @@ a.pgcc:hover .ar{color:var(--blue)}
 .pgD-w{background:none;border:0;box-shadow:none;padding:0;border-radius:0;gap:20px}
 .pgD-sd,.pgD-mn{border:1px solid var(--hair);box-shadow:var(--sh)}
 @media (max-width:1000px){.pgW.pgW-ct,.pgD-w{gap:12px;padding:0}}
+.pgF .pgW-h{display:none}
