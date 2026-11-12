@@ -722,3 +722,15 @@ a.pgcc:hover .ar{color:var(--blue)}
 @media (max-width:1000px){.pgF .pgD-ctc{display:none}.pgF .pgW-c{padding:6px 14px 18px}.pgF-g{scroll-margin-top:84px}}
 @media (max-width:640px){.pgF .pgW-c{padding:4px 6px 12px}.pgF-q summary{padding:13px 10px 13px 12px;font-size:15px}.pgF-a{padding:0 12px 16px}.pgF-g h2{font-size:16px;padding:0 6px}.pgF-q,.pgF-q summary{border-radius:12px}}
 @media (prefers-reduced-motion:reduce){.pgF-q[open] .pgF-a{animation:none}}
+/* FAQ v2 (13 Nov): no grey frame like Articles, sticky sidebar, each topic its own card */
+.pgW.pgF{background:none;border:0;box-shadow:none;padding:0;border-radius:0;gap:20px}
+.pgF .pgW-sd{border:1px solid var(--hair);box-shadow:var(--sh)}
+.pgF .pgW-mn{background:none;box-shadow:none;border-radius:0;overflow:visible;display:grid;gap:16px;align-content:start}
+.pgF .pgW-h{background:var(--card);border:1px solid var(--hair);border-bottom:1px solid var(--hair);border-radius:18px;box-shadow:var(--sh)}
+.pgF .pgW-c,.pgF .pgW-c{padding:0;display:grid;gap:16px}
+.pgF-g,.pgF-g+.pgF-g{background:var(--card);border:1px solid var(--hair);border-radius:18px;box-shadow:var(--sh);padding:18px 14px 12px;margin:0}
+.pgF-g h2{padding:0 6px 6px 4px}
+.pgF-no{background:var(--card);border:1px solid var(--hair);border-radius:18px;box-shadow:var(--sh)}
+@media (min-width:1001px){.pgW.pgF{align-items:start}.pgF .pgW-sd{position:sticky;top:96px;align-self:start;max-height:calc(100svh - 120px);overflow-y:auto}}
+@media (max-width:1000px){.pgW.pgF{gap:12px}.pgF .pgW-mn,.pgF .pgW-c{gap:12px}.pgF .pgW-c{padding:0}}
+@media (max-width:640px){.pgF .pgW-c{padding:0}.pgF-g,.pgF-g+.pgF-g{padding:14px 6px 8px;border-radius:16px}.pgF .pgW-h{border-radius:16px}}

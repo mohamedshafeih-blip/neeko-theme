@@ -18,7 +18,7 @@ foreach ( $F as $k => $t ) $side .= '<a href="#t-' . esc_attr( $k ) . '" data-t=
 $side .= '</nav><div class="pgD-ctc"><p>Rather talk to a person?</p><nav class="pgW-nv pgc-ch" aria-label="Contact Neeko"><a href="https://wa.me/60176604771" target="_blank" rel="noopener"><i class="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg></i><span><b>WhatsApp</b><small>+60 17-660 4771</small></span><svg class="pgc-ar" aria-hidden="true"><use href="#i-ne"/></svg></a><a href="mailto:enquiry@neeko.my"><i><svg aria-hidden="true"><use href="#i-mail"/></svg></i><span><b>Email</b><small>enquiry@neeko.my</small></span><svg class="pgc-ar" aria-hidden="true"><use href="#i-ne"/></svg></a></nav></div>';
 ?>
 <main>
-<?php nk_page_hero( array( array( 'FAQ', null ) ), 'Frequently asked questions', 'Prices, timing, scope and support across every Neeko service. Search below or pick a topic.', '', 'pgF-hero', true ); ?>
+<?php nk_page_hero( array( array( 'FAQ', null ) ), 'Frequently asked questions', 'Prices, timing, scope and support across every Neeko service. Search below or pick a topic.', '', 'pgF-hero pg-hero-w', true ); ?>
 <?php nk_win_start( 'All questions', array( array( 'i-wa', 'https://wa.me/60176604771', 'Ask on WhatsApp', true ) ), $side, 'pgF', '<span id="pgFn">' . $tot . ' answers</span> · ' . count( $F ) . ' topics' ); ?>
 <?php
 $n = 0;
@@ -56,7 +56,7 @@ inp.addEventListener('input',()=>{const v=norm(inp.value.trim()),w=v.split(/\s+/
  cnt.textContent=w.length?c+' of '+tot+' answers':tot+' answers';no.hidden=!!c;
  if(!c){document.getElementById('pgFt').textContent=inp.value.trim();document.getElementById('pgFwa').href='https://wa.me/60176604771?text='+encodeURIComponent('Hi Neeko, I have a question: '+inp.value.trim())}});
 const on=k=>nav.forEach(a=>a.toggleAttribute('aria-current',a.dataset.t===k));
-if('IntersectionObserver'in window){const vis=new Map();const io=new IntersectionObserver(es=>{es.forEach(e=>vis.set(e.target.dataset.t,e.isIntersecting?e.boundingClientRect.top:null));const k=gs.map(g=>g.dataset.t).find(t=>vis.get(t)!=null);if(k)on(k)},{rootMargin:'-120px 0px -55% 0px'});gs.forEach(g=>io.observe(g))}
+let rq=0;const spy=()=>{rq=0;let k=null;for(const g of gs){if(g.hidden)continue;if(g.getBoundingClientRect().top<=innerHeight*.35||!k)k=g.dataset.t}on(k)};addEventListener('scroll',()=>{if(!rq)rq=requestAnimationFrame(spy)},{passive:true});spy();
 const hash=()=>{const h=location.hash.slice(1);if(!h)return;const el=document.getElementById(h);if(el&&el.tagName==='DETAILS'){el.open=true;setTimeout(()=>el.scrollIntoView({block:'center'}),60)}};hash();addEventListener('hashchange',hash);
 })();
 </script>
