@@ -1863,4 +1863,5 @@ footer{padding:96px 0 36px}
 .pbg .pmw.pwl .pic{box-shadow:0 1px 2px rgba(31,91,255,.08)}
 .pbg .pmw.pwl .pic{background:color-mix(in srgb,var(--blue-soft) 40%,var(--card,#fff))}
 /* 13 Nov: process stages, first row taller and second row shorter (desktop) */
-@media (min-width:1101px){body .pjb2 .pjd.pbg{grid-template-rows:minmax(min-content,1fr) minmax(min-content,1.2fr)!important}}
+@media (min-width:1101px){body .pjb2 .pjd.pbg{grid-template-rows:auto auto!important;align-content:stretch}}
+.pbg .pmw.pwl .pic{background:color-mix(in srgb,var(--blue-soft) 15%,var(--card,#fff))}
