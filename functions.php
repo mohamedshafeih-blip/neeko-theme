@@ -20,7 +20,7 @@ function nk_page_key() {
 	if ( is_page( 'social-media' ) ) return 'social-media';
 	if ( is_page( 'graphic-design' ) ) return 'graphic-design';
 	if ( is_page( 'ai-photography' ) ) return 'ai-photography';
-	foreach ( array( 'about', 'contact', 'terms', 'privacy' ) as $pg ) {
+	foreach ( array( 'about', 'contact', 'faq', 'terms', 'privacy' ) as $pg ) {
 		if ( is_page( $pg ) ) return $pg;
 	}
 	if ( function_exists( 'is_404' ) && is_404() ) return '404';
@@ -35,7 +35,7 @@ function nk_has_brief() {
 	return $k && ! in_array( $k, nk_plain_keys(), true );
 }
 function nk_plain_keys() {
-	return array( 'about', 'contact', 'terms', 'privacy', '404', 'article', 'articles' );
+	return array( 'about', 'contact', 'faq', 'terms', 'privacy', '404', 'article', 'articles' );
 }
 
 add_action( 'wp_enqueue_scripts', function () {
@@ -138,7 +138,7 @@ add_action( 'send_headers', function () {
 
 /* nk_ensure_pages: create approved service pages once if they don't exist yet (no manual step after deploy). */
 add_action( 'init', function () {
-	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design', 'ai-photography' => 'AI photography', 'about' => 'About', 'contact' => 'Contact', 'articles' => 'Articles', 'terms' => 'Terms of service', 'privacy' => 'Privacy policy' );
+	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design', 'ai-photography' => 'AI photography', 'about' => 'About', 'contact' => 'Contact', 'faq' => 'FAQ', 'articles' => 'Articles', 'terms' => 'Terms of service', 'privacy' => 'Privacy policy' );
 	if ( get_option( 'nk_pages_v' ) === implode( ',', array_keys( $want ) ) ) return;
 	foreach ( $want as $slug => $title ) {
 		if ( ! get_page_by_path( $slug ) ) {
