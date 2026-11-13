@@ -26,6 +26,7 @@ function nk_services() {
 		'Care'    => array(
 			array( 'website-care', 'Website care', 'Backups, updates, fixes', 'i-shield' ),
 			array( 'ai-care', 'AI care', 'Monitoring for chats and workflows', 'i-spark' ),
+			array( 'system-care', 'System care', 'CRM, ERP, apps and integrations', 'i-code' ),
 		),
 	);
 }
@@ -52,7 +53,7 @@ function nk_svc_chips( $group ) {
 
 /** Pricing tab id => page slug, exposed to the pricing script (built pages only). */
 function nk_pricing_map() {
-	$ids = array( 'web' => 'website-design', 'seo' => 'seo', 'social' => 'social-media', 'design' => 'graphic-design', 'photo' => 'ai-photography', 'ai' => 'ai-solutions', 'crm' => 'crm', 'api' => 'integrations', 'erp' => 'erp', 'software' => 'custom-software', 'mobile' => 'mobile-app', 'care' => 'website-care', 'aicare' => 'ai-care' );
+	$ids = array( 'web' => 'website-design', 'seo' => 'seo', 'social' => 'social-media', 'design' => 'graphic-design', 'photo' => 'ai-photography', 'ai' => 'ai-solutions', 'crm' => 'crm', 'api' => 'integrations', 'erp' => 'erp', 'software' => 'custom-software', 'mobile' => 'mobile-app', 'care' => 'website-care', 'aicare' => 'ai-care', 'syscare' => 'system-care' );
 	$out = array();
 	foreach ( $ids as $id => $slug ) {
 		$u = nk_svc_url( $slug );

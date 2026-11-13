@@ -168,6 +168,26 @@ function nk_soon() {
 				array( 'Security', 'i-shield', 'list', array( 'Firewall on', 'Login protection', 'SSL valid' ) ),
 			),
 		),
+		'system-care' => array(
+			'name'  => 'System care',
+			'group' => 'Care',
+			'icon'  => 'i-code',
+			'h1'    => 'Keep your CRM, ERP and apps running',
+			'sub'   => 'Monitoring, bug fixes and support hours for the systems your team relies on: CRM, ERP, custom software, mobile apps and integrations.',
+			'desc'  => 'System care plans in Malaysia: monitoring, bug fixes and support hours for CRM, ERP, custom software, mobile apps and integrations. From RM399/month.',
+			'title' => 'System care: CRM, ERP and app support from RM399/month — Neeko',
+			'mo'    => true,
+			'pk'    => array( array( 'System Care', 0, 399, '1 system · monitoring + bug fixes · 1.5 support hours' ), array( 'System Care Plus', 0, 999, 'Up to 3 systems · monthly review · 5 support hours' ), array( 'System Priority', 0, 1999, 'Up to 6 systems · priority queue · 10 support hours' ) ),
+			'tasks' => array( 'Packages and prices', 'Monitoring windows', 'Care steps and FAQ' ),
+			'win'   => array(
+				array( 'Site health', 'i-shield', 'stats', array( array( 'Health', '98' ), array( 'Uptime', '99.9%' ), array( 'Speed', '1.4s' ), array( 'Updates', '0' ) ) ),
+				array( 'Backups', 'i-clock', 'list', array( '13 Nov · Full backup', '6 Nov · Full backup', '30 Oct · Full backup' ) ),
+				array( '', '', 'photo', $I . 'nk-about-connect.webp' ),
+				array( 'Updates', 'i-check', 'list', array( 'WordPress 6.8', 'LiteSpeed Cache', 'Contact form' ) ),
+				array( 'Support', 'i-chat', 'chat', array( array( 'The contact form stopped sending', 0 ), array( 'Fixed and tested, mail is going out', 1 ) ) ),
+				array( 'Security', 'i-shield', 'list', array( 'Firewall on', 'Login protection', 'SSL valid' ) ),
+			),
+		),
 	);
 }
 

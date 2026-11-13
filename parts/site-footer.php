@@ -231,7 +231,11 @@ const S=[
  {id:'aicare',g:'care',n:'AI care',d:'Monitoring for chats and workflows',t:[
   {n:'AI Care',mo:399,f:['Up to 2 chats or workflows','Monitoring + fixes','1 care hour']},
   {n:'AI Care Plus',mo:799,f:['Up to 4 chats or workflows','Monthly review','2 care hours']},
-  {n:'AI Priority',mo:1499,f:['Up to 8 chats or workflows','Review + report','4 care hours']}]}
+  {n:'AI Priority',mo:1499,f:['Up to 8 chats or workflows','Review + report','4 care hours']}]},
+ {id:'syscare',g:'care',n:'System care',d:'CRM, ERP, apps and integrations',t:[
+  {n:'System Care',mo:399,f:['1 system or integration','Monitoring + bug fixes','1.5 support hours']},
+  {n:'System Care Plus',mo:999,f:['Up to 3 systems','Monthly health review','5 support hours']},
+  {n:'System Priority',mo:1999,f:['Up to 6 systems','Priority queue + report','10 support hours']}]}
 ];
 const BUNDLES=[{n:'Presence',p:2199,t:[0,0,0]},{n:'Growth',p:3699,t:[1,1,1]},{n:'Authority',p:6999,t:[2,2,1]}]; // social, seo, care
 
@@ -289,10 +293,14 @@ care:{t:[['1 WordPress website','Monthly backup + updates','Basic health check',
 aicare:{t:[['Up to 2 chat channels or workflows','Monitoring + error alerts','Fixes when a connected tool changes','1 care hour a month'],
  ['Up to 4 chat channels or workflows','Monitoring + error alerts','Monthly flow review','2 care hours a month'],
  ['Up to 8 chat channels or workflows','Monitoring + error alerts','Monthly review + report','4 care hours a month']],
- n:'Business-hours support. Care hours don’t roll over. Model tokens, WhatsApp fees and vendor subscriptions are separate.'}
+ n:'Business-hours support. Care hours don’t roll over. Model tokens, WhatsApp fees and vendor subscriptions are separate.'},
+syscare:{t:[['1 system or integration','Uptime + error monitoring','Bug fixes','1.5 support hours a month'],
+ ['Up to 3 systems or integrations','Uptime + error monitoring','Monthly health review','5 support hours a month'],
+ ['Up to 6 systems or integrations','Priority work queue','Monthly report','10 support hours a month']],
+ n:'Business-hours support. Support hours don’t roll over. Hosting, licences and new features are quoted separately.'}
 };
 
-const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI solutions',crm:'CRM setup',api:'API integration',erp:'ERP and operations',software:'Custom software',mobile:'Mobile app',care:'Website care',aicare:'AI care'};
+const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI solutions',crm:'CRM setup',api:'API integration',erp:'ERP and operations',software:'Custom software',mobile:'Mobile app',care:'Website care',aicare:'AI care',syscare:'System care'};
 const fmt=n=>'RM'+n.toLocaleString('en-MY');
 const ck='<svg aria-hidden="true"><use href="#i-check"/></svg>';
 const tabs=document.getElementById('ptabs'),plans=document.getElementById('plans');
@@ -406,15 +414,19 @@ const S=[
  {id:'aicare',g:'care',n:'AI care',d:'Monitoring for chats and workflows',t:[
   {n:'AI Care',mo:399,f:['Up to 2 chats or workflows','Monitoring + fixes','1 care hour']},
   {n:'AI Care Plus',mo:799,f:['Up to 4 chats or workflows','Monthly review','2 care hours']},
-  {n:'AI Priority',mo:1499,f:['Up to 8 chats or workflows','Review + report','4 care hours']}]}
+  {n:'AI Priority',mo:1499,f:['Up to 8 chats or workflows','Review + report','4 care hours']}]},
+ {id:'syscare',g:'care',n:'System care',d:'CRM, ERP, apps and integrations',t:[
+  {n:'System Care',mo:399,f:['1 system or integration','Monitoring + bug fixes','1.5 support hours']},
+  {n:'System Care Plus',mo:999,f:['Up to 3 systems','Monthly health review','5 support hours']},
+  {n:'System Priority',mo:1999,f:['Up to 6 systems','Priority queue + report','10 support hours']}]}
 ];
 const BUNDLES=[{n:'Presence',p:2199,t:[0,0,0]},{n:'Growth',p:3699,t:[1,1,1]},{n:'Authority',p:6999,t:[2,2,1]}]; // social, seo, care
 
 const LVL=['Starter','Growth','Growth','Pro'];
 const SZ=[{n:'Micro',d:'Under 5 staff',r:'Under RM300k/yr'},{n:'Small',d:'5–29 staff',r:'RM300k–3M/yr'},{n:'Medium',d:'30–75 staff',r:'RM3M–20M/yr'},{n:'Large',d:'75+ staff',r:'Over RM20M/yr'}];
-const ROLE={web:['Web designer','WD'],seo:['SEO specialist','SE'],social:['Social media manager','SM'],design:['Graphic designer','GD'],photo:['AI image producer','AP'],ai:['AI automation specialist','AI'],aicare:['AI support specialist','AS'],crm:['CRM consultant','CC'],api:['Integration developer','ID'],erp:['ERP consultant','EC'],software:['Software developer','SD'],mobile:['Mobile developer','MD'],care:['Support engineer','SC']};
+const ROLE={web:['Web designer','WD'],seo:['SEO specialist','SE'],social:['Social media manager','SM'],design:['Graphic designer','GD'],photo:['AI image producer','AP'],ai:['AI automation specialist','AI'],aicare:['AI support specialist','AS'],syscare:['Systems support engineer','SY'],crm:['CRM consultant','CC'],api:['Integration developer','ID'],erp:['ERP consultant','EC'],software:['Software developer','SD'],mobile:['Mobile developer','MD'],care:['Support engineer','SC']};
 const TK0='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
-const GRP=[['Presence',['web','seo','social']],['Creative',['design','photo']],['Products',['software','mobile','api']],['Operations',['crm','erp','ai']],['After launch',['care','aicare']]];
+const GRP=[['Presence',['web','seo','social']],['Creative',['design','photo']],['Products',['software','mobile','api']],['Operations',['crm','erp','ai']],['After launch',['care','aicare','syscare']]];
 const GOALS=[
  {n:'Get online',s:['web','seo','care']},
  {n:'Answer customers faster',s:['ai','api']},
@@ -447,7 +459,7 @@ const save=()=>{try{localStorage.setItem('neeko-nb',JSON.stringify(st))}catch(e)
 const rec=s=>Math.min(st.size==null?0:REC[st.size],s.t.length-1);
 const minP=s=>{const t=s.t[0];return t.one!=null?short(t.one):short(t.mo)+'/mo'};
 
-const DET={web:'WordPress site, mobile-first',seo:'Get found on Google',social:'Plan, design and post',design:'Posters, posts and decks',photo:'100 on-brand images',software:'Portals and internal tools',mobile:'Apps for customers or staff',api:'Link the tools you already use',crm:'Track and follow up every lead',erp:'Orders, stock and approvals',ai:'Chat assistants, workflows, custom AI',care:'Backups, updates and fixes',aicare:'Monitoring for chats and workflows'};
+const DET={web:'WordPress site, mobile-first',seo:'Get found on Google',social:'Plan, design and post',design:'Posters, posts and decks',photo:'100 on-brand images',software:'Portals and internal tools',mobile:'Apps for customers or staff',api:'Link the tools you already use',crm:'Track and follow up every lead',erp:'Orders, stock and approvals',ai:'Chat assistants, workflows, custom AI',care:'Backups, updates and fixes',aicare:'Monitoring for chats and workflows',syscare:'Support for CRM, ERP and apps'};
 const CATS=[['connect','Connect'],['create','Create'],['build','Build'],['care','Care']];
 let cat=null;
 function drawList(){
