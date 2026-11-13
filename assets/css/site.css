@@ -1924,3 +1924,7 @@ html[lang|=ar] body{font-family:"IBM Plex Sans Arabic","Plus Jakarta Sans",sans-
 /* Pricing note: centred, tinted panel */
 .pnote{text-align:center!important;margin:36px auto 0!important;max-width:760px;padding:16px 24px;border-radius:16px;background:var(--soft);text-wrap:pretty}
 .pnote span{max-width:68ch;margin-inline:auto}
+/* Section headings: one line on desktop where they fit, otherwise long line first (no balanced split) */
+.sh{max-width:900px}
+.sh h2{text-wrap:pretty}
+.sh>p{max-width:640px}
