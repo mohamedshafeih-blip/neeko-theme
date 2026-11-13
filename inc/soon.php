@@ -8,17 +8,17 @@
 function nk_soon() {
 	$I = NK_URI . '/assets/img/';
 	return array(
-		'ai-chat-assistant' => array(
-			'name'  => 'AI chat assistant',
+		'ai-automation' => array(
+			'name'  => 'AI automation',
 			'group' => 'Build',
 			'icon'  => 'i-chat',
-			'h1'    => 'An AI assistant that answers your customers',
-			'sub'   => 'On WhatsApp and your website: answers common questions in English and BM, qualifies leads, then hands the chat to your team.',
-			'desc'  => 'AI chat assistant for Malaysian businesses: answers FAQs in English and BM on WhatsApp and your website, then hands over to staff. From RM2,499 setup.',
-			'title' => 'AI chat assistant in Malaysia from RM2,499 — Neeko',
+			'h1'    => 'AI automation that answers customers and handles the routine work',
+			'sub'   => 'AI chat assistants on WhatsApp and your website, plus workflows that capture leads, route enquiries and follow up, with a person in the loop.',
+			'desc'  => 'AI automation for Malaysian businesses: chat assistants on WhatsApp and your website, lead capture and workflow automation with human handover. From RM2,499 setup.',
+			'title' => 'AI automation in Malaysia from RM2,499 — Neeko',
 			'mo'    => true,
 			'pk'    => array( array( 'Assist', 2499, 399, '1 channel · 25 FAQ topics · EN + BM' ), array( 'Connect', 4999, 799, '2 channels · 60 FAQ topics · 3 workflows' ), array( 'Operate', 9999, 1499, '3 channels · 120 FAQ topics · 5 workflows' ) ),
-			'tasks' => array( 'Packages and prices', 'Chat demo windows', 'Setup steps and FAQ' ),
+			'tasks' => array( 'Packages and prices', 'Chat and workflow windows', 'Setup steps and FAQ' ),
 			'win'   => array(
 				array( 'WhatsApp inbox', 'i-wa', 'chat', array( array( 'Hi, how much for a 3-page website?', 0 ), array( 'Our Starter site is RM3,900 for up to 5 pages. Want me to book a call?', 1 ), array( 'Yes, tomorrow 3pm', 0 ) ) ),
 				array( 'FAQ topics', 'i-doc', 'list', array( 'Prices and packages', 'Opening hours', 'Delivery areas', 'Booking a slot', 'Refund policy' ) ),

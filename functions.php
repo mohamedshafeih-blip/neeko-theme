@@ -6,6 +6,7 @@ define( 'NK_VER', '1.0.0' );
 define( 'NK_URI', get_template_directory_uri() );
 define( 'NK_DIR', get_template_directory() );
 require NK_DIR . '/inc/services.php';
+require NK_DIR . '/inc/i18n.php';
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
@@ -140,7 +141,7 @@ add_action( 'send_headers', function () {
 
 /* nk_ensure_pages: create approved service pages once if they don't exist yet (no manual step after deploy). */
 add_action( 'init', function () {
-	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design', 'ai-photography' => 'AI photography', 'about' => 'About', 'contact' => 'Contact', 'faq' => 'FAQ', 'articles' => 'Articles', 'terms' => 'Terms of service', 'privacy' => 'Privacy policy', 'ai-chat-assistant' => 'AI chat assistant', 'crm' => 'CRM setup', 'integrations' => 'API integration', 'erp' => 'ERP and operations', 'custom-software' => 'Custom software', 'mobile-app' => 'Mobile app', 'website-care' => 'Website care' );
+	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design', 'ai-photography' => 'AI photography', 'about' => 'About', 'contact' => 'Contact', 'faq' => 'FAQ', 'articles' => 'Articles', 'terms' => 'Terms of service', 'privacy' => 'Privacy policy', 'ai-automation' => 'AI automation', 'crm' => 'CRM setup', 'integrations' => 'API integration', 'erp' => 'ERP and operations', 'custom-software' => 'Custom software', 'mobile-app' => 'Mobile app', 'website-care' => 'Website care' );
 	if ( get_option( 'nk_pages_v' ) === implode( ',', array_keys( $want ) ) ) return;
 	foreach ( $want as $slug => $title ) {
 		if ( ! get_page_by_path( $slug ) ) {
@@ -155,6 +156,14 @@ add_action( 'init', function () {
 } );
 
 require NK_DIR . '/inc/soon.php';
+
+/* AI chat assistant became AI automation (13 Nov 2026): keep old links and rankings. */
+add_action( 'template_redirect', function () {
+	if ( preg_match( '#^/ai-chat-assistant/?(\?|$)#', $GLOBALS['nk_path'] ) ) {
+		wp_redirect( nk_svc_url( 'ai-automation' ), 301 );
+		exit;
+	}
+}, 1 );
 require NK_DIR . '/inc/articles.php';
 require NK_DIR . '/inc/pages.php';
 

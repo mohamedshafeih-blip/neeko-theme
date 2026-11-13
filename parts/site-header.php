@@ -15,7 +15,7 @@
           <a href="<?php echo esc_url( nk_url( 'contact' ) ); ?>"><i><svg aria-hidden="true"><use href="#i-mail"/></svg></i><b>Contact</b><small>WhatsApp or email us</small></a></div></li>
     </ul>
     <div class="nr">
-      <div class="lang" role="group" aria-label="Language"><button type="button" aria-pressed="true">EN</button><button type="button" aria-pressed="false">BM</button><button type="button" aria-pressed="false" lang="zh">中文</button></div><button type="button" class="thm" id="thm" aria-label="Switch to dark mode"><svg class="mo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg><svg class="su" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></button>
+      <?php echo nk_lang_switch(); ?><button type="button" class="thm" id="thm" aria-label="Switch to dark mode"><svg class="mo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg><svg class="su" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></button>
       <a class="login" href="#">Log in</a>
       <a class="btn btn-blue" href="<?php echo esc_url( home_url( '/' ) ); ?>#brief">Start a brief</a>
       <button class="mb" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mp" id="mb"><svg class="mbo" aria-hidden="true"><use href="#i-menu"/></svg><svg class="mbx" aria-hidden="true"><use href="#i-x"/></svg></button>
@@ -24,6 +24,7 @@
   <nav class="mp" id="mp" aria-label="Mobile">
     <?php foreach ( nk_services() as $g => $items ) : ?><div class="mpg"><span class="mpl"><?php echo esc_html( $g ); ?></span><?php foreach ( $items as $s ) : ?><a class="mpi" href="<?php echo esc_url( nk_svc_url( $s[0] ) ); ?>"><i><svg aria-hidden="true"><use href="#<?php echo esc_attr( $s[3] ); ?>"/></svg></i><b><?php echo esc_html( $s[1] ); ?></b><small><?php echo esc_html( $s[2] ); ?></small></a><?php endforeach; ?></div>
     <?php endforeach; ?><div class="mpc"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#pricing">Pricing</a><a href="<?php echo esc_url( nk_url( 'about' ) ); ?>">About</a><a href="<?php echo esc_url( nk_url( 'articles' ) ); ?>">Articles</a><a href="<?php echo esc_url( nk_url( 'faq' ) ); ?>">FAQ</a><a href="<?php echo esc_url( nk_url( 'contact' ) ); ?>">Contact</a><a href="#">Log in</a></div>
+    <?php echo nk_lang_switch( true ); ?>
     <div class="mpa"><a class="btn mpw" href="https://wa.me/60176604771" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp us</a><a class="btn btn-blue" href="<?php echo esc_url( home_url( '/' ) ); ?>#brief">Start a brief</a></div>
   </nav>
 </header>

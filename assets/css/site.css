@@ -1899,3 +1899,25 @@ footer{padding:96px 0 36px}
 .bcr{flex-wrap:wrap;row-gap:8px}
 .bcr>*{white-space:nowrap;flex:none}
 .bcr .bcp{line-height:1}
+
+/* Language switcher (inc/i18n.php) */
+.lgs{position:relative}
+.lgb{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 10px 0 9px;border:0;border-radius:999px;background:var(--soft-2);font:600 12.5px/1 inherit;font-family:inherit;color:var(--ink);cursor:pointer;white-space:nowrap}
+.lgb svg{width:15px;height:15px;color:var(--muted)}
+.lgb .cv{width:10px;height:10px;transition:transform .18s var(--ease)}
+.lgm{position:absolute;top:calc(100% + 8px);right:0;min-width:212px;padding:6px;border-radius:16px;background:var(--card);border:1px solid var(--hair);box-shadow:var(--sh-lg);display:grid;gap:2px;opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .16s var(--ease),transform .16s var(--ease),visibility 0s .16s;z-index:5}
+.lgs:hover .lgm,.lgs:focus-within .lgm,.lgb[aria-expanded="true"]+.lgm{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.lgs:hover .lgb .cv,.lgb[aria-expanded="true"] .cv{transform:rotate(180deg)}
+.lgm a,.lgm>span{white-space:nowrap;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;border-radius:10px;font-size:14px;font-weight:500;color:var(--ink);text-decoration:none}
+.lgm [aria-current]{background:var(--soft);font-weight:600}
+.lgm>span,.lgp>span{color:var(--muted);cursor:default}
+.lgm em,.lgp em{font-style:normal;font-size:10.5px;font-weight:600;padding:3px 7px;border-radius:999px;background:var(--soft);color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.lgm a:hover{background:var(--soft)}.lgb:hover{background:var(--soft)}}
+.lgp{display:flex;flex-wrap:wrap;gap:6px;padding:12px 6px 6px;border-top:1px solid var(--hair)}
+.lgp a,.lgp>span{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;background:var(--soft);font-size:13.5px;font-weight:600;text-decoration:none;color:var(--ink)}
+.lgp [aria-current]{background:var(--ink);color:var(--card)}
+.lgp>span{background:none;border:1px dashed var(--hair);font-weight:500}
+@media (max-width:640px){.lgs{display:none}}
+/* Scripts the Latin font doesn't cover */
+html[lang|=zh] body{font-family:"Plus Jakarta Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif}
+html[lang|=ar] body{font-family:"IBM Plex Sans Arabic","Plus Jakarta Sans",sans-serif}

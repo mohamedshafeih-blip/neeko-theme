@@ -200,7 +200,7 @@ const S=[
   {n:'Starter',one:299,f:['50 high-res images','1 scene or product set','Amendments within the brief']},
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
- {id:'ai',g:'build',n:'AI chat assistant',d:'Answers FAQs, hands over',t:[
+ {id:'ai',g:'build',n:'AI automation',d:'Chat assistants and workflows',t:[
   {n:'Assist',one:2499,mo:399,f:['1 channel','25 FAQ topics','English + BM']},
   {n:'Connect',one:4999,mo:799,f:['2 channels','60 FAQ topics','3 workflows']},
   {n:'Operate',one:9999,mo:1499,f:['3 channels','120 FAQ topics','5 workflows']}]},
@@ -284,7 +284,7 @@ care:{t:[['1 WordPress website','Monthly backup + updates','Basic health check',
  n:'Business-hours support. Time allowances don’t roll over. No 24/7 emergency SLA.'}
 };
 
-const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI chat assistant',crm:'CRM setup',api:'API integration',erp:'ERP and operations',software:'Custom software',mobile:'Mobile app',care:'Website care'};
+const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI automation',crm:'CRM setup',api:'API integration',erp:'ERP and operations',software:'Custom software',mobile:'Mobile app',care:'Website care'};
 const fmt=n=>'RM'+n.toLocaleString('en-MY');
 const ck='<svg aria-hidden="true"><use href="#i-check"/></svg>';
 const tabs=document.getElementById('ptabs'),plans=document.getElementById('plans');
@@ -367,7 +367,7 @@ const S=[
   {n:'Starter',one:299,f:['50 high-res images','1 scene or product set','Amendments within the brief']},
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
- {id:'ai',g:'build',n:'AI chat assistant',d:'Answers FAQs, hands over',t:[
+ {id:'ai',g:'build',n:'AI automation',d:'Chat assistants and workflows',t:[
   {n:'Assist',one:2499,mo:399,f:['1 channel','25 FAQ topics','English + BM']},
   {n:'Connect',one:4999,mo:799,f:['2 channels','60 FAQ topics','3 workflows']},
   {n:'Operate',one:9999,mo:1499,f:['3 channels','120 FAQ topics','5 workflows']}]},
