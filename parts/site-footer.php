@@ -309,14 +309,14 @@ const price=t=>{
   if(t.mo)return `<b>${fmt(t.mo)}</b><small>/ month</small></div>`;
   return `<b>${fmt(t.one)}</b><small>one-time</small></div>`;
 };
-const TG={web:{0:['Easy start','y'],2:['Full scope','p']},seo:{0:['Local focus','y']},social:{0:['One platform','k'],2:['3 platforms','p']},design:{2:['Bigger pack','k']},photo:{0:['Try it first','y']},ai:{0:['Per channel','y'],1:['Per workflow','k'],2:['Prototype first','p']},crm:{0:['Quick setup','y']},software:{2:['Full scope','p']},mobile:{0:['MVP','y']},care:{1:['Most cover','k']}};
+const TG={web:{0:['Easy start','y'],2:['Full scope','p']},seo:{0:['Local focus','y']},social:{0:['One platform','k'],2:['3 platforms','p']},design:{2:['Bigger pack','k']},photo:{0:['Try it first','y']},ai:{1:['Per workflow','k'],2:['Prototype first','p']},crm:{0:['Quick setup','y']},software:{2:['Full scope','p']},mobile:{0:['MVP','y']},care:{1:['Most cover','k']}};
 function show(id){
   const s=S.find(x=>x.id===id);
   tabs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-selected',b.dataset.id===id));
-  const n=s.t.length,mid=n===3&&id!=='ai'?1:-1,F=FULL[id]||{};
+  const n=s.t.length,mid=id==='ai'?0:(n===3?1:-1),F=FULL[id]||{};
   const note=document.getElementById('pnote');if(note)note.innerHTML='<b>Starting prices in MYR, checked 28 Oct 2026 · your quotation confirms the final scope.</b>'+(F.n?'<span>'+F.n+'</span>':'');
   plans.innerHTML=s.t.map((t,i)=>`<article class="pc${i===mid?' hi':''}">
-    <div class="ph"><h3>${t.n}</h3>${i===mid?'<span class="chip">Suggested for small teams</span>':(TG[id]&&TG[id][i]?`<span class="tg ${TG[id][i][1]}">${TG[id][i][0]}</span>`:'')}</div>
+    <div class="ph"><h3>${t.n}</h3>${i===mid?'<span class="chip">'+(id==='ai'?'Most popular':'Suggested for small teams')+'</span>':(TG[id]&&TG[id][i]?`<span class="tg ${TG[id][i][1]}">${TG[id][i][0]}</span>`:'')}</div>
     <div class="pr num">${price(t)}
     ${F.d?`<p class="fr">${F.d[i]}</p>`:''}
     <ul>${(F.t?F.t[i]:t.f).map(f=>`<li>${ck}<span>${f}</span></li>`).join('')}</ul>
