@@ -346,7 +346,14 @@ show('web');
 const loop=()=>{};
 const edge=()=>{const m=tabs.scrollWidth-tabs.clientWidth;tabs.classList.toggle('ov',m>2);tabs.classList.toggle('st',tabs.scrollLeft<4);tabs.classList.toggle('en',tabs.scrollLeft>m-4)};
 const ctr=()=>{const b=tabs.querySelector('[aria-selected="true"]');if(b)tabs.scrollLeft=b.offsetLeft-(tabs.clientWidth-b.offsetWidth)/2};
-tabs.addEventListener('scroll',edge,{passive:true});addEventListener('resize',edge);edge();const home=()=>{ctr();edge()};home();addEventListener('load',()=>{home();edge()});
+tabs.addEventListener('scroll',edge,{passive:true});
+/* Drag the tab row with a mouse (touch already scrolls natively). A drag doesn't count as a click. */
+(()=>{let x0=0,s0=0,down=false,moved=false;
+tabs.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0||tabs.scrollWidth<=tabs.clientWidth)return;down=true;moved=false;x0=e.clientX;s0=tabs.scrollLeft});
+addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-x0;if(!moved&&Math.abs(dx)>5){moved=true;tabs.classList.add('drag')}if(moved){tabs.scrollLeft=s0-dx;e.preventDefault()}});
+addEventListener('pointerup',()=>{if(!down)return;down=false;if(moved)setTimeout(()=>tabs.classList.remove('drag'),0)});
+tabs.addEventListener('click',e=>{if(tabs.classList.contains('drag')){e.stopPropagation();e.preventDefault()}},true);
+tabs.addEventListener('dragstart',e=>e.preventDefault());})();addEventListener('resize',edge);edge();const home=()=>{ctr();edge()};home();addEventListener('load',()=>{home();edge()});
 })();
 ;(()=>{const t=document.getElementById('ptabs');if(!t)return;
 t.addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)||e.ctrlKey)return;const max=t.scrollWidth-t.clientWidth;if(max<=0)return;const d=e.deltaMode===1?e.deltaY*32:e.deltaY;

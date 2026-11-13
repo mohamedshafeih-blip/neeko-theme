@@ -1927,3 +1927,5 @@ html[lang|=ar] body{font-family:"IBM Plex Sans Arabic","Plus Jakarta Sans",sans-
 .sh{max-width:900px}
 .sh h2{text-wrap:pretty}
 .sh>p{max-width:640px}
+/* Pricing tabs: drag to slide with a mouse */
+@media (hover:hover) and (pointer:fine){.ptabs.ov{cursor:grab}.ptabs.drag,.ptabs.drag button{cursor:grabbing;user-select:none}}
