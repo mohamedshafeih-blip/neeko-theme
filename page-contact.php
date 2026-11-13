@@ -15,7 +15,7 @@ $side .= '<div class="pgc-gt"><b>Get in touch</b><small>WhatsApp is the quickest
 $side .= '<a href="https://wa.me/60176604771" target="_blank" rel="noopener"><i class="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg></i><span><b>WhatsApp</b><small>+60 17-660 4771</small></span><svg class="pgc-ar" aria-hidden="true"><use href="#i-ne"/></svg></a>';
 $side .= '<a href="mailto:enquiry@neeko.my"><i><svg aria-hidden="true"><use href="#i-mail"/></svg></i><span><b>Email us</b><small>enquiry@neeko.my</small></span><svg class="pgc-ar" aria-hidden="true"><use href="#i-ne"/></svg></a>';
 $side .= '<a href="' . esc_url( home_url( '/#brief' ) ) . '"><i><svg aria-hidden="true"><use href="#i-pen"/></svg></i><span><b>Build a brief</b><small>Pick services, get an estimate</small></span><svg class="pgc-ar" aria-hidden="true"><use href="#i-ne"/></svg></a>';
-$side .= '</nav><ul class="pgc-tg"><li><svg aria-hidden="true"><use href="#i-pin"/></svg>Kuala Lumpur</li><li><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri, 9–6</li><li><svg aria-hidden="true"><use href="#i-chat"/></svg>English · BM · 中文</li></ul>';
+$side .= '</nav><ul class="pgc-tg"><li><svg aria-hidden="true"><use href="#i-pin"/></svg>Kuala Lumpur</li><li><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri, 9–6</li><li><svg aria-hidden="true"><use href="#i-chat"/></svg>English · BM · 中文 · <span lang="ar" dir="rtl">العربية</span></li></ul>';
 nk_win_start( 'New message', array( array( 'i-wa', 'https://wa.me/60176604771', 'Open WhatsApp', true ), array( 'i-mail', 'mailto:enquiry@neeko.my', 'Email Neeko' ) ), $side, 'pgW-ct' );
 ?>
   <form class="pgc-fm" id="pgfm" novalidate>
@@ -41,7 +41,7 @@ nk_win_start( 'New message', array( array( 'i-wa', 'https://wa.me/60176604771', 
 		array( 'what-to-include', 'What should I include in my first message?', 'Your business name, what you’d like done, any deadline and links to your current website or social pages. If you already know the service, the brief builder on our homepage gives you an estimate first.' ),
 		array( 'quotation', 'Do I get a quotation before paying anything?', 'Yes. Your quotation confirms the deliverables, timing, responsibilities, payment milestones and any separate costs such as licences, hosting or ad spend. Work starts once you accept it.' ),
 		array( 'outside-kl', 'Do you work with businesses outside Kuala Lumpur?', 'Yes. We work with businesses across Malaysia. Briefs, reviews and handovers happen on WhatsApp, email and video calls, so location doesn’t slow the work down.' ),
-		array( 'language', 'Can we talk in Bahasa Malaysia?', 'Yes. You can message us in English, Bahasa Malaysia or Chinese, and AI assistants can be set up in English and Bahasa Malaysia.' ),
+		array( 'language', 'Can we talk in Bahasa Malaysia?', 'Yes. You can message us in English, Bahasa Malaysia, Chinese or Arabic, and AI assistants can be set up in English and Bahasa Malaysia.' ),
 	);
 	foreach ( $Q as $n => $q ) :
 		?>

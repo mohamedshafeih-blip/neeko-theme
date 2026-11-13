@@ -10,7 +10,7 @@ function nk_faq_data() {
 			array( 'services', 'What services do you offer?', 'Three groups of work. Create: graphic design and AI photography. Connect: websites, SEO and social media. Build: AI solutions, CRM, API integration, ERP, custom software and mobile apps. Care plans for websites, AI and systems keep things running after launch.', '#pricing', 'See all prices' ),
 			array( 'how-to-start', 'How do I start?', 'Use the brief builder on our homepage to pick your goals and see an estimate, or message us on WhatsApp. We confirm the scope with you and send a quotation before any work starts.', '#brief', 'Start a brief' ),
 			array( 'outside-kl', 'Do you work with businesses outside Kuala Lumpur?', 'Yes. We work with businesses across Malaysia. Briefs, reviews and handovers happen on WhatsApp, email and video calls.', '', '' ),
-			array( 'language', 'Which languages can we use?', 'You can message us in English, Bahasa Malaysia or Chinese. AI assistants are set up in English and Bahasa Malaysia.', '', '' ),
+			array( 'language', 'Which languages can we use?', 'You can message us in English, Bahasa Malaysia, Chinese or Arabic. AI assistants are set up in English and Bahasa Malaysia.', '', '' ),
 		) ),
 		'pricing' => array( 'i-card', 'Pricing and payment', array(
 			array( 'prices-final', 'Are the prices on the site final?', 'They are starting prices. Website and SEO prices follow our published rates, and the other services use proposed starting packages. Your quotation confirms the final scope and price after we understand the work.', '#pricing', 'See all prices' ),
