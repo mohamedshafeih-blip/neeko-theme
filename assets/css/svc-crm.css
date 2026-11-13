@@ -2720,3 +2720,56 @@ body .pbg>.pmw.wide>.pmb>.xasx{flex:1 1 auto}.xasx .xasxr{flex:1}
 .crtk .crtkm p{align-content:start;padding:0!important}
 .crtk .xsch p{display:flex;justify-content:space-between;margin:0;font-size:11px;color:var(--muted)}
 .crps,.crdp,.crmb{overflow:hidden}.crmb{padding-bottom:2px}
+
+/* ===== CRM v3: every window is a screen of the same CRM app ===== */
+.bn .fc .pv.btv>.wg:has(>.crapp){display:flex!important;flex-direction:column}
+.wg>.crapp{flex:1 1 auto;min-height:0}
+.crapp{display:grid;grid-template-columns:40px minmax(0,1fr);border-radius:12px;overflow:hidden;background:#fff;border:1px solid #e6eaf1;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.pbg>.pmw:has(.crapp){display:flex;flex-direction:column}.pbg>.pmw:has(.crapp)>.pmb{flex:1;display:flex;flex-direction:column}.pbg>.pmw>.pmb>.crapp{flex:1}
+.crrl{display:flex;flex-direction:column;align-items:center;gap:5px;padding:8px 0;background:#f7f8fb;border-right:1px solid #e6eaf1}
+.crlg{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;margin-bottom:6px;background:#1f5bff;color:#fff;font-size:11px;font-weight:800}
+.crrl i{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#94a3b8}.crrl i svg{width:14px;height:14px}
+.crrl i.on{background:#e8efff;color:#1f5bff}
+.crmn{display:flex;flex-direction:column;min-width:0}
+.crtb{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid #eef1f5;min-height:38px}
+.crtb>b{font-size:12.5px;color:#0f172a;white-space:nowrap}
+.crsr{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:10.5px;color:#94a3b8;padding:5px 12px 5px 9px;border-radius:99px;background:#f5f7fb;min-width:120px}.crsr svg{width:12px;height:12px}
+.crav{width:22px;height:22px;flex:none;border-radius:50%;overflow:hidden}.crav img{display:block;width:100%;height:100%;object-fit:cover}
+.crapp.n .crsr{min-width:0;padding:5px;font-size:0;gap:0}
+.crbd{flex:1;display:flex;flex-direction:column;padding:10px;min-height:0}
+.crbd>*{flex:1 1 auto;min-height:0}.crbd>.pmu{flex:0 0 auto;margin-top:8px}
+.crbd .crpb{height:auto;min-height:196px}
+.crbd .crrt{height:auto;min-height:200px}
+.crbd .crpk{background:#f7f8fb}
+.crtg2{font-size:9.5px;font-weight:800;padding:2px 8px;border-radius:99px;background:#fff3c4;color:#7a6400}
+.crtb .crrec{color:#b91c1c;font-size:10px}
+@media (max-width:640px){.crapp{grid-template-columns:34px minmax(0,1fr)}.crrl i{width:24px;height:24px}.crsr{min-width:0;padding:5px;font-size:0;gap:0}}
+
+/* stage 1: pipeline draft */
+.crdf{display:flex;flex-direction:column;gap:9px}
+.crdfc{flex:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.crdfc .crcd{grid-template-columns:minmax(0,1fr);min-height:36px}.crdfc .crcd u{font-size:9.5px;color:var(--muted)}
+.crdfx{border:1.5px dashed #f59e0b;background:#fffbea!important;justify-content:flex-start}
+.crdft{min-height:30px;margin:0!important}
+.crdfe{margin-top:auto;font-size:9.5px;font-weight:800;text-align:center;padding:4px 6px;border-radius:99px;background:#fee2e2;color:#b91c1c}
+.crdfs{display:flex;align-items:center;gap:10px}.crdfs>small{font-size:10px;font-weight:600;color:var(--muted)}
+.crdfm{display:grid;gap:0;padding:5px 10px;border-radius:8px;background:#1f5bff;color:#fff;min-width:110px}.crdfm b{font-size:11px}.crdfm small{font-size:9.5px;opacity:.85}
+.crdf .crmv{animation-duration:9s}
+@media (prefers-reduced-motion:no-preference){.pjd:not([hidden]) .crdfe{animation:crdfe 9s steps(1) infinite}}
+@keyframes crdfe{0%,51%{opacity:1}52%,91%{opacity:0}92%,100%{opacity:1}}
+
+/* stage 2: automations */
+.crau{display:flex;flex-direction:column;gap:6px}
+.crau>div{flex:1;display:grid;grid-template-columns:30px minmax(0,1fr) auto;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;border:1px solid #eef1f5;background:#fff}
+.crau>div>i{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:#e8efff;color:#1f5bff}.crau>div>i svg{width:14px;height:14px}
+.crau p{display:grid;margin:0!important;line-height:1.3;min-width:0}.crau p b{font-size:12px;color:#0f172a}.crau p small{font-size:10.5px;color:var(--muted)}
+.crauf{display:flex;align-items:center;justify-content:space-between;font-size:10.5px;color:var(--muted);padding:0 2px}.crauf b{font-size:10.5px;color:#1f5bff;padding:5px 10px;border-radius:7px;border:1px dashed #cddbff}
+
+/* stage 3: training on the deals screen */
+.crtrn{position:relative;display:flex;flex-direction:column;gap:8px}
+.crtrn .crscb{flex:1}
+.crtrv{position:absolute;right:0;bottom:30px;width:96px;height:72px;border-radius:10px;overflow:hidden;box-shadow:0 8px 20px rgba(16,24,40,.18);border:2px solid #fff;z-index:4}
+.crtrv img{width:100%;height:100%;object-fit:cover}.crtrv em{position:absolute;left:4px;bottom:4px;font-style:normal;font-size:8.5px;font-weight:700;color:#fff;padding:1px 5px;border-radius:4px;background:rgba(0,0,0,.55)}
+.crpk .crpkh b{font-size:11px!important;line-height:1.3}
+.crph{background:#fff;border:1.5px solid #dfe3ea;box-shadow:0 8px 22px rgba(16,24,40,.08)}.crphn{background:#e2e8f0}.crphs{background:#f7f8fb}
+.crbd .crfn{padding:0;background:none}
