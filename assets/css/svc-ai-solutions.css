@@ -2314,3 +2314,16 @@ body .pbg>.pmw.wide>.pmb>.xasx{flex:1 1 auto}.xasx .xasxr{flex:1}
 @media (max-width:640px){.xsin{height:auto}}
 @media (max-width:1000px){.bn .wg>.xsws{height:440px;min-height:440px;flex:none}}
 @media (max-width:640px){.xsfr{font-size:10px}.xsfr b{display:none}}
+/* polish 13 Nov */
+.xawtx.xagr{align-items:center;padding-top:0;padding-bottom:0}.xawtx .caret{background:#16a34a;height:11px;vertical-align:-1px}
+.xsup{justify-content:space-between}.xsup .pmu{margin-top:2px}
+.xsch{display:grid;gap:8px;padding:9px 10px;border-radius:10px;background:var(--card)}
+.xsup .xsch p{display:flex;justify-content:space-between;margin:0;font-size:11px;color:var(--muted)}.xsch b{font-size:11px;color:#0f172a}
+.xsch>i{display:block;height:6px;border-radius:3px;background:var(--hair);overflow:hidden}.xsch u{display:block;height:100%;width:60%;border-radius:3px;background:#1f5bff}
+.xsrpb{grid-template-columns:minmax(0,1fr) 178px}
+.xsrpn{gap:6px}.xsrp .xsrpn p{flex:1;padding:0 8px;border-radius:8px;background:var(--card);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:30px}
+.xsws>img{object-position:center 35%}
+.xswsh{left:16px;top:16px}.xswsh b{font-size:18px;text-shadow:0 1px 12px rgba(0,0,0,.25)}
+.xswsc{left:12px;right:12px;bottom:12px;gap:7px;padding:11px;border-radius:16px;box-shadow:0 12px 32px rgba(10,16,32,.28)}
+.xswsm{font-size:11.5px}
+.xsrp .xsrpn p,.xsup .xsch p{font-size:11.5px!important}
