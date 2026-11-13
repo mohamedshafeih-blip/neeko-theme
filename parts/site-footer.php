@@ -200,10 +200,10 @@ const S=[
   {n:'Starter',one:299,f:['50 high-res images','1 scene or product set','Amendments within the brief']},
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
- {id:'ai',g:'build',n:'AI automation',d:'Chat assistants and workflows',t:[
-  {n:'Assist',one:2499,mo:399,f:['1 chat channel','1 workflow','Human handover']},
-  {n:'Connect',one:4999,mo:799,f:['2 chat channels','3 workflows','1 integration']},
-  {n:'Operate',one:9999,mo:1499,f:['3 chat channels','5 workflows','2 integrations']}]},
+ {id:'ai',g:'build',n:'AI solutions',d:'Chat, workflows, custom AI',t:[
+  {n:'Assist',one:2499,f:['1 chat channel','1 workflow','Human handover']},
+  {n:'Connect',one:4999,f:['2 chat channels','3 workflows','1 integration']},
+  {n:'Operate',one:9999,f:['3 chat channels','5 workflows','2 integrations']}]},
  {id:'crm',g:'build',n:'CRM setup',d:'Track every lead',t:[
   {n:'Launch',one:3500,f:['1 pipeline','Up to 5 users','2 automations']},
   {n:'Connect',one:7500,f:['2 pipelines','Up to 15 users','1 integration']},
@@ -227,7 +227,11 @@ const S=[
  {id:'care',g:'care',n:'Website care',d:'Backups, updates, fixes',t:[
   {n:'Care',mo:199,f:['Backup + updates','Health check','1 support hour']},
   {n:'Care Plus',mo:399,f:['Health + security checks','3 support hours','Troubleshooting']},
-  {n:'Priority',mo:699,f:['Health + security checks','6 support hours','Priority queue']}]}
+  {n:'Priority',mo:699,f:['Health + security checks','6 support hours','Priority queue']}]},
+ {id:'aicare',g:'care',n:'AI care',d:'Monitoring for chats and workflows',t:[
+  {n:'AI Care',mo:399,f:['Up to 2 chats or workflows','Monitoring + fixes','1 care hour']},
+  {n:'AI Care Plus',mo:799,f:['Up to 4 chats or workflows','Monthly review','2 care hours']},
+  {n:'AI Priority',mo:1499,f:['Up to 8 chats or workflows','Review + report','4 care hours']}]}
 ];
 const BUNDLES=[{n:'Presence',p:2199,t:[0,0,0]},{n:'Growth',p:3699,t:[1,1,1]},{n:'Authority',p:6999,t:[2,2,1]}]; // social, seo, care
 
@@ -254,10 +258,10 @@ photo:{d:['For a quick refresh of key visuals','For a full set of brand and prod
  ['100 high-resolution images','Up to 3 scenes or product sets','Creative direction','Brand-consistent colour and style','Amendments within the agreed brief'],
  ['250 high-resolution images','Up to 6 scenes or product sets','Campaign art direction','Brand-consistent colour and style','Sized for web, social and print','Amendments within the agreed brief']],
  n:'Starter and Pro are new packages.'},
-ai:{t:[['1 channel','25 approved FAQ topics','1 lead capture flow','English + BM setup','Human handover','1 care hour a month'],
- ['Up to 2 channels','60 approved FAQ topics','Up to 3 workflows','1 standard integration','Monthly flow review','2 care hours a month'],
- ['Up to 3 channels','120 approved FAQ topics','Up to 5 workflows','2 standard integrations','Review + reporting','4 care hours a month']],
- n:'AI, messaging, WhatsApp and platform usage fees are listed separately in the quotation.'},
+ai:{t:[['AI chat assistant on 1 channel','25 approved FAQ topics','1 workflow (e.g. lead capture)','English + BM setup','Human handover'],
+ ['AI chat assistant on 2 channels','60 approved FAQ topics','3 workflows','1 standard integration','Flow review before launch'],
+ ['AI chat assistant on 3 channels','120 approved FAQ topics','5 workflows','2 standard integrations','Reporting setup']],
+ n:'Bundles cost less than buying separately: chat RM1,499 per channel (+RM999 each extra), workflows from RM1,499 each, custom AI prototypes from RM4,999. Monthly AI care is separate (from RM399). AI, WhatsApp and platform usage fees are listed in the quotation.'},
 crm:{t:[['1 sales pipeline','Up to 5 users configured','2 simple automations','1 prepared CSV import','1 training session','30-day defect support'],
  ['Up to 2 pipelines','Up to 15 users configured','5 simple automations','1 standard integration','Dashboard + 2 sessions','60-day defect support'],
  ['Up to 4 pipelines','Up to 30 users configured','10 simple automations','2 standard integrations','Reporting + 3 sessions','90-day defect support']],
@@ -281,10 +285,14 @@ mobile:{t:[['Up to 5 main screens','Login + basic records','Admin view','Support
 care:{t:[['1 WordPress website','Monthly backup + updates','Basic health check','Up to 1 support hour','Existing content changes'],
  ['1 WordPress website','Backup + update cycle','Health + security checks','Up to 3 support hours','Minor troubleshooting'],
  ['1 WordPress website','Backup + update cycle','Health + security checks','Up to 6 support hours','Priority work queue']],
- n:'Business-hours support. Time allowances don’t roll over. No 24/7 emergency SLA.'}
+ n:'Business-hours support. Time allowances don’t roll over. No 24/7 emergency SLA.'},
+aicare:{t:[['Up to 2 chat channels or workflows','Monitoring + error alerts','Fixes when a connected tool changes','1 care hour a month'],
+ ['Up to 4 chat channels or workflows','Monitoring + error alerts','Monthly flow review','2 care hours a month'],
+ ['Up to 8 chat channels or workflows','Monitoring + error alerts','Monthly review + report','4 care hours a month']],
+ n:'Business-hours support. Care hours don’t roll over. Model tokens, WhatsApp fees and vendor subscriptions are separate.'}
 };
 
-const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI automation',crm:'CRM setup',api:'API integration',erp:'ERP and operations',software:'Custom software',mobile:'Mobile app',care:'Website care'};
+const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI solutions',crm:'CRM setup',api:'API integration',erp:'ERP and operations',software:'Custom software',mobile:'Mobile app',care:'Website care',aicare:'AI care'};
 const fmt=n=>'RM'+n.toLocaleString('en-MY');
 const ck='<svg aria-hidden="true"><use href="#i-check"/></svg>';
 const tabs=document.getElementById('ptabs'),plans=document.getElementById('plans');
@@ -367,10 +375,10 @@ const S=[
   {n:'Starter',one:299,f:['50 high-res images','1 scene or product set','Amendments within the brief']},
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
- {id:'ai',g:'build',n:'AI automation',d:'Chat assistants and workflows',t:[
-  {n:'Assist',one:2499,mo:399,f:['1 chat channel','1 workflow','Human handover']},
-  {n:'Connect',one:4999,mo:799,f:['2 chat channels','3 workflows','1 integration']},
-  {n:'Operate',one:9999,mo:1499,f:['3 chat channels','5 workflows','2 integrations']}]},
+ {id:'ai',g:'build',n:'AI solutions',d:'Chat, workflows, custom AI',t:[
+  {n:'Assist',one:2499,f:['1 chat channel','1 workflow','Human handover']},
+  {n:'Connect',one:4999,f:['2 chat channels','3 workflows','1 integration']},
+  {n:'Operate',one:9999,f:['3 chat channels','5 workflows','2 integrations']}]},
  {id:'crm',g:'build',n:'CRM setup',d:'Track every lead',t:[
   {n:'Launch',one:3500,f:['1 pipeline','Up to 5 users','2 automations']},
   {n:'Connect',one:7500,f:['2 pipelines','Up to 15 users','1 integration']},
@@ -394,15 +402,19 @@ const S=[
  {id:'care',g:'care',n:'Website care',d:'Backups, updates, fixes',t:[
   {n:'Care',mo:199,f:['Backup + updates','Health check','1 support hour']},
   {n:'Care Plus',mo:399,f:['Health + security checks','3 support hours','Troubleshooting']},
-  {n:'Priority',mo:699,f:['Health + security checks','6 support hours','Priority queue']}]}
+  {n:'Priority',mo:699,f:['Health + security checks','6 support hours','Priority queue']}]},
+ {id:'aicare',g:'care',n:'AI care',d:'Monitoring for chats and workflows',t:[
+  {n:'AI Care',mo:399,f:['Up to 2 chats or workflows','Monitoring + fixes','1 care hour']},
+  {n:'AI Care Plus',mo:799,f:['Up to 4 chats or workflows','Monthly review','2 care hours']},
+  {n:'AI Priority',mo:1499,f:['Up to 8 chats or workflows','Review + report','4 care hours']}]}
 ];
 const BUNDLES=[{n:'Presence',p:2199,t:[0,0,0]},{n:'Growth',p:3699,t:[1,1,1]},{n:'Authority',p:6999,t:[2,2,1]}]; // social, seo, care
 
 const LVL=['Starter','Growth','Growth','Pro'];
 const SZ=[{n:'Micro',d:'Under 5 staff',r:'Under RM300k/yr'},{n:'Small',d:'5–29 staff',r:'RM300k–3M/yr'},{n:'Medium',d:'30–75 staff',r:'RM3M–20M/yr'},{n:'Large',d:'75+ staff',r:'Over RM20M/yr'}];
-const ROLE={web:['Web designer','WD'],seo:['SEO specialist','SE'],social:['Social media manager','SM'],design:['Graphic designer','GD'],photo:['AI image producer','AP'],ai:['AI automation specialist','AI'],crm:['CRM consultant','CC'],api:['Integration developer','ID'],erp:['ERP consultant','EC'],software:['Software developer','SD'],mobile:['Mobile developer','MD'],care:['Support engineer','SC']};
+const ROLE={web:['Web designer','WD'],seo:['SEO specialist','SE'],social:['Social media manager','SM'],design:['Graphic designer','GD'],photo:['AI image producer','AP'],ai:['AI automation specialist','AI'],aicare:['AI support specialist','AS'],crm:['CRM consultant','CC'],api:['Integration developer','ID'],erp:['ERP consultant','EC'],software:['Software developer','SD'],mobile:['Mobile developer','MD'],care:['Support engineer','SC']};
 const TK0='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
-const GRP=[['Presence',['web','seo','social']],['Creative',['design','photo']],['Products',['software','mobile','api']],['Operations',['crm','erp','ai']],['After launch',['care']]];
+const GRP=[['Presence',['web','seo','social']],['Creative',['design','photo']],['Products',['software','mobile','api']],['Operations',['crm','erp','ai']],['After launch',['care','aicare']]];
 const GOALS=[
  {n:'Get online',s:['web','seo','care']},
  {n:'Answer customers faster',s:['ai','api']},
@@ -435,7 +447,7 @@ const save=()=>{try{localStorage.setItem('neeko-nb',JSON.stringify(st))}catch(e)
 const rec=s=>Math.min(st.size==null?0:REC[st.size],s.t.length-1);
 const minP=s=>{const t=s.t[0];return t.one!=null?short(t.one):short(t.mo)+'/mo'};
 
-const DET={web:'WordPress site, mobile-first',seo:'Get found on Google',social:'Plan, design and post',design:'Posters, posts and decks',photo:'100 on-brand images',software:'Portals and internal tools',mobile:'Apps for customers or staff',api:'Link the tools you already use',crm:'Track and follow up every lead',erp:'Orders, stock and approvals',ai:'Answers FAQs, hands over to you',care:'Backups, updates and fixes'};
+const DET={web:'WordPress site, mobile-first',seo:'Get found on Google',social:'Plan, design and post',design:'Posters, posts and decks',photo:'100 on-brand images',software:'Portals and internal tools',mobile:'Apps for customers or staff',api:'Link the tools you already use',crm:'Track and follow up every lead',erp:'Orders, stock and approvals',ai:'Chat assistants, workflows, custom AI',care:'Backups, updates and fixes',aicare:'Monitoring for chats and workflows'};
 const CATS=[['connect','Connect'],['create','Create'],['build','Build'],['care','Care']];
 let cat=null;
 function drawList(){

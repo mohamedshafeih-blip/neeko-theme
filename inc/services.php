@@ -16,7 +16,7 @@ function nk_services() {
 			array( 'ai-photography', 'AI photography', 'Brand images, fast', 'i-cam' ),
 		),
 		'Build'   => array(
-			array( 'ai-automation', 'AI automation', 'Chat assistants and workflows', 'i-chat' ),
+			array( 'ai-solutions', 'AI solutions', 'Chat, workflows, custom AI', 'i-chat' ),
 			array( 'crm', 'CRM setup', 'Track every lead', 'i-team' ),
 			array( 'integrations', 'API integration', 'Connect your tools', 'i-sheet' ),
 			array( 'erp', 'ERP and operations', 'Orders, stock, approvals', 'i-cart' ),
@@ -25,6 +25,7 @@ function nk_services() {
 		),
 		'Care'    => array(
 			array( 'website-care', 'Website care', 'Backups, updates, fixes', 'i-shield' ),
+			array( 'ai-care', 'AI care', 'Monitoring for chats and workflows', 'i-spark' ),
 		),
 	);
 }
@@ -51,7 +52,7 @@ function nk_svc_chips( $group ) {
 
 /** Pricing tab id => page slug, exposed to the pricing script (built pages only). */
 function nk_pricing_map() {
-	$ids = array( 'web' => 'website-design', 'seo' => 'seo', 'social' => 'social-media', 'design' => 'graphic-design', 'photo' => 'ai-photography', 'ai' => 'ai-automation', 'crm' => 'crm', 'api' => 'integrations', 'erp' => 'erp', 'software' => 'custom-software', 'mobile' => 'mobile-app', 'care' => 'website-care' );
+	$ids = array( 'web' => 'website-design', 'seo' => 'seo', 'social' => 'social-media', 'design' => 'graphic-design', 'photo' => 'ai-photography', 'ai' => 'ai-solutions', 'crm' => 'crm', 'api' => 'integrations', 'erp' => 'erp', 'software' => 'custom-software', 'mobile' => 'mobile-app', 'care' => 'website-care', 'aicare' => 'ai-care' );
 	$out = array();
 	foreach ( $ids as $id => $slug ) {
 		$u = nk_svc_url( $slug );

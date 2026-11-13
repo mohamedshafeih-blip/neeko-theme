@@ -141,7 +141,7 @@ add_action( 'send_headers', function () {
 
 /* nk_ensure_pages: create approved service pages once if they don't exist yet (no manual step after deploy). */
 add_action( 'init', function () {
-	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design', 'ai-photography' => 'AI photography', 'about' => 'About', 'contact' => 'Contact', 'faq' => 'FAQ', 'articles' => 'Articles', 'terms' => 'Terms of service', 'privacy' => 'Privacy policy', 'ai-automation' => 'AI automation', 'crm' => 'CRM setup', 'integrations' => 'API integration', 'erp' => 'ERP and operations', 'custom-software' => 'Custom software', 'mobile-app' => 'Mobile app', 'website-care' => 'Website care' );
+	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design', 'ai-photography' => 'AI photography', 'about' => 'About', 'contact' => 'Contact', 'faq' => 'FAQ', 'articles' => 'Articles', 'terms' => 'Terms of service', 'privacy' => 'Privacy policy', 'ai-solutions' => 'AI solutions', 'crm' => 'CRM setup', 'integrations' => 'API integration', 'erp' => 'ERP and operations', 'custom-software' => 'Custom software', 'mobile-app' => 'Mobile app', 'website-care' => 'Website care', 'ai-care' => 'AI care' );
 	if ( get_option( 'nk_pages_v' ) === implode( ',', array_keys( $want ) ) ) return;
 	foreach ( $want as $slug => $title ) {
 		if ( ! get_page_by_path( $slug ) ) {
@@ -157,10 +157,10 @@ add_action( 'init', function () {
 
 require NK_DIR . '/inc/soon.php';
 
-/* AI chat assistant became AI automation (13 Nov 2026): keep old links and rankings. */
+/* AI chat assistant → AI automation → AI solutions (13 Nov 2026): keep old links and rankings. */
 add_action( 'template_redirect', function () {
-	if ( preg_match( '#^/ai-chat-assistant/?(\?|$)#', $GLOBALS['nk_path'] ) ) {
-		wp_redirect( nk_svc_url( 'ai-automation' ), 301 );
+	if ( preg_match( '#^/(ai-chat-assistant|ai-automation)/?(\?|$)#', $GLOBALS['nk_path'] ) ) {
+		wp_redirect( nk_svc_url( 'ai-solutions' ), 301 );
 		exit;
 	}
 }, 1 );

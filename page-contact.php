@@ -24,7 +24,7 @@ nk_win_start( 'New message', array( array( 'i-wa', 'https://wa.me/60176604771', 
     <label class="pgc-r"><span>Company</span><input name="company" type="text" autocomplete="organization" placeholder="Kopi Lane Sdn Bhd (optional)"></label>
     <label class="pgc-r"><span>Reply to</span><input name="contact" type="text" autocomplete="email" required placeholder="Phone or email"></label>
     <div class="pgc-r pgc-tp"><span>Topic</span><div class="pgc-cp" role="radiogroup" aria-label="Topic">
-      <?php $first = true; foreach ( array( 'Not sure yet', 'Website', 'SEO', 'Social media', 'Graphic design', 'AI photography', 'AI automation', 'Software and apps', 'Website care' ) as $t ) : ?><label><input type="radio" name="need" value="<?php echo esc_attr( $t ); ?>"<?php echo $first ? ' checked' : ''; ?>><span><?php echo esc_html( $t ); ?></span></label><?php $first = false; endforeach; ?>
+      <?php $first = true; foreach ( array( 'Not sure yet', 'Website', 'SEO', 'Social media', 'Graphic design', 'AI photography', 'AI solutions', 'Software and apps', 'Website care' ) as $t ) : ?><label><input type="radio" name="need" value="<?php echo esc_attr( $t ); ?>"<?php echo $first ? ' checked' : ''; ?>><span><?php echo esc_html( $t ); ?></span></label><?php $first = false; endforeach; ?>
     </div></div>
     <label class="pgc-r pgc-ms"><span class="sr">Message</span><textarea name="msg" rows="7" required placeholder="Hi Neeko, a few lines about your business, what you’d like done and any deadline…"></textarea></label>
     <p class="pger" id="pger" role="alert" hidden></p>

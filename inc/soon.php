@@ -8,17 +8,17 @@
 function nk_soon() {
 	$I = NK_URI . '/assets/img/';
 	return array(
-		'ai-automation' => array(
-			'name'  => 'AI automation',
+		'ai-solutions' => array(
+			'name'  => 'AI solutions',
 			'group' => 'Build',
 			'icon'  => 'i-chat',
-			'h1'    => 'AI automation that answers customers and handles the routine work',
-			'sub'   => 'AI chat assistants on WhatsApp and your website, plus workflows that capture leads, route enquiries and follow up, with a person in the loop.',
-			'desc'  => 'AI automation for Malaysian businesses: chat assistants on WhatsApp and your website, lead capture and workflow automation with human handover. From RM2,499 setup.',
-			'title' => 'AI automation in Malaysia from RM2,499 — Neeko',
-			'mo'    => true,
-			'pk'    => array( array( 'Assist', 2499, 399, '1 chat channel · 1 workflow · human handover' ), array( 'Connect', 4999, 799, '2 chat channels · 3 workflows · 1 integration' ), array( 'Operate', 9999, 1499, '3 chat channels · 5 workflows · 2 integrations' ) ),
-			'tasks' => array( 'Packages and prices', 'Chat and workflow windows', 'Setup steps and FAQ' ),
+			'h1'    => 'AI that answers customers and handles the routine work',
+			'sub'   => 'AI chat assistants on WhatsApp and your website, workflows that capture leads and follow up, and custom AI built around your business. A person stays in the loop.',
+			'desc'  => 'AI solutions for Malaysian businesses: AI chat assistants from RM1,499 per channel, workflow automation from RM1,499 and custom AI prototypes from RM4,999.',
+			'title' => 'AI solutions in Malaysia: chat assistants, automation, custom AI — Neeko',
+			'mo'    => false,
+			'pk'    => array( array( 'Assist', 2499, 0, '1 chat channel · 1 workflow · human handover' ), array( 'Connect', 4999, 0, '2 chat channels · 3 workflows · 1 integration' ), array( 'Operate', 9999, 0, '3 chat channels · 5 workflows · 2 integrations' ) ),
+			'tasks' => array( 'Chat, workflow and custom AI prices', 'Demo windows', 'Setup steps and FAQ' ),
 			'win'   => array(
 				array( 'WhatsApp inbox', 'i-wa', 'chat', array( array( 'Hi, how much for a 3-page website?', 0 ), array( 'Our Starter site is RM3,900 for up to 5 pages. Want me to book a call?', 1 ), array( 'Yes, tomorrow 3pm', 0 ) ) ),
 				array( 'FAQ topics', 'i-doc', 'list', array( 'Prices and packages', 'Opening hours', 'Delivery areas', 'Booking a slot', 'Refund policy' ) ),
@@ -139,6 +139,26 @@ function nk_soon() {
 			'mo'    => true,
 			'pk'    => array( array( 'Care', 0, 199, 'Backup + updates · health check · 1 support hour' ), array( 'Care Plus', 0, 399, 'Health + security checks · 3 support hours' ), array( 'Priority', 0, 699, 'Health + security checks · 6 support hours · priority queue' ) ),
 			'tasks' => array( 'Packages and prices', 'Site health windows', 'Care steps and FAQ' ),
+			'win'   => array(
+				array( 'Site health', 'i-shield', 'stats', array( array( 'Health', '98' ), array( 'Uptime', '99.9%' ), array( 'Speed', '1.4s' ), array( 'Updates', '0' ) ) ),
+				array( 'Backups', 'i-clock', 'list', array( '13 Nov · Full backup', '6 Nov · Full backup', '30 Oct · Full backup' ) ),
+				array( '', '', 'photo', $I . 'nk-about-connect.webp' ),
+				array( 'Updates', 'i-check', 'list', array( 'WordPress 6.8', 'LiteSpeed Cache', 'Contact form' ) ),
+				array( 'Support', 'i-chat', 'chat', array( array( 'The contact form stopped sending', 0 ), array( 'Fixed and tested, mail is going out', 1 ) ) ),
+				array( 'Security', 'i-shield', 'list', array( 'Firewall on', 'Login protection', 'SSL valid' ) ),
+			),
+		),
+		'ai-care' => array(
+			'name'  => 'AI care',
+			'group' => 'Care',
+			'icon'  => 'i-spark',
+			'h1'    => 'Keep your AI assistant and workflows running',
+			'sub'   => 'Monthly monitoring, fixes when a connected tool changes, answer updates and care hours for your chat assistants and workflows.',
+			'desc'  => 'AI care plans in Malaysia: monitoring, fixes and care hours for AI chat assistants and automated workflows. From RM399/month.',
+			'title' => 'AI care: monitoring for chatbots and automation from RM399/month — Neeko',
+			'mo'    => true,
+			'pk'    => array( array( 'AI Care', 0, 399, 'Up to 2 chats or workflows · monitoring · 1 care hour' ), array( 'AI Care Plus', 0, 799, 'Up to 4 · monthly review · 2 care hours' ), array( 'AI Priority', 0, 1499, 'Up to 8 · review + report · 4 care hours' ) ),
+			'tasks' => array( 'Packages and prices', 'Monitoring windows', 'Care steps and FAQ' ),
 			'win'   => array(
 				array( 'Site health', 'i-shield', 'stats', array( array( 'Health', '98' ), array( 'Uptime', '99.9%' ), array( 'Speed', '1.4s' ), array( 'Updates', '0' ) ) ),
 				array( 'Backups', 'i-clock', 'list', array( '13 Nov · Full backup', '6 Nov · Full backup', '30 Oct · Full backup' ) ),
