@@ -1929,3 +1929,8 @@ html[lang|=ar] body{font-family:"IBM Plex Sans Arabic","Plus Jakarta Sans",sans-
 .sh>p{max-width:640px}
 /* Pricing tabs: drag to slide with a mouse */
 @media (hover:hover) and (pointer:fine){.ptabs.ov{cursor:grab}.ptabs.drag,.ptabs.drag button{cursor:grabbing;user-select:none}}
+
+/* Pricing card header: badge never breaks inside its pill; drops under the name when space runs out */
+.pc .ph{flex-wrap:wrap;gap:8px 10px}
+.pc .ph h3{min-width:0}
+.pc .ph .chip,.pc .ph .tg{white-space:nowrap;flex:none}
