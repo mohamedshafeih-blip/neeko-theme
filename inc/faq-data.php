@@ -45,13 +45,13 @@ function nk_faq_data() {
 			array( 'ai-care', 'What does AI care cover?', 'Monitoring, error alerts, fixes when a connected tool changes and monthly care hours. AI care starts from RM399 per month for up to 2 chat channels or workflows. Model tokens, WhatsApp fees and vendor subscriptions are charged separately.', 'ai-care', 'AI care' ),
 			array( 'licences', 'Are CRM or ERP licences included?', 'No. Platform licences, hosting and data cleansing are extra. User counts in the packages describe how many users we configure, not paid seats.', 'crm', 'CRM setup' ),
 			array( 'integration', 'Can you connect the tools we already use?', 'Yes, through API integration: from one trigger between two systems to scoped workflows across three systems, with testing, error logging and handover. API access and usage fees need to be confirmed first.', 'integrations', 'API integration' ),
-			array( 'mobile', 'Do you build for both iOS and Android?', 'Where it suits the project, we use a shared codebase. Supported devices, offline use and store submission are confirmed in the quotation. Store approval is controlled by Apple and Google.', 'mobile-app', 'Mobile app' ),
-			array( 'defects', 'What is defect support?', 'After launch, software, CRM and ERP projects include 30, 60 or 90 days, depending on the package, to fix anything that doesn’t work as agreed. New features are quoted separately.', 'custom-software', 'Custom web app' ),
+			array( 'mobile', 'Do you build for both iOS and Android?', 'Yes. MVP is a single-platform build (iOS or Android). Growth and Full Scale are cross-platform, built from one shared codebase, with full App Store and Play Store setup. Offline mode and background sync come with Full Scale. Store approval is controlled by Apple and Google.', 'mobile-app', 'Mobile app' ),
+			array( 'defects', 'What is defect support?', 'After launch, web app, mobile app, CRM and ERP projects include 30, 60 or 90 days of support, depending on the package, to fix anything that doesn’t work as agreed. New features are quoted separately.', 'custom-software', 'Custom web app' ),
 		) ),
 		'care' => array( 'i-shield', 'Care and support', array(
 			array( 'after-launch', 'What happens after my website launches?', 'Website packages include 3, 6 or 12 months of minor support. After that, website care starts from RM199 per month for backups, updates, health checks and support hours.', 'website-care', 'Website care' ),
 			array( 'hours', 'Do unused support hours roll over?', 'No. Support runs in business hours, time allowances don’t roll over and there is no 24/7 emergency SLA.', 'website-care', 'Website care' ),
-			array( 'system-care', 'Do you support apps and automations after launch?', 'Yes. System care covers CRM, ERP, custom software, mobile apps and integrations. It starts from RM399 per month for 1 system with monitoring, bug fixes and 1.5 support hours; larger plans cover up to 3 or 6 systems with 5 or 10 hours.', 'system-care', 'System care' ),
+			array( 'system-care', 'Do you support apps and automations after launch?', 'Yes. System care covers CRM, ERP, custom web apps, mobile apps and integrations. It starts from RM399 per month for 1 system with monitoring, bug fixes and 1.5 support hours; larger plans cover up to 3 or 6 systems with 5 or 10 hours.', 'system-care', 'System care' ),
 		) ),
 	);
 }
