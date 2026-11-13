@@ -2789,3 +2789,31 @@ body .pbg>.pmw.wide>.pmb>.xasx{flex:1 1 auto}.xasx .xasxr{flex:1}
 .crpr .crctl p{flex:1;padding:7px 9px;border-radius:9px;background:#f7f8fb}
 .crpr .crctl p::after{display:none}
 @media (max-width:1000px){.crprp{flex:none;height:220px}.crpr .crctl{flex:none}}
+/* v4: rail only on Deals + Lead routing, fixes */
+.crapp.nr{grid-template-columns:minmax(0,1fr)}
+.crfn .crfnf p,.crfn .crfnl p{font-size:11px!important;line-height:1.3!important;padding:0!important}
+.crfn .crfnf p span{font-size:11px}.crfn .crfnf p b{font-size:11px}
+.crfnf{justify-content:space-between}
+.crdph{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.crdp .crdpb{align-self:auto;padding:5px 12px;font-size:10px}
+.crdpc{grid-template-rows:none;grid-template-columns:1fr 1fr}
+.crdpa,.crdpm{flex-direction:column;align-items:stretch;gap:5px;padding:8px}
+.crdpt{display:flex;align-items:center;gap:6px;padding-bottom:5px;border-bottom:1px solid #eef1f5}.crdpt i{width:22px!important;height:22px!important}.crdpt b{font-size:11px;color:#0f172a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.crdpt em{margin-left:auto;font-style:normal;font-size:9px;font-weight:800;padding:2px 6px;border-radius:99px;background:#dcfce7;color:#147a3d;white-space:nowrap}
+.crdp .crdpa p,.crdp .crdpm p{flex:1;display:grid!important;gap:0;font-size:10px;line-height:1.25}
+.crdp p span{font-size:9px;color:var(--muted);font-weight:700}.crdp p b{font-size:10.5px;color:#0f172a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.crdp p b.x{color:#cbd5e1}
+.crdpm{position:absolute;inset:0;flex-direction:column}
+@keyframes crdpa{0%,58%{opacity:1;transform:none}66%,94%{opacity:0;transform:translateX(30px)}100%{opacity:1;transform:none}}
+@keyframes crdpa2{0%,58%{opacity:1;transform:none}66%,94%{opacity:0;transform:translateX(-30px)}100%{opacity:1;transform:none}}
+.crmb{align-items:stretch;padding:0}
+.crph{width:158px;height:100%;max-height:100%;box-sizing:border-box}
+.crphs{min-height:0;overflow:hidden}
+.crphd em{margin-left:auto;font-style:normal;font-size:10px;font-weight:800;color:#0f172a}
+.crapp{width:100%;align-self:stretch;box-sizing:border-box}
+.crapp.nr{display:flex;flex-direction:column}.crapp.nr>.crmn{flex:1;min-height:0}
+.crmb .crphs p.crpht.g{background:#eef2f8;color:#475569}
+.crpr .crctl{flex:0 0 auto}.crpr .crctl p{flex:0 0 auto}
+.crprn{flex:1 1 auto;display:flex;flex-direction:column;gap:4px;padding:9px 10px;border-radius:9px;background:#fffbea;border:1px solid #fde68a;min-height:60px}
+.crprn small{font-size:9.5px;font-weight:800;color:#7a6400}.crprn span{font-size:11px;line-height:1.45;color:#0f172a}
+@media (max-width:1000px){.crprn{flex:none}}
+.crprp{flex:1 1 190px}.crpr .crctl{flex:1 1 auto}.crpr .crctl p{flex:1 1 auto}.crprn{flex:0 0 auto;min-height:0}
+@media (max-width:1000px){.crprp{flex:none;height:220px}.crpr .crctl{flex:none}}
