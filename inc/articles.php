@@ -145,3 +145,19 @@ add_action( 'init', function () {
 	}
 	$wp_rewrite->flush_rules( false );
 }, 30 );
+
+
+/* One-time: bring the seeded AI article in line with the AI solutions prices (13 Nov 2026). */
+add_action( 'init', function () {
+	if ( get_option( 'nk_art_ai_v2' ) ) return;
+	$p = get_page_by_path( 'ai-chat-assistant-small-business', OBJECT, 'post' );
+	if ( $p ) {
+		$c = str_replace(
+			array( '<thead><tr><th>Package</th><th>Setup from</th><th>Monthly care</th><th>Scope</th></tr></thead>', '<p>Channel approvals, AI model usage, WhatsApp fees and vendor subscriptions are listed separately in the quotation.</p>' ),
+			array( '<thead><tr><th>Bundle</th><th>Setup from</th><th>AI care from</th><th>Scope</th></tr></thead>', '<p>Need only one piece? An AI chat assistant on its own is RM1,499 for the first channel (RM999 for each extra channel), and a single automated workflow starts from RM1,499. Monthly AI care is a separate plan from RM399. Channel approvals, AI model usage, WhatsApp fees and vendor subscriptions are listed separately in the quotation.</p>' ),
+			$p->post_content
+		);
+		if ( $c !== $p->post_content ) wp_update_post( array( 'ID' => $p->ID, 'post_content' => $c ) );
+	}
+	update_option( 'nk_art_ai_v2', 1, false );
+}, 30 );

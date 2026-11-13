@@ -7,7 +7,7 @@ function nk_faq_data() {
 	return array(
 		'start' => array( 'i-team', 'Getting started', array(
 			array( 'what-is-neeko', 'What is Neeko?', 'Neeko is a freelancer collective based in Kuala Lumpur, registered as Berdua Sama Niaga (003225924-X). We bring the right creative, marketing and technical specialists into one scope, so you brief one team and get one quotation.', 'about', 'About Neeko' ),
-			array( 'services', 'What services do you offer?', 'Three groups of work. Create: graphic design and AI photography. Connect: websites, SEO and social media. Build: AI solutions, CRM, API integration, ERP, custom software and mobile apps. Website care keeps things running after launch.', '#pricing', 'See all prices' ),
+			array( 'services', 'What services do you offer?', 'Three groups of work. Create: graphic design and AI photography. Connect: websites, SEO and social media. Build: AI solutions, CRM, API integration, ERP, custom software and mobile apps. Care plans for websites, AI and systems keep things running after launch.', '#pricing', 'See all prices' ),
 			array( 'how-to-start', 'How do I start?', 'Use the brief builder on our homepage to pick your goals and see an estimate, or message us on WhatsApp. We confirm the scope with you and send a quotation before any work starts.', '#brief', 'Start a brief' ),
 			array( 'outside-kl', 'Do you work with businesses outside Kuala Lumpur?', 'Yes. We work with businesses across Malaysia. Briefs, reviews and handovers happen on WhatsApp, email and video calls.', '', '' ),
 			array( 'language', 'Which languages can we use?', 'You can message us in English, Bahasa Malaysia or Chinese. AI assistants are set up in English and Bahasa Malaysia.', '', '' ),
@@ -41,7 +41,8 @@ function nk_faq_data() {
 		) ),
 		'build' => array( 'i-code', 'AI, software and systems', array(
 			array( 'ai-replace', 'Will an AI assistant replace my team?', 'No. It answers approved questions and captures enquiries, then hands over to a person when a request is new or sensitive. Human handover is part of every flow.', 'ai-solutions', 'AI solutions' ),
-			array( 'ai-care', 'What does the AI assistant’s monthly care cover?', 'Monitoring and minor refinements within the plan’s care hours. Model tokens, WhatsApp fees and vendor subscriptions are charged separately.', 'ai-solutions', 'AI solutions' ),
+			array( 'ai-price', 'How much does an AI chat assistant or automation cost?', 'An AI chat assistant is RM1,499 for the first channel and RM999 for each extra channel. Workflow automation starts from RM1,499 per workflow. Custom AI starts with a working prototype from RM4,999; full builds start from RM15,000. Bundles of chat and workflows start at RM2,499.', 'ai-solutions', 'AI solutions' ),
+			array( 'ai-care', 'What does AI care cover?', 'Monitoring, error alerts, fixes when a connected tool changes and monthly care hours. AI care starts from RM399 per month for up to 2 chat channels or workflows. Model tokens, WhatsApp fees and vendor subscriptions are charged separately.', 'ai-care', 'AI care' ),
 			array( 'licences', 'Are CRM or ERP licences included?', 'No. Platform licences, hosting and data cleansing are extra. User counts in the packages describe how many users we configure, not paid seats.', 'crm', 'CRM setup' ),
 			array( 'integration', 'Can you connect the tools we already use?', 'Yes, through API integration: from one trigger between two systems to scoped workflows across three systems, with testing, error logging and handover. API access and usage fees need to be confirmed first.', 'integrations', 'API integration' ),
 			array( 'mobile', 'Do you build for both iOS and Android?', 'Where it suits the project, we use a shared codebase. Supported devices, offline use and store submission are confirmed in the quotation. Store approval is controlled by Apple and Google.', 'mobile-app', 'Mobile app' ),
@@ -50,7 +51,7 @@ function nk_faq_data() {
 		'care' => array( 'i-shield', 'Care and support', array(
 			array( 'after-launch', 'What happens after my website launches?', 'Website packages include 3, 6 or 12 months of minor support. After that, website care starts from RM199 per month for backups, updates, health checks and support hours.', 'website-care', 'Website care' ),
 			array( 'hours', 'Do unused support hours roll over?', 'No. Support runs in business hours, time allowances don’t roll over and there is no 24/7 emergency SLA.', 'website-care', 'Website care' ),
-			array( 'system-care', 'Do you support apps and automations after launch?', 'Yes. System care starts from RM899 per month, with up to 4 technical support hours for monitoring and minor fixes within an agreed scope.', '', '' ),
+			array( 'system-care', 'Do you support apps and automations after launch?', 'Yes. System care covers CRM, ERP, custom software, mobile apps and integrations. It starts from RM399 per month for 1 system with monitoring, bug fixes and 1.5 support hours; larger plans cover up to 3 or 6 systems with 5 or 10 hours.', 'system-care', 'System care' ),
 		) ),
 	);
 }

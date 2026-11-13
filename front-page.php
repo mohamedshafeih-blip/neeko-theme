@@ -4,7 +4,7 @@ get_header(); ?>
 <main>
 <section class="hero sky" id="top">
   <div class="wrap hc">
-    <span class="pill">Freelance collective in Kuala Lumpur <span class="pls"><i class="p1">Connect</i><i class="p2">Create</i><i class="p3">Build</i></span><b>12 services</b></span>
+    <span class="pill">Freelance collective in Kuala Lumpur <span class="pls"><i class="p1">Connect</i><i class="p2">Create</i><i class="p3">Build</i></span><b>14 services</b></span>
     <h1><span class="h1k">Digital marketing agency in Kuala Lumpur<span class="sr">:</span></span> One brief, the right team, prices up front</h1>
     <p class="sub">Websites, SEO, social media, design and software for Malaysian businesses. Pick your goals below to see your team and an estimate in under a minute.</p>
   </div>
