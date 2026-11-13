@@ -201,8 +201,8 @@ const S=[
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
  {id:'ai',g:'build',n:'AI solutions',d:'Chat, workflows, custom AI',t:[
-  {n:'AI chat assistant',one:1499,f:['1 channel','25 FAQ topics','Human handover']},
   {n:'Workflow automation',one:1499,f:['1 workflow','Trigger, action, fallback','Error alerts']},
+  {n:'AI chat assistant',one:1499,f:['1 channel','25 FAQ topics','Human handover']},
   {n:'Custom AI',one:4999,f:['Working prototype','2–4 weeks','Then quoted']}]},
  {id:'crm',g:'build',n:'CRM setup',d:'Track every lead',t:[
   {n:'Launch',one:3500,f:['1 pipeline','Up to 5 users','2 automations']},
@@ -262,8 +262,8 @@ photo:{d:['For a quick refresh of key visuals','For a full set of brand and prod
  ['100 high-resolution images','Up to 3 scenes or product sets','Creative direction','Brand-consistent colour and style','Amendments within the agreed brief'],
  ['250 high-resolution images','Up to 6 scenes or product sets','Campaign art direction','Brand-consistent colour and style','Sized for web, social and print','Amendments within the agreed brief']],
  n:'Starter and Pro are new packages.'},
-ai:{t:[['1 channel: WhatsApp, website or Instagram','25 approved FAQ topics','English + BM setup','Lead capture + human handover','+RM999 for each extra channel'],
- ['1 automated workflow, e.g. form → CRM + WhatsApp alert','Agreed trigger, action and fallback','1 standard integration','Error alerts + testing','Price per workflow; complex flows quoted'],
+ai:{t:[['1 automated workflow, e.g. form → CRM + WhatsApp alert','Agreed trigger, action and fallback','1 standard integration','Error alerts + testing','Price per workflow; complex flows quoted'],
+ ['1 channel: WhatsApp, website or Instagram','25 approved FAQ topics','English + BM setup','Lead capture + human handover','+RM999 for each extra channel'],
  ['Working prototype of your idea in 2–4 weeks','AI agents, document assistants, AI inside your system','Scope, data and success test agreed first','Full builds quoted after the prototype, from RM15,000']],
  n:'Bundles cost less: Assist RM2,499 (1 channel + 1 workflow), Connect RM4,999 (2 channels + 3 workflows + 1 integration), Operate RM9,999 (3 channels + 5 workflows + 2 integrations). Monthly AI care is separate, from RM399. AI, WhatsApp and platform usage fees are listed in the quotation.'},
 crm:{t:[['1 sales pipeline','Up to 5 users configured','2 simple automations','1 prepared CSV import','1 training session','30-day defect support'],
@@ -309,11 +309,11 @@ const price=t=>{
   if(t.mo)return `<b>${fmt(t.mo)}</b><small>/ month</small></div>`;
   return `<b>${fmt(t.one)}</b><small>one-time</small></div>`;
 };
-const TG={web:{0:['Easy start','y'],2:['Full scope','p']},seo:{0:['Local focus','y']},social:{0:['One platform','k'],2:['3 platforms','p']},design:{2:['Bigger pack','k']},photo:{0:['Try it first','y']},ai:{1:['Per workflow','k'],2:['Prototype first','p']},crm:{0:['Quick setup','y']},software:{2:['Full scope','p']},mobile:{0:['MVP','y']},care:{1:['Most cover','k']}};
+const TG={web:{0:['Easy start','y'],2:['Full scope','p']},seo:{0:['Local focus','y']},social:{0:['One platform','k'],2:['3 platforms','p']},design:{2:['Bigger pack','k']},photo:{0:['Try it first','y']},ai:{0:['Per workflow','k'],2:['Prototype first','p']},crm:{0:['Quick setup','y']},software:{2:['Full scope','p']},mobile:{0:['MVP','y']},care:{1:['Most cover','k']}};
 function show(id){
   const s=S.find(x=>x.id===id);
   tabs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-selected',b.dataset.id===id));
-  const n=s.t.length,mid=id==='ai'?0:(n===3?1:-1),F=FULL[id]||{};
+  const n=s.t.length,mid=n===3?1:-1,F=FULL[id]||{};
   const note=document.getElementById('pnote');if(note)note.innerHTML='<b>Starting prices in MYR, checked 28 Oct 2026 · your quotation confirms the final scope.</b>'+(F.n?'<span>'+F.n+'</span>':'');
   plans.innerHTML=s.t.map((t,i)=>`<article class="pc${i===mid?' hi':''}">
     <div class="ph"><h3>${t.n}</h3>${i===mid?'<span class="chip">'+(id==='ai'?'Most popular':'Suggested for small teams')+'</span>':(TG[id]&&TG[id][i]?`<span class="tg ${TG[id][i][1]}">${TG[id][i][0]}</span>`:'')}</div>
@@ -384,8 +384,8 @@ const S=[
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
  {id:'ai',g:'build',n:'AI solutions',d:'Chat, workflows, custom AI',t:[
-  {n:'AI chat assistant',one:1499,f:['1 channel','25 FAQ topics','Human handover']},
   {n:'Workflow automation',one:1499,f:['1 workflow','Trigger, action, fallback','Error alerts']},
+  {n:'AI chat assistant',one:1499,f:['1 channel','25 FAQ topics','Human handover']},
   {n:'Custom AI',one:4999,f:['Working prototype','2–4 weeks','Then quoted']}]},
  {id:'crm',g:'build',n:'CRM setup',d:'Track every lead',t:[
   {n:'Launch',one:3500,f:['1 pipeline','Up to 5 users','2 automations']},

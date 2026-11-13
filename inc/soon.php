@@ -17,7 +17,7 @@ function nk_soon() {
 			'desc'  => 'AI solutions for Malaysian businesses: AI chat assistants from RM1,499 per channel, workflow automation from RM1,499 and custom AI prototypes from RM4,999.',
 			'title' => 'AI solutions in Malaysia: chat assistants, automation, custom AI — Neeko',
 			'mo'    => false,
-			'pk'    => array( array( 'AI chat assistant', 1499, 0, 'Per channel · 25 FAQ topics · handover' ), array( 'Workflow automation', 1499, 0, 'Per workflow · trigger, action, fallback' ), array( 'Custom AI', 4999, 0, 'Working prototype in 2–4 weeks' ) ),
+			'pk'    => array( array( 'Workflow automation', 1499, 0, 'Per workflow · trigger, action, fallback' ), array( 'AI chat assistant', 1499, 0, 'Per channel · 25 FAQ topics · handover' ), array( 'Custom AI', 4999, 0, 'Working prototype in 2–4 weeks' ) ),
 			'tasks' => array( 'Chat, workflow and custom AI prices', 'Demo windows', 'Setup steps and FAQ' ),
 			'win'   => array(
 				array( 'WhatsApp inbox', 'i-wa', 'chat', array( array( 'Hi, how much for a 3-page website?', 0 ), array( 'Our Starter site is RM3,900 for up to 5 pages. Want me to book a call?', 1 ), array( 'Yes, tomorrow 3pm', 0 ) ) ),
