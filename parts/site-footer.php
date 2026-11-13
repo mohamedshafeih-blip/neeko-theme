@@ -435,7 +435,7 @@ const GOALS=[
  {n:'Sell online',s:['web','seo','social']},
  {n:'Fresh content every month',s:['social','design']},
  {n:'Website upkeep',s:['care']},
- {n:'Keep my systems running',s:['syscare','aicare']},
+ {n:'System upkeep',s:['syscare','aicare']},
  {n:'Grow on social',s:['social','design','photo']},
  {n:'Take bookings',s:['web','crm']},
  {n:'Get found on Google',s:['seo','web']},
