@@ -429,25 +429,26 @@ const TK0='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
 const GRP=[['Presence',['web','seo','social']],['Creative',['design','photo']],['Products',['software','mobile','api']],['Operations',['crm','erp','ai']],['After launch',['care','aicare','syscare']]];
 const GOALS=[
  {n:'Get online',s:['web','seo','care']},
- {n:'Answer customers faster',s:['ai','api']},
+ {n:'Answer customers faster',s:['ai','api','aicare']},
  {n:'Look professional online',s:['web','design']},
  {n:'More leads',s:['seo','social','crm']},
  {n:'Sell online',s:['web','seo','social']},
  {n:'Fresh content every month',s:['social','design']},
  {n:'Website upkeep',s:['care']},
+ {n:'Keep my systems running',s:['syscare','aicare']},
  {n:'Grow on social',s:['social','design','photo']},
  {n:'Take bookings',s:['web','crm']},
  {n:'Get found on Google',s:['seo','web']},
  {n:'Rebrand',s:['design','photo','web']},
  {n:'Save time',s:['ai','api','crm']},
- {n:'Track stock',s:['erp','api']},
+ {n:'Track stock',s:['erp','api','syscare']},
  {n:'Follow up every lead',s:['crm','ai']},
  {n:'New website',s:['web','care']},
  {n:'Automate sales',s:['crm','ai','api']},
  {n:'Product photos',s:['photo']},
  {n:'Cut admin work',s:['erp','api','ai']},
- {n:'Launch an app',s:['mobile','api','care']},
- {n:'Internal tools',s:['software','api','care']},
+ {n:'Launch an app',s:['mobile','api','syscare']},
+ {n:'Internal tools',s:['software','api','syscare']},
  {n:'Connect my systems',s:['api']}];
 const byId=Object.fromEntries(S.map(s=>[s.id,s]));
 const rm=n=>'RM'+Math.round(n).toLocaleString('en-MY');
