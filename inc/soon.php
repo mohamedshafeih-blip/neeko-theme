@@ -17,7 +17,7 @@ function nk_soon() {
 			'desc'  => 'AI automation for Malaysian businesses: chat assistants on WhatsApp and your website, lead capture and workflow automation with human handover. From RM2,499 setup.',
 			'title' => 'AI automation in Malaysia from RM2,499 — Neeko',
 			'mo'    => true,
-			'pk'    => array( array( 'Assist', 2499, 399, '1 channel · 25 FAQ topics · EN + BM' ), array( 'Connect', 4999, 799, '2 channels · 60 FAQ topics · 3 workflows' ), array( 'Operate', 9999, 1499, '3 channels · 120 FAQ topics · 5 workflows' ) ),
+			'pk'    => array( array( 'Assist', 2499, 399, '1 chat channel · 1 workflow · human handover' ), array( 'Connect', 4999, 799, '2 chat channels · 3 workflows · 1 integration' ), array( 'Operate', 9999, 1499, '3 chat channels · 5 workflows · 2 integrations' ) ),
 			'tasks' => array( 'Packages and prices', 'Chat and workflow windows', 'Setup steps and FAQ' ),
 			'win'   => array(
 				array( 'WhatsApp inbox', 'i-wa', 'chat', array( array( 'Hi, how much for a 3-page website?', 0 ), array( 'Our Starter site is RM3,900 for up to 5 pages. Want me to book a call?', 1 ), array( 'Yes, tomorrow 3pm', 0 ) ) ),

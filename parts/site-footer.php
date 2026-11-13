@@ -201,9 +201,9 @@ const S=[
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
  {id:'ai',g:'build',n:'AI automation',d:'Chat assistants and workflows',t:[
-  {n:'Assist',one:2499,mo:399,f:['1 channel','25 FAQ topics','English + BM']},
-  {n:'Connect',one:4999,mo:799,f:['2 channels','60 FAQ topics','3 workflows']},
-  {n:'Operate',one:9999,mo:1499,f:['3 channels','120 FAQ topics','5 workflows']}]},
+  {n:'Assist',one:2499,mo:399,f:['1 chat channel','1 workflow','Human handover']},
+  {n:'Connect',one:4999,mo:799,f:['2 chat channels','3 workflows','1 integration']},
+  {n:'Operate',one:9999,mo:1499,f:['3 chat channels','5 workflows','2 integrations']}]},
  {id:'crm',g:'build',n:'CRM setup',d:'Track every lead',t:[
   {n:'Launch',one:3500,f:['1 pipeline','Up to 5 users','2 automations']},
   {n:'Connect',one:7500,f:['2 pipelines','Up to 15 users','1 integration']},
@@ -368,9 +368,9 @@ const S=[
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
  {id:'ai',g:'build',n:'AI automation',d:'Chat assistants and workflows',t:[
-  {n:'Assist',one:2499,mo:399,f:['1 channel','25 FAQ topics','English + BM']},
-  {n:'Connect',one:4999,mo:799,f:['2 channels','60 FAQ topics','3 workflows']},
-  {n:'Operate',one:9999,mo:1499,f:['3 channels','120 FAQ topics','5 workflows']}]},
+  {n:'Assist',one:2499,mo:399,f:['1 chat channel','1 workflow','Human handover']},
+  {n:'Connect',one:4999,mo:799,f:['2 chat channels','3 workflows','1 integration']},
+  {n:'Operate',one:9999,mo:1499,f:['3 chat channels','5 workflows','2 integrations']}]},
  {id:'crm',g:'build',n:'CRM setup',d:'Track every lead',t:[
   {n:'Launch',one:3500,f:['1 pipeline','Up to 5 users','2 automations']},
   {n:'Connect',one:7500,f:['2 pipelines','Up to 15 users','1 integration']},
