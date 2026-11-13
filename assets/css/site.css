@@ -1921,3 +1921,6 @@ footer{padding:96px 0 36px}
 /* Scripts the Latin font doesn't cover */
 html[lang|=zh] body{font-family:"Plus Jakarta Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif}
 html[lang|=ar] body{font-family:"IBM Plex Sans Arabic","Plus Jakarta Sans",sans-serif}
+/* Pricing note: centred, tinted panel */
+.pnote{text-align:center!important;margin:36px auto 0!important;max-width:760px;padding:16px 24px;border-radius:16px;background:var(--soft);text-wrap:pretty}
+.pnote span{max-width:68ch;margin-inline:auto}
