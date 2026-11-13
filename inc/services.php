@@ -20,7 +20,7 @@ function nk_services() {
 			array( 'crm', 'CRM setup', 'Track every lead', 'i-team' ),
 			array( 'integrations', 'API integration', 'Connect your tools', 'i-sheet' ),
 			array( 'erp', 'ERP and operations', 'Orders, stock, approvals', 'i-cart' ),
-			array( 'custom-software', 'Custom software', 'Portals, dashboards, tools', 'i-code' ),
+			array( 'custom-software', 'Custom web app', 'Portals, dashboards, tools', 'i-code' ),
 			array( 'mobile-app', 'Mobile app', 'For customers or staff', 'i-send' ),
 		),
 		'Care'    => array(

@@ -156,14 +156,14 @@ array(
 
 <h2>How much does an AI assistant cost?</h2>
 <table>
-<thead><tr><th>Bundle</th><th>Setup from</th><th>AI care from</th><th>Scope</th></tr></thead>
+<thead><tr><th>Service</th><th>Setup from</th><th>Scope</th></tr></thead>
 <tbody>
-<tr><td>Assist</td><td>RM2,499</td><td>RM399</td><td>1 channel, 25 FAQ topics, 1 lead capture flow</td></tr>
-<tr><td>Connect</td><td>RM4,999</td><td>RM799</td><td>Up to 2 channels, 60 FAQ topics, up to 3 workflows</td></tr>
-<tr><td>Operate</td><td>RM9,999</td><td>RM1,499</td><td>Up to 3 channels, 120 FAQ topics, up to 5 workflows</td></tr>
+<tr><td>Workflow automation</td><td>RM2,499</td><td>1 automated workflow, e.g. form → CRM + WhatsApp alert, with error alerts</td></tr>
+<tr><td>AI chat assistant</td><td>RM3,499</td><td>1 channel (WhatsApp, website or Instagram), 25 FAQ topics, human handover; RM999 for each extra channel</td></tr>
+<tr><td>Custom AI</td><td>RM5,999</td><td>Working prototype in 2–4 weeks, self-hosted LLM option so all data is yours; full builds from RM15,000</td></tr>
 </tbody>
 </table>
-<p>Need only one piece? An AI chat assistant on its own is RM1,499 for the first channel (RM999 for each extra channel), and a single automated workflow starts from RM1,499. Monthly AI care is a separate plan from RM399. Channel approvals, AI model usage, WhatsApp fees and vendor subscriptions are listed separately in the quotation.</p>
+<p>Need several channels and workflows? We quote a bundle price. Monthly AI care is a separate plan from RM399. Channel approvals, AI model usage, WhatsApp fees and vendor subscriptions are listed separately in the quotation.</p>
 
 <h2>What do you need before it goes live?</h2>
 <ul>

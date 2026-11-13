@@ -161,3 +161,24 @@ add_action( 'init', function () {
 	}
 	update_option( 'nk_art_ai_v2', 1, false );
 }, 30 );
+
+
+/* One-time: AI prices updated 13 Nov 2026 (workflow RM2,499, chat RM3,499, custom AI RM5,999 + self-hosted LLM). */
+add_action( 'init', function () {
+	if ( get_option( 'nk_art_ai_v3' ) ) return;
+	$p = get_page_by_path( 'ai-chat-assistant-small-business', OBJECT, 'post' );
+	if ( $p ) {
+		$c = preg_replace( '~<h2>How much does an AI assistant cost\?</h2>.*?(?=<h2>What do you need)~s', '<h2>How much does an AI assistant cost?</h2>
+<table>
+<thead><tr><th>Service</th><th>Setup from</th><th>Scope</th></tr></thead>
+<tbody>
+<tr><td>Workflow automation</td><td>RM2,499</td><td>1 automated workflow, e.g. form → CRM + WhatsApp alert, with error alerts</td></tr>
+<tr><td>AI chat assistant</td><td>RM3,499</td><td>1 channel (WhatsApp, website or Instagram), 25 FAQ topics, human handover; RM999 for each extra channel</td></tr>
+<tr><td>Custom AI</td><td>RM5,999</td><td>Working prototype in 2–4 weeks, self-hosted LLM option so all data is yours; full builds from RM15,000</td></tr>
+</tbody>
+</table>
+<p>Need several channels and workflows? We quote a bundle price. Monthly AI care is a separate plan from RM399. Channel approvals, AI model usage, WhatsApp fees and vendor subscriptions are listed separately in the quotation.</p>' . "\n\n", $p->post_content, 1 );
+		if ( $c && $c !== $p->post_content ) wp_update_post( array( 'ID' => $p->ID, 'post_content' => $c ) );
+	}
+	update_option( 'nk_art_ai_v3', 1, false );
+}, 31 );

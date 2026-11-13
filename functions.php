@@ -141,7 +141,7 @@ add_action( 'send_headers', function () {
 
 /* nk_ensure_pages: create approved service pages once if they don't exist yet (no manual step after deploy). */
 add_action( 'init', function () {
-	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design', 'ai-photography' => 'AI photography', 'about' => 'About', 'contact' => 'Contact', 'faq' => 'FAQ', 'articles' => 'Articles', 'terms' => 'Terms of service', 'privacy' => 'Privacy policy', 'ai-solutions' => 'AI solutions', 'crm' => 'CRM setup', 'integrations' => 'API integration', 'erp' => 'ERP and operations', 'custom-software' => 'Custom software', 'mobile-app' => 'Mobile app', 'website-care' => 'Website care', 'ai-care' => 'AI care', 'system-care' => 'System care' );
+	$want = array( 'social-media' => 'Social media', 'graphic-design' => 'Graphic design', 'ai-photography' => 'AI photography', 'about' => 'About', 'contact' => 'Contact', 'faq' => 'FAQ', 'articles' => 'Articles', 'terms' => 'Terms of service', 'privacy' => 'Privacy policy', 'ai-solutions' => 'AI solutions', 'crm' => 'CRM setup', 'integrations' => 'API integration', 'erp' => 'ERP and operations', 'custom-software' => 'Custom web app', 'mobile-app' => 'Mobile app', 'website-care' => 'Website care', 'ai-care' => 'AI care', 'system-care' => 'System care' );
 	if ( get_option( 'nk_pages_v' ) === implode( ',', array_keys( $want ) ) ) return;
 	foreach ( $want as $slug => $title ) {
 		if ( ! get_page_by_path( $slug ) ) {

@@ -201,9 +201,9 @@ const S=[
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
  {id:'ai',g:'build',n:'AI solutions',d:'Chat, workflows, custom AI',t:[
-  {n:'Workflow automation',one:1499,f:['1 workflow','Trigger, action, fallback','Error alerts']},
-  {n:'AI chat assistant',one:1499,f:['1 channel','25 FAQ topics','Human handover']},
-  {n:'Custom AI',one:4999,f:['Working prototype','2–4 weeks','Then quoted']}]},
+  {n:'Workflow automation',one:2499,f:['1 workflow','Trigger, action, fallback','Error alerts']},
+  {n:'AI chat assistant',one:3499,f:['1 channel','25 FAQ topics','Human handover']},
+  {n:'Custom AI',one:5999,f:['Prototype in 2–4 weeks','Self-hosted LLM option','All your data stays yours']}]},
  {id:'crm',g:'build',n:'CRM setup',d:'Track every lead',t:[
   {n:'Launch',one:3500,f:['1 pipeline','Up to 5 users','2 automations']},
   {n:'Connect',one:7500,f:['2 pipelines','Up to 15 users','1 integration']},
@@ -216,14 +216,14 @@ const S=[
   {n:'Essentials',one:7500,f:['1 module','Up to 5 users','2 hours training']},
   {n:'Operations',one:15000,f:['3 modules','Up to 10 users','Approvals + reporting']},
   {n:'Connected',one:28000,f:['5 modules','Up to 20 users','1 integration']}]},
- {id:'software',g:'build',n:'Custom software',d:'Portals, dashboards, tools',t:[
+ {id:'software',g:'build',n:'Custom web app',d:'Portals, dashboards, tools',t:[
   {n:'MVP',one:15000,f:['1 core workflow','Up to 6 screens','2 user roles']},
   {n:'Workflow',one:30000,f:['3 workflows','Up to 12 screens','1 integration']},
   {n:'Platform',one:60000,f:['5 workflows','Up to 20 screens','2 integrations']}]},
  {id:'mobile',g:'build',n:'Mobile app',d:'For customers or staff',t:[
-  {n:'MVP',one:18000,f:['Up to 5 screens','Login + records','Admin view']},
-  {n:'Growth',one:35000,f:['Up to 10 screens','Notifications','1 integration']},
-  {n:'Scale',one:60000,f:['Up to 20 screens','2 integrations','Role-based workflow']}]},
+  {n:'MVP',one:18000,f:['iOS or Android','Standard UI kit','30-day bug warranty']},
+  {n:'Growth',one:35000,f:['iOS + Android','Custom UI/UX design','60-day support']},
+  {n:'Full Scale',one:60000,f:['Offline mode + sync','Real-time tracking','90-day priority SLA']}]},
  {id:'care',g:'care',n:'Website care',d:'Backups, updates, fixes',t:[
   {n:'Care',mo:199,f:['Backup + updates','Health check','1 support hour']},
   {n:'Care Plus',mo:399,f:['Health + security checks','3 support hours','Troubleshooting']},
@@ -264,8 +264,8 @@ photo:{d:['For a quick refresh of key visuals','For a full set of brand and prod
  n:'Starter and Pro are new packages.'},
 ai:{t:[['1 automated workflow, e.g. form → CRM + WhatsApp alert','Agreed trigger, action and fallback','1 standard integration','Error alerts + testing','Price per workflow; complex flows quoted'],
  ['1 channel: WhatsApp, website or Instagram','25 approved FAQ topics','English + BM setup','Lead capture + human handover','+RM999 for each extra channel'],
- ['Working prototype of your idea in 2–4 weeks','AI agents, document assistants, AI inside your system','Scope, data and success test agreed first','Full builds quoted after the prototype, from RM15,000']],
- n:'Bundles cost less: Assist RM2,499 (1 channel + 1 workflow), Connect RM4,999 (2 channels + 3 workflows + 1 integration), Operate RM9,999 (3 channels + 5 workflows + 2 integrations). Monthly AI care is separate, from RM399. AI, WhatsApp and platform usage fees are listed in the quotation.'},
+ ['Working prototype of your idea in 2–4 weeks','AI agents, document assistants, AI inside your system','Self-hosted LLM option: all data is yours','Scope, data and success test agreed first','Full builds quoted after the prototype, from RM15,000']],
+ n:'Need several channels and workflows? We quote a bundle price. Monthly AI care is separate, from RM399. AI, WhatsApp and platform usage fees are listed in the quotation.'},
 crm:{t:[['1 sales pipeline','Up to 5 users configured','2 simple automations','1 prepared CSV import','1 training session','30-day defect support'],
  ['Up to 2 pipelines','Up to 15 users configured','5 simple automations','1 standard integration','Dashboard + 2 sessions','60-day defect support'],
  ['Up to 4 pipelines','Up to 30 users configured','10 simple automations','2 standard integrations','Reporting + 3 sessions','90-day defect support']],
@@ -282,9 +282,9 @@ software:{t:[['1 core workflow','Up to 6 main screens','2 user roles','Login + s
  ['Up to 3 workflows','Up to 12 main screens','3 user roles','1 standard integration','Dashboard + permissions','60-day defect support'],
  ['Up to 5 workflows','Up to 20 main screens','4 user roles','2 standard integrations','Advanced reporting scope','90-day defect support']],
  n:'Includes discovery, interface design, testing, deployment guidance and handover. Hosting and licences are separate.'},
-mobile:{t:[['Up to 5 main screens','Login + basic records','Admin view','Supported devices agreed upfront'],
- ['Up to 10 main screens','Notifications','1 standard integration','Supported devices agreed upfront'],
- ['Up to 20 main screens','2 integrations','Role-based workflow','Supported devices agreed upfront']],
+mobile:{t:[['iOS or Android single-platform build','Clean, standard UI component kit','Basic search and data filtering','App store submission assistance','30-day post-launch bug warranty'],
+ ['Cross-platform (iOS & Android)','Custom branded UI/UX design','Payment gateway or WhatsApp API','Usage analytics and crash reporting','Full App Store & Play Store setup','60-day post-launch support'],
+ ['Custom UI/UX + reusable design system','Offline mode and background sync','Real-time updates and live tracking','Role permissions and audit logs','Dedicated staging environment','90-day priority SLA support']],
  n:'Store accounts, hosting, licences and ongoing support are separate. Store approval is controlled by the platform.'},
 care:{t:[['1 WordPress website','Monthly backup + updates','Basic health check','Up to 1 support hour','Existing content changes'],
  ['1 WordPress website','Backup + update cycle','Health + security checks','Up to 3 support hours','Minor troubleshooting'],
@@ -300,7 +300,7 @@ syscare:{t:[['1 system or integration','Uptime + error monitoring','Bug fixes','
  n:'Business-hours support. Support hours don’t roll over. Hosting, licences and new features are quoted separately.'}
 };
 
-const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI solutions',crm:'CRM setup',api:'API integration',erp:'ERP and operations',software:'Custom software',mobile:'Mobile app',care:'Website care',aicare:'AI care',syscare:'System care'};
+const L={web:'Website design',seo:'SEO',social:'Social media',design:'Graphic design',photo:'AI photography',ai:'AI solutions',crm:'CRM setup',api:'API integration',erp:'ERP and operations',software:'Custom web app',mobile:'Mobile app',care:'Website care',aicare:'AI care',syscare:'System care'};
 const fmt=n=>'RM'+n.toLocaleString('en-MY');
 const ck='<svg aria-hidden="true"><use href="#i-check"/></svg>';
 const tabs=document.getElementById('ptabs'),plans=document.getElementById('plans');
@@ -391,9 +391,9 @@ const S=[
   {n:'Growth',one:499,f:['100 high-res images','Creative direction','Amendments within the brief']},
   {n:'Pro',one:999,f:['250 high-res images','Campaign art direction','Amendments within the brief']}]},
  {id:'ai',g:'build',n:'AI solutions',d:'Chat, workflows, custom AI',t:[
-  {n:'Workflow automation',one:1499,f:['1 workflow','Trigger, action, fallback','Error alerts']},
-  {n:'AI chat assistant',one:1499,f:['1 channel','25 FAQ topics','Human handover']},
-  {n:'Custom AI',one:4999,f:['Working prototype','2–4 weeks','Then quoted']}]},
+  {n:'Workflow automation',one:2499,f:['1 workflow','Trigger, action, fallback','Error alerts']},
+  {n:'AI chat assistant',one:3499,f:['1 channel','25 FAQ topics','Human handover']},
+  {n:'Custom AI',one:5999,f:['Prototype in 2–4 weeks','Self-hosted LLM option','All your data stays yours']}]},
  {id:'crm',g:'build',n:'CRM setup',d:'Track every lead',t:[
   {n:'Launch',one:3500,f:['1 pipeline','Up to 5 users','2 automations']},
   {n:'Connect',one:7500,f:['2 pipelines','Up to 15 users','1 integration']},
@@ -406,14 +406,14 @@ const S=[
   {n:'Essentials',one:7500,f:['1 module','Up to 5 users','2 hours training']},
   {n:'Operations',one:15000,f:['3 modules','Up to 10 users','Approvals + reporting']},
   {n:'Connected',one:28000,f:['5 modules','Up to 20 users','1 integration']}]},
- {id:'software',g:'build',n:'Custom software',d:'Portals, dashboards, tools',t:[
+ {id:'software',g:'build',n:'Custom web app',d:'Portals, dashboards, tools',t:[
   {n:'MVP',one:15000,f:['1 core workflow','Up to 6 screens','2 user roles']},
   {n:'Workflow',one:30000,f:['3 workflows','Up to 12 screens','1 integration']},
   {n:'Platform',one:60000,f:['5 workflows','Up to 20 screens','2 integrations']}]},
  {id:'mobile',g:'build',n:'Mobile app',d:'For customers or staff',t:[
-  {n:'MVP',one:18000,f:['Up to 5 screens','Login + records','Admin view']},
-  {n:'Growth',one:35000,f:['Up to 10 screens','Notifications','1 integration']},
-  {n:'Scale',one:60000,f:['Up to 20 screens','2 integrations','Role-based workflow']}]},
+  {n:'MVP',one:18000,f:['iOS or Android','Standard UI kit','30-day bug warranty']},
+  {n:'Growth',one:35000,f:['iOS + Android','Custom UI/UX design','60-day support']},
+  {n:'Full Scale',one:60000,f:['Offline mode + sync','Real-time tracking','90-day priority SLA']}]},
  {id:'care',g:'care',n:'Website care',d:'Backups, updates, fixes',t:[
   {n:'Care',mo:199,f:['Backup + updates','Health check','1 support hour']},
   {n:'Care Plus',mo:399,f:['Health + security checks','3 support hours','Troubleshooting']},
