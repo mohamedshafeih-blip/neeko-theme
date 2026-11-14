@@ -543,3 +543,18 @@ if(!_saved)sync();drawSize();drawGoals();draw();$('goals').addEventListener('scr
 </script>
 <?php endif; ?>
 
+<script>window.NKT=650;/* nk process fit: fixed stage height on every service page; windows that overflow scale down */
+(()=>{const fitP=()=>{if(!matchMedia('(min-width:1101px)').matches){document.querySelectorAll('.pjd .pmw>.pmb').forEach(b=>{b.style.zoom='';b.style.height='';b.style.width='';b.style.flex=''});return}
+document.querySelectorAll('.pjd:not([hidden]) .pmw>.pmb').forEach(b=>{b.style.zoom='';b.style.height='';b.style.width='';b.style.flex='';const A=b.clientHeight,W=b.clientWidth;if(!A)return;b.classList.add('nkfm');const N=b.scrollHeight;b.classList.remove('nkfm');
+if(N>A+2){const s=Math.max(.78,A/N);b.style.flex='0 0 auto';b.style.zoom=s;b.style.height=(A/s)+'px';b.style.width=(W/s)+'px'}})};
+let t;const go=()=>{clearTimeout(t);t=setTimeout(fitP,150)};addEventListener('load',()=>setTimeout(fitP,200));addEventListener('resize',go);document.addEventListener('input',e=>{if(e.target.closest&&e.target.closest('.pjw'))go()});document.addEventListener('click',e=>{if(e.target.closest&&e.target.closest('.pjw'))go()})})();
+</script>
+<script>/* nk bento fit: bento and FAQ windows have fixed heights on every service page; small overflow scales down, spare space centres the content */
+(()=>{if(!document.querySelector('#features .bn, #faq .fqx .pv'))return;
+const fit=()=>{const on=matchMedia('(min-width:1001px)').matches;document.querySelectorAll('#features .bn .fc>.pv.btv>.wg, #faq .fqx .pv>.wg, #faq .fqx .pv>.hw').forEach(w=>{const h=w.firstElementChild,hd=h&&/(^| )(wt|hwt)( |$)/.test(h.className)?h:null;
+w.style.zoom='';w.style.height='';w.style.width='';if(hd)hd.style.marginBottom='';if(!on||w.querySelector(':scope>.mzx'))return;const pv=w.parentElement;if(!pv.offsetHeight)return;const cs=getComputedStyle(pv),A=pv.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom),W=pv.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+w.classList.add('nkfm');w.style.height='auto';const N=w.scrollHeight;w.style.height='';w.classList.remove('nkfm');
+if(N>A+2){const s=Math.max(.78,A/N);w.style.zoom=s;w.style.height=(A/s)+'px';w.style.width=(W/s)+'px'}
+else if(hd&&A-N>28&&!pv.closest('.tall')){hd.style.marginBottom=(parseFloat(getComputedStyle(hd).marginBottom)+Math.min(60,(A-N)/2))+'px'}})};
+let t;const go=(d)=>{clearTimeout(t);t=setTimeout(fit,d||120)};addEventListener('load',fit);addEventListener('resize',()=>go());if(document.fonts)document.fonts.ready.then(fit);document.addEventListener('click',e=>{if(e.target.closest&&e.target.closest('#faq'))go(450)})})();
+</script>

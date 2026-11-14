@@ -917,3 +917,17 @@
 .pfo .fl.ob.btn{width:52px!important;height:62px!important;position:absolute;justify-content:center}
 .ob.btn em{display:block;width:32px;height:10px;padding:0;margin-top:7px;border-radius:999px;background:#1f5bff}
 .ob.btn .cu{position:absolute;right:6px;bottom:8px;width:12px;height:12px}
+/* nk equal bento v1: same section height on every service page */
+@media (min-width:1001px){body .bn{grid-template-rows:520px 480px 520px;grid-auto-rows:500px}
+body .bn>.fc{min-height:0;height:auto}
+body .bn>.fc>.bd{flex:0 0 auto}
+body .bn .fc .pv.btv{flex:1 1 0;min-height:0;height:auto}
+body .bn .fc .pv.btv>.wg{height:100%;overflow:hidden}}
+.nkfm *{animation:none!important;transition:none!important}
+/* nk equal FAQ windows */
+@media (min-width:1001px){#faq .fqx .pv{height:250px!important;min-height:0!important;box-sizing:border-box}
+#faq .fqx .pv>.wg,#faq .fqx .pv>.hw{height:100%!important;overflow:hidden}}
+/* nk equal section headings + hero */
+@media (min-width:1001px){#features .sh,#pricing .sh,#process .sh{min-height:107px;box-sizing:border-box}
+#top.sv-hero{min-height:724px!important;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}#top.sv-hero>.wrap{width:100%}}
+@media (min-width:1001px){#faq .fqg{min-height:1100px}}
