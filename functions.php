@@ -25,6 +25,7 @@ function nk_page_key() {
 	if ( is_page( 'crm' ) ) return 'crm';
 	if ( is_page( 'integrations' ) ) return 'integrations';
 	if ( is_page( 'erp' ) ) return 'erp';
+	if ( is_page( 'ai-care' ) ) return 'ai-care';
 	if ( is_page( 'website-care' ) ) return 'website-care';
 	if ( is_page( 'mobile-app' ) ) return 'mobile-app';
 	if ( is_page( 'custom-software' ) ) return 'custom-software';
