@@ -57,10 +57,11 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'nk-site', NK_URI . '/assets/css/site.css', array(), filemtime( NK_DIR . '/assets/css/site.css' ) );
 	$k = nk_page_key();
 	if ( $k && 'home' !== $k && file_exists( NK_DIR . '/assets/css/svc-' . $k . '.css' ) ) {
-		// Build/Care pages share svc-base.css (app shell, pointer, typer, nq window kit); their own file holds page rules only.
-		$dep = array( 'nk-site' );
+		// Every service page loads svc-core.css; Build/Care pages add svc-base.css; svc-{slug}.css holds page rules only.
+		wp_enqueue_style( 'nk-svc-core', NK_URI . '/assets/css/svc-core.css', array( 'nk-site' ), filemtime( NK_DIR . '/assets/css/svc-core.css' ) );
+		$dep = array( 'nk-svc-core' );
 		if ( in_array( $k, nk_base_keys(), true ) ) {
-			wp_enqueue_style( 'nk-svc-base', NK_URI . '/assets/css/svc-base.css', array( 'nk-site' ), filemtime( NK_DIR . '/assets/css/svc-base.css' ) );
+			wp_enqueue_style( 'nk-svc-base', NK_URI . '/assets/css/svc-base.css', array( 'nk-svc-core' ), filemtime( NK_DIR . '/assets/css/svc-base.css' ) );
 			$dep = array( 'nk-svc-base' );
 		}
 		wp_enqueue_style( 'nk-svc-' . $k, NK_URI . '/assets/css/svc-' . $k . '.css', $dep, filemtime( NK_DIR . '/assets/css/svc-' . $k . '.css' ) );
