@@ -1,1 +1,7 @@
 /* erp: page rules only; shared rules live in svc-base.css */
+/* first day live counters */
+.erfd{flex:1 1 auto;width:100%;box-sizing:border-box;display:flex;flex-direction:column;gap:8px;padding:10px;border-radius:10px;background:#fff;border:1px solid #e6eaf1}
+.pbg>.pmw:has(.erfd){display:flex;flex-direction:column}.pbg>.pmw:has(.erfd)>.pmb{flex:1;display:flex!important;flex-direction:column!important;align-items:stretch!important}
+.erfg{flex:1 1 auto;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.erfg>span{display:grid;align-content:center;gap:2px;padding:8px 10px;border-radius:9px;background:#f7f8fb}
+.erfg small{font-size:9px;font-weight:700;color:var(--muted)}.erfg b{font-size:22px;letter-spacing:-.02em;color:#0f172a}.erfg b .igsw{display:inline-grid!important}

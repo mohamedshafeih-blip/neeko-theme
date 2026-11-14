@@ -59,3 +59,24 @@
 .cxrl{display:grid!important;flex:1 1 auto}.cxrl>span{display:grid;align-content:start;gap:5px}
 .cxrl p{display:flex;align-items:center;gap:8px;margin:0!important;padding:5px 7px!important;border-radius:8px;background:#fff;border:1px solid #eef1f5;font-size:10.5px!important}
 .cxrl p b{font-size:10.5px;color:#0f172a}.cxrl p.x{opacity:.5}.cxrl .nqi{width:22px;height:22px}.cxrl .nqi svg{width:11px;height:11px}
+/* jobs calendar heatmap */
+.cxhm{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:12px;min-height:0}
+.cxhg{display:flex;flex-direction:column;gap:6px;min-height:0}.cxhg>small,.cxar>small{font-size:9px;font-weight:800;color:var(--muted)}
+.cxcal{flex:1 1 auto;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:1fr;gap:4px}
+.cxcal i{position:relative;border-radius:6px;background:#eef2f8;min-height:22px}
+.cxcal i u{position:absolute;left:4px;top:3px;text-decoration:none;font-size:8.5px;font-weight:700;color:#64748b}
+.cxcal .l1{background:#dbe5ff}.cxcal .l2{background:#9bb5ff}.cxcal .l3{background:#4d7dff}.cxcal .l4{background:#1f5bff}
+.cxcal .l3 u,.cxcal .l4 u{color:#fff}
+.cxlg{display:flex;align-items:center;gap:4px;justify-content:flex-end}.cxlg small{font-size:8.5px;color:var(--muted)}.cxlg i{width:12px;height:12px;border-radius:3px}
+.cxlg .l1{background:#dbe5ff}.cxlg .l2{background:#9bb5ff}.cxlg .l3{background:#4d7dff}.cxlg .l4{background:#1f5bff}
+.cxar{display:flex;flex-direction:column;gap:6px;min-height:0}
+@media (prefers-reduced-motion:no-preference){.cxcal i{animation:igem 8s ease infinite}.cxcal i:nth-child(2n){animation-delay:.15s}.cxcal i:nth-child(3n){animation-delay:.3s}}
+@media (max-width:640px){.cxhm{grid-template-columns:minmax(0,1fr)}.cxcal i{min-height:18px}}
+/* browser prototype with hotspot */
+.cxpr .nqbw{flex:1 1 auto}
+.cxpv{display:flex;flex-direction:column;gap:8px;padding:12px;justify-content:center}
+.cxps{display:flex;gap:5px}.cxps span{flex:1;text-align:center;font-size:10px;font-weight:700;padding:6px 0;border-radius:7px;border:1px solid #e6eaf1;color:#475569}
+.cxps span.on{background:#0e7490;border-color:#0e7490;color:#fff}
+.cxhs{position:relative;align-self:flex-end;font-size:10px;font-weight:800;padding:7px 18px;border-radius:8px;background:#0e7490;color:#fff;box-shadow:0 0 0 3px #fff,0 0 0 5px #1f5bff}
+@media (prefers-reduced-motion:no-preference){.cxhs{animation:cxhs 1.6s ease-in-out infinite}}
+@keyframes cxhs{0%,100%{box-shadow:0 0 0 3px #fff,0 0 0 5px rgba(31,91,255,.9)}50%{box-shadow:0 0 0 3px #fff,0 0 0 8px rgba(31,91,255,.25)}}

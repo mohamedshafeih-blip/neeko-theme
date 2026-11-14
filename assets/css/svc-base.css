@@ -2838,3 +2838,4 @@ body .pbg>.pmw.wide>.pmb>.xasx{flex:1 1 auto}.xasx .xasxr{flex:1}
 .cxiv>span{display:grid;flex:1;min-width:0}.cxiv b{font-size:10.5px;color:#0f172a}.cxiv small{font-size:9.5px;color:var(--muted)}
 .igtr p{max-height:58px}
 @media (max-width:640px){.ertph{flex:0 0 170px}}
+.igrf>span{min-width:0}.igrf b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
