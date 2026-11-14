@@ -3732,6 +3732,8 @@ body .pbg>.pmw.wide>.pmb>.xasx{flex:1 1 auto}.xasx .xasxr{flex:1}
 .nqbig{display:grid;gap:1px}.nqbig small{font-size:9px;font-weight:700;color:var(--muted)}.nqbig b{font-size:20px;color:#0f172a;letter-spacing:-.02em}.nqbig b u{text-decoration:none;font-size:11px;color:var(--muted);font-weight:700}
 @media (prefers-reduced-motion:no-preference){.nqsgb>i{transform-origin:left;animation:errb 8s ease-in-out infinite;animation-delay:var(--d,0s)}}
 .nqgt>span>em.t{top:auto;bottom:8px;right:auto;left:10px;position:static;align-self:flex-start;margin-top:4px}
+.nqgt>span>b .igsw{display:inline-grid!important}.nqgt>span>b:only-of-type{font-size:13px}
+.nqgt>span>b:first-child{font-size:17px;letter-spacing:-.01em}
 
 /* ===== Custom web app (cx-) page, 14 Nov: every window is a screen of "Sejuk Portal" ===== */
 .cxdb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;min-height:0;flex:1 1 auto}
