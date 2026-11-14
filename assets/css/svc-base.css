@@ -2816,3 +2816,25 @@ body .pbg>.pmw.wide>.pmb>.xasx{flex:1 1 auto}.xasx .xasxr{flex:1}
 .nqgt>span>em.t{top:auto;bottom:8px;right:auto;left:10px;position:static;align-self:flex-start;margin-top:4px}
 .nqgt>span>b .igsw{display:inline-grid!important}.nqgt>span>b:only-of-type{font-size:13px}
 .nqgt>span>b:first-child{font-size:17px;letter-spacing:-.01em}
+/* phone fit fixes (14 Nov live check) */
+.crtb>b{min-width:0;overflow:hidden;text-overflow:ellipsis}.crtb>.crav,.crtb>.crsr,.crtb>.crtg2{flex:none}
+@media (max-width:400px){.crtb .crtg2{display:none}}
+@media (max-width:360px){.crtb .crsr{display:none}.crtb>.crav{margin-left:auto}.erar>p>b{white-space:normal}}
+@media (max-width:640px){.nqtr:has(>:nth-child(4)){grid-template-columns:minmax(0,1fr) auto!important}.nqtr:has(>:nth-child(4))>:not(:first-child):not(:last-child){display:none}}
+.nqcal small{font-size:9px}
+@media (max-width:640px){.ertm .igrf span{min-width:0}.ertm .igrf b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ertm .igtr p:nth-child(n+4){display:none}}
+@media (max-width:360px){.cxtr>span.g{display:none}}
+.nqph{padding:6px 0 10px;box-sizing:border-box}
+@media (max-width:640px){.nqcm{gap:4px}.nqcm small{font-size:8.5px;overflow:hidden;text-overflow:ellipsis}.igpin.erpn{position:static;align-self:flex-end;max-width:none;margin-top:4px}}
+/* tall record tiles v2 (14 Nov): photo with name tag, varied body per page */
+.ertph{position:relative;flex:1 1 0;min-height:150px;border-radius:10px;overflow:hidden;background:#eef2f8}
+.ertph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.ertag{position:absolute;left:8px;bottom:8px;display:grid;padding:6px 10px;border-radius:9px;background:rgba(255,255,255,.94);box-shadow:0 2px 8px rgba(16,24,40,.12)}
+.ertag b{font-size:11.5px;color:#0f172a}.ertag small{font-size:9px;color:#475569}
+.ertm2 .nqgt{flex:0 0 auto;grid-auto-rows:auto}.ertm2 .nqgt>span{padding:9px 10px}
+.ertm2 .nqgt>span>i{width:24px;height:24px;margin-bottom:3px}
+.cxut{flex:0 0 auto}.cxut .nqtr{flex:none;height:32px}
+.cxiv{display:flex;align-items:center;gap:8px;padding:8px 9px;border-radius:9px;border:1px solid #eef1f5}
+.cxiv>span{display:grid;flex:1;min-width:0}.cxiv b{font-size:10.5px;color:#0f172a}.cxiv small{font-size:9.5px;color:var(--muted)}
+.igtr p{max-height:58px}
+@media (max-width:640px){.ertph{flex:0 0 170px}}

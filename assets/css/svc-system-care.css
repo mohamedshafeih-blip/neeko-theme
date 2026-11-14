@@ -91,3 +91,5 @@
 .yqtl{justify-content:flex-start;gap:6px}.yqtl p{flex:1 1 auto;max-height:62px;align-items:center;padding:6px 9px!important;border-radius:8px;background:#f7f8fb}
 .yqtl p::before{top:50%;margin-top:-5px}.yqtl::before{top:14px;bottom:14px}
 .yqrc .yqnt{flex:0 0 auto}
+@media (max-width:640px){.yqst>.yqsc:nth-child(3){display:none}}
+@media (max-width:640px){.yqph{flex-basis:160px}}@media (max-width:360px){.yqmp{padding:8px}.yqmp>.n{padding:8px 3px}.yqmp>.n b{font-size:9px;overflow-wrap:anywhere}}

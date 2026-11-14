@@ -1934,3 +1934,5 @@ html[lang|=ar] body{font-family:"IBM Plex Sans Arabic","Plus Jakarta Sans",sans-
 .pc .ph{flex-wrap:wrap;gap:8px 10px}
 .pc .ph h3{min-width:0}
 .pc .ph .chip,.pc .ph .tg{white-space:nowrap;flex:none}
+/* 320px phones: header CTA and pricing cards fit (14 Nov) */
+@media (max-width:340px){.nr .btn-blue{display:none}.c3{grid-template-columns:minmax(0,1fr)}.pc{padding:24px 20px}}

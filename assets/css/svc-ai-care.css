@@ -18,3 +18,4 @@
 .nqr .xstg{margin-left:auto}
 @media (max-width:640px){.aqov,.aqrv{grid-template-columns:minmax(0,1fr)}.aqov .nqcc,.aqrv .nqcc{min-height:150px}}
 /* aq marker 14nov */
+@media (max-width:640px){.aqph{flex-basis:170px}}
