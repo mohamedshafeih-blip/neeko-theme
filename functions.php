@@ -45,6 +45,9 @@ function nk_has_brief() {
 	$k = nk_page_key();
 	return $k && ! in_array( $k, nk_plain_keys(), true );
 }
+function nk_base_keys() {
+	return array( 'ai-solutions', 'crm', 'integrations', 'erp', 'custom-software', 'mobile-app', 'website-care', 'ai-care', 'system-care' );
+}
 function nk_plain_keys() {
 	return array( 'about', 'contact', 'faq', 'terms', 'privacy', '404', 'article', 'articles', 'soon' );
 }
@@ -54,7 +57,13 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'nk-site', NK_URI . '/assets/css/site.css', array(), filemtime( NK_DIR . '/assets/css/site.css' ) );
 	$k = nk_page_key();
 	if ( $k && 'home' !== $k && file_exists( NK_DIR . '/assets/css/svc-' . $k . '.css' ) ) {
-		wp_enqueue_style( 'nk-svc-' . $k, NK_URI . '/assets/css/svc-' . $k . '.css', array( 'nk-site' ), filemtime( NK_DIR . '/assets/css/svc-' . $k . '.css' ) );
+		// Build/Care pages share svc-base.css (app shell, pointer, typer, nq window kit); their own file holds page rules only.
+		$dep = array( 'nk-site' );
+		if ( in_array( $k, nk_base_keys(), true ) ) {
+			wp_enqueue_style( 'nk-svc-base', NK_URI . '/assets/css/svc-base.css', array( 'nk-site' ), filemtime( NK_DIR . '/assets/css/svc-base.css' ) );
+			$dep = array( 'nk-svc-base' );
+		}
+		wp_enqueue_style( 'nk-svc-' . $k, NK_URI . '/assets/css/svc-' . $k . '.css', $dep, filemtime( NK_DIR . '/assets/css/svc-' . $k . '.css' ) );
 	} elseif ( 'home' !== $k ) {
 		// About, contact, legal, articles, 404 and any other WordPress page.
 		wp_enqueue_style( 'nk-pages', NK_URI . '/assets/css/pages.css', array( 'nk-site' ), filemtime( NK_DIR . '/assets/css/pages.css' ) );
