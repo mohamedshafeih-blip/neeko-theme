@@ -24,6 +24,7 @@ function nk_page_key() {
 	if ( is_page( 'ai-solutions' ) ) return 'ai-solutions';
 	if ( is_page( 'crm' ) ) return 'crm';
 	if ( is_page( 'integrations' ) ) return 'integrations';
+	if ( is_page( 'erp' ) ) return 'erp';
 	if ( function_exists( 'nk_soon_cur' ) && nk_soon_cur() ) return 'soon';
 	foreach ( array( 'about', 'contact', 'faq', 'terms', 'privacy' ) as $pg ) {
 		if ( is_page( $pg ) ) return $pg;
